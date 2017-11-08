@@ -1,0 +1,12 @@
+C:\Proyecto_Sistema_Contable_UCR\SistemaContable_UCR_TC682\SC_UCR\SC_UCR_VIEWS\bin\Debug\SC_UCR_VIEWS.exe.config
+C:\Proyecto_Sistema_Contable_UCR\SistemaContable_UCR_TC682\SC_UCR\SC_UCR_VIEWS\bin\Debug\SC_UCR_VIEWS.exe
+C:\Proyecto_Sistema_Contable_UCR\SistemaContable_UCR_TC682\SC_UCR\SC_UCR_VIEWS\bin\Debug\SC_UCR_VIEWS.pdb
+C:\Proyecto_Sistema_Contable_UCR\SistemaContable_UCR_TC682\SC_UCR\SC_UCR_VIEWS\bin\Debug\MetroFramework.dll
+C:\Proyecto_Sistema_Contable_UCR\SistemaContable_UCR_TC682\SC_UCR\SC_UCR_VIEWS\obj\Debug\SC_UCR_VIEWS.csprojResolveAssemblyReference.cache
+C:\Proyecto_Sistema_Contable_UCR\SistemaContable_UCR_TC682\SC_UCR\SC_UCR_VIEWS\obj\Debug\SC_UCR_VIEWS.Login.resources
+C:\Proyecto_Sistema_Contable_UCR\SistemaContable_UCR_TC682\SC_UCR\SC_UCR_VIEWS\obj\Debug\SC_UCR_VIEWS.Properties.Resources.resources
+C:\Proyecto_Sistema_Contable_UCR\SistemaContable_UCR_TC682\SC_UCR\SC_UCR_VIEWS\obj\Debug\SC_UCR_VIEWS.Register.resources
+C:\Proyecto_Sistema_Contable_UCR\SistemaContable_UCR_TC682\SC_UCR\SC_UCR_VIEWS\obj\Debug\SC_UCR_VIEWS.csproj.GenerateResource.Cache
+C:\Proyecto_Sistema_Contable_UCR\SistemaContable_UCR_TC682\SC_UCR\SC_UCR_VIEWS\obj\Debug\SC_UCR_VIEWS.csproj.CoreCompileInputs.cache
+C:\Proyecto_Sistema_Contable_UCR\SistemaContable_UCR_TC682\SC_UCR\SC_UCR_VIEWS\obj\Debug\SC_UCR_VIEWS.exe
+C:\Proyecto_Sistema_Contable_UCR\SistemaContable_UCR_TC682\SC_UCR\SC_UCR_VIEWS\obj\Debug\SC_UCR_VIEWS.pdb

@@ -16,5 +16,10 @@ namespace SC_UCR_VIEWS
         {
             InitializeComponent();
         }
+
+        private void metroPanel_Login_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
