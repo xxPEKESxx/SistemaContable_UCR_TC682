@@ -11,9 +11,9 @@ using MetroFramework.Forms;
 
 namespace SistemaContable_UCR_VIEWS
 {
-    public partial class Form1 : MetroForm
+    public partial class Login : MetroForm
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }

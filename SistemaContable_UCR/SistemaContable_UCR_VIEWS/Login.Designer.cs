@@ -1,6 +1,6 @@
 ﻿namespace SistemaContable_UCR_VIEWS
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.metroTile_Register = new MetroFramework.Controls.MetroTile();
             this.metroTile_Entrar = new MetroFramework.Controls.MetroTile();
             this.metroTextBox_Password = new MetroFramework.Controls.MetroTextBox();
