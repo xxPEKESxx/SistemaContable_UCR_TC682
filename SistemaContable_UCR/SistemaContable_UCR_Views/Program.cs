@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemaContable_UCR_Views
+namespace SistemaContable_UCR_VIEWS
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace SistemaContable_UCR_Views
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new Form1());
         }
     }
 }

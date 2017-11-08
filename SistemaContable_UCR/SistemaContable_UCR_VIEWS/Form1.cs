@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 
-namespace SistemaContable_UCR_Views
+namespace SistemaContable_UCR_VIEWS
 {
-    public partial class Login : MetroForm
+    public partial class Form1 : MetroForm
     {
-        public Login()
+        public Form1()
         {
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
