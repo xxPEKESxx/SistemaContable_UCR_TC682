@@ -40,7 +40,7 @@
             // 
             this.metroTile_Register.ActiveControl = null;
             this.metroTile_Register.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.metroTile_Register.Location = new System.Drawing.Point(259, 482);
+            this.metroTile_Register.Location = new System.Drawing.Point(23, 455);
             this.metroTile_Register.MaximumSize = new System.Drawing.Size(177, 104);
             this.metroTile_Register.MinimumSize = new System.Drawing.Size(177, 104);
             this.metroTile_Register.Name = "metroTile_Register";
@@ -61,7 +61,7 @@
             this.metroTile_Entrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.metroTile_Entrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.metroTile_Entrar.Location = new System.Drawing.Point(23, 483);
+            this.metroTile_Entrar.Location = new System.Drawing.Point(259, 455);
             this.metroTile_Entrar.Name = "metroTile_Entrar";
             this.metroTile_Entrar.Size = new System.Drawing.Size(177, 103);
             this.metroTile_Entrar.Style = MetroFramework.MetroColorStyle.Custom;
