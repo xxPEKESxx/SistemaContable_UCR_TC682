@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SC_UCR_VIEWS")]
+[assembly: AssemblyTitle("SistemaContable_UCR_Views")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SC_UCR_VIEWS")]
+[assembly: AssemblyProduct("SistemaContable_UCR_Views")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("be184237-4cc4-4f2e-9ab1-b4a9f41246fa")]
+[assembly: Guid("988a0854-9801-42fa-ac68-79bc2fae6372")]
 
 // Version information for an assembly consists of the following four values:
 //

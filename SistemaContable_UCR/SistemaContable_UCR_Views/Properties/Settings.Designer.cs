@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SC_UCR_VIEWS.Properties
+namespace SistemaContable_UCR_Views.Properties
 {
 
 

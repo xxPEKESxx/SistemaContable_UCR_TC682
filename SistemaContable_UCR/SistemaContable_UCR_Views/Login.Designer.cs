@@ -1,6 +1,6 @@
-﻿namespace SC_UCR_VIEWS
+﻿namespace SistemaContable_UCR_Views
 {
-    partial class Register
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Register
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 388);
-            this.Name = "Register";
-            this.Text = "Registro de usuario";
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "Login";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
 
         }
@@ -44,3 +45,4 @@
         #endregion
     }
 }
+

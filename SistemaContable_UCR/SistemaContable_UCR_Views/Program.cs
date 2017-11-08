@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SC_UCR_VIEWS
+namespace SistemaContable_UCR_Views
 {
     static class Program
     {

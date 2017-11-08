@@ -7,17 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
-namespace SC_UCR_VIEWS
+namespace SistemaContable_UCR_Views
 {
-    public partial class Login : Form
+    public partial class Login : MetroForm
     {
         public Login()
         {
             InitializeComponent();
         }
 
-        private void metroPanel_Login_Paint(object sender, PaintEventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
 
         }
