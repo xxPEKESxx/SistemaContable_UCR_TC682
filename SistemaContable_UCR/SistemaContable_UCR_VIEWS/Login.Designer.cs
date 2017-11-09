@@ -73,6 +73,7 @@
             this.metroTile_Entrar.UseCustomBackColor = true;
             this.metroTile_Entrar.UseSelectable = true;
             this.metroTile_Entrar.UseTileImage = true;
+            this.metroTile_Entrar.Click += new System.EventHandler(this.metroTile_Entrar_Click);
             // 
             // metroTextBox_Password
             // 
@@ -80,9 +81,9 @@
             // 
             // 
             this.metroTextBox_Password.CustomButton.Image = null;
-            this.metroTextBox_Password.CustomButton.Location = new System.Drawing.Point(284, 2);
+            this.metroTextBox_Password.CustomButton.Location = new System.Drawing.Point(379, 2);
             this.metroTextBox_Password.CustomButton.Name = "";
-            this.metroTextBox_Password.CustomButton.Size = new System.Drawing.Size(23, 25);
+            this.metroTextBox_Password.CustomButton.Size = new System.Drawing.Size(31, 31);
             this.metroTextBox_Password.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox_Password.CustomButton.TabIndex = 1;
             this.metroTextBox_Password.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -91,7 +92,7 @@
             this.metroTextBox_Password.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.metroTextBox_Password.Lines = new string[0];
             this.metroTextBox_Password.Location = new System.Drawing.Point(23, 291);
-            this.metroTextBox_Password.Margin = new System.Windows.Forms.Padding(60, 60, 60, 60);
+            this.metroTextBox_Password.Margin = new System.Windows.Forms.Padding(60);
             this.metroTextBox_Password.MaxLength = 32767;
             this.metroTextBox_Password.Name = "metroTextBox_Password";
             this.metroTextBox_Password.PasswordChar = '●';
@@ -117,9 +118,9 @@
             // 
             // 
             this.metroTextBox_UserName.CustomButton.Image = null;
-            this.metroTextBox_UserName.CustomButton.Location = new System.Drawing.Point(284, 1);
+            this.metroTextBox_UserName.CustomButton.Location = new System.Drawing.Point(379, 1);
             this.metroTextBox_UserName.CustomButton.Name = "";
-            this.metroTextBox_UserName.CustomButton.Size = new System.Drawing.Size(25, 27);
+            this.metroTextBox_UserName.CustomButton.Size = new System.Drawing.Size(33, 33);
             this.metroTextBox_UserName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox_UserName.CustomButton.TabIndex = 1;
             this.metroTextBox_UserName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -157,7 +158,7 @@
             this.metroCheckBox1.Text = "Recordarme";
             this.metroCheckBox1.UseSelectable = true;
             // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -170,7 +171,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Login";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.Text = "Inicio de Sesión";
