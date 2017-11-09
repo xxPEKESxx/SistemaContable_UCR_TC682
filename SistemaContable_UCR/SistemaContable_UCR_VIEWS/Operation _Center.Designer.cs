@@ -35,6 +35,7 @@
             // 
             // metroPanel_Information
             // 
+            this.metroPanel_Information.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.metroPanel_Information.Dock = System.Windows.Forms.DockStyle.Top;
             this.metroPanel_Information.HorizontalScrollbarBarColor = true;
             this.metroPanel_Information.HorizontalScrollbarHighlightOnWheel = false;
@@ -43,6 +44,7 @@
             this.metroPanel_Information.Name = "metroPanel_Information";
             this.metroPanel_Information.Size = new System.Drawing.Size(1287, 100);
             this.metroPanel_Information.TabIndex = 0;
+            this.metroPanel_Information.UseCustomBackColor = true;
             this.metroPanel_Information.VerticalScrollbarBarColor = true;
             this.metroPanel_Information.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel_Information.VerticalScrollbarSize = 10;

@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+
 using SistemaContable_UCR_Model;
+using MetroFramework;
 
 namespace SistemaContable_UCR_VIEWS
 {
@@ -28,8 +30,15 @@ namespace SistemaContable_UCR_VIEWS
         {
             Conection conetion = new Conection();
 
-            if (!(conetion.StartSesion(metroTextBox_UserName.Text, metroTextBox_Password.Text))) {
+            if ((conetion.StartSesion(metroTextBox_UserName.Text, metroTextBox_Password.Text)))
+            {
+                Operation__Center OC = new Operation__Center();
 
+                OC.Visible = true;
+            }
+            else
+            {
+                MetroMessageBox.Show(this, "Error en inicio de sesion", "DATOS ERRONEOS", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
