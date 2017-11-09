@@ -30,9 +30,10 @@ namespace SistemaContable_UCR_VIEWS
         {
             Conection conetion = new Conection();
 
-            if ((conetion.StartSesion(metroTextBox_UserName.Text, metroTextBox_Password.Text)))
+            if ((conetion.StartSesion(metroTextBox_UserName.Text, metroTextBox_Password.Text)))//SI LA CONEXION ES CORRECTA NOS ENVIA AL CENTRO DE OPERACIONES
             {
-                Operation__Center OC = new Operation__Center();
+                Operation__Center OC = new Operation__Center(); //PARA VER EL CENTRO DE OPERACION(DONDE VAN A ESTAR LAS GESTIONES DEL SISTEMA
+                
 
                 OC.Visible = true;
             }
