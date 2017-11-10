@@ -9,6 +9,6 @@ namespace SistemaContable_UCR_Busisness
     public class Class1
     {
 
-
+        
     }
 }
