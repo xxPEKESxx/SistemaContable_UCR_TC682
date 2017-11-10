@@ -9,6 +9,6 @@ namespace SistemaContable_UCR_Model
     public class Productos
     {
         public int ID { get; set; }
-        public string Productos { get; set; }
+        public string Producto { get; set; }
     }
 }

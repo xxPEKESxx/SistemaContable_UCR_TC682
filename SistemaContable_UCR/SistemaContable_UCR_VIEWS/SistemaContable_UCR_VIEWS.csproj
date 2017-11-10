@@ -136,5 +136,11 @@
   <ItemGroup>
     <None Include="Resources\icons8_Add_User_Male_48.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaContable_UCR_Model\SistemaContable_UCR_Model.csproj">
+      <Project>{e86ac33a-86f7-4846-9f03-cde622d18c7c}</Project>
+      <Name>SistemaContable_UCR_Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
