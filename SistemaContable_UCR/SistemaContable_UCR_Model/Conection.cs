@@ -19,6 +19,7 @@ namespace SistemaContable_UCR_Model
         public bool StartSesion(string idUser,string password) {
 
             bool exists = false;
+
                
                 stringConection = new SQLiteConnection("Data Source=SC_UCR_TC682.s3db");
                 stringConection.Open();
