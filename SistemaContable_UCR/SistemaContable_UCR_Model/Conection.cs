@@ -22,6 +22,7 @@ namespace SistemaContable_UCR_Model
                
                 stringConection = new SQLiteConnection("Data Source=SC_UCR_TC682.s3db");
                 stringConection.Open();
+
             string query = "select * from Users";
                 SQLiteCommand command = new SQLiteCommand(query, stringConection);
                 SQLiteDataReader datos = command.ExecuteReader();
