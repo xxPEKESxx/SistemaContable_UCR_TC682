@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaContable_UCR_VIEWS",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaContable_UCR_Model", "SistemaContable_UCR_Model\SistemaContable_UCR_Model.csproj", "{E86AC33A-86F7-4846-9F03-CDE622D18C7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaContable_UCR_Busisness", "SistemaContable_UCR_Busisness\SistemaContable_UCR_Busisness.csproj", "{CBA636EE-53CD-4D10-B994-5E9829AF006B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{E86AC33A-86F7-4846-9F03-CDE622D18C7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E86AC33A-86F7-4846-9F03-CDE622D18C7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E86AC33A-86F7-4846-9F03-CDE622D18C7C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CBA636EE-53CD-4D10-B994-5E9829AF006B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CBA636EE-53CD-4D10-B994-5E9829AF006B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CBA636EE-53CD-4D10-B994-5E9829AF006B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CBA636EE-53CD-4D10-B994-5E9829AF006B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
