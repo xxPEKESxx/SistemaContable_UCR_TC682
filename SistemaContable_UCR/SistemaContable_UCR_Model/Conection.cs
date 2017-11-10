@@ -19,15 +19,14 @@ namespace SistemaContable_UCR_Model
         public bool StartSesion(string idUser,string password) {
 
             bool exists = false;
-
+            try
+            {
                
                 stringConection = new SQLiteConnection("Data Source=SC_UCR_TC682.s3db");
                 stringConection.Open();
-
-            string query = "select * from Users";
+                string query = "select * from Users where IdUsers=" + idUser;
                 SQLiteCommand command = new SQLiteCommand(query, stringConection);
                 SQLiteDataReader datos = command.ExecuteReader();
-            while (datos.Read()) {
 
                 if (datos.GetString(1).Equals(idUser) && datos.GetString(4).Equals(password))
                 {
@@ -38,11 +37,13 @@ namespace SistemaContable_UCR_Model
                 {
                     exists = false;
                 }
+
+
             }
-                
-
-
-           
+            catch (SQLiteException ex)
+            {
+               Console.WriteLine(ex.Message);
+            }
       
 
 

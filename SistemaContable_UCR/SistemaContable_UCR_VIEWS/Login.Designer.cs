@@ -32,9 +32,8 @@
             this.metroTile_Register = new MetroFramework.Controls.MetroTile();
             this.metroTile_Entrar = new MetroFramework.Controls.MetroTile();
             this.metroTextBox_Password = new MetroFramework.Controls.MetroTextBox();
-            this.dni_user = new MetroFramework.Controls.MetroTextBox();
+            this.metroTextBox_UserName = new MetroFramework.Controls.MetroTextBox();
             this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
-            this.metroUserControl1 = new MetroFramework.Controls.MetroUserControl();
             this.SuspendLayout();
             // 
             // metroTile_Register
@@ -113,69 +112,59 @@
             this.metroTextBox_Password.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox_Password.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // dni_user
+            // metroTextBox_UserName
             // 
             // 
             // 
             // 
-            this.dni_user.CustomButton.Image = null;
-            this.dni_user.CustomButton.Location = new System.Drawing.Point(363, 1);
-            this.dni_user.CustomButton.Name = "";
-            this.dni_user.CustomButton.Size = new System.Drawing.Size(49, 49);
-            this.dni_user.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.dni_user.CustomButton.TabIndex = 1;
-            this.dni_user.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.dni_user.CustomButton.UseSelectable = true;
-            this.dni_user.CustomButton.Visible = false;
-            this.dni_user.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.dni_user.Lines = new string[0];
-            this.dni_user.Location = new System.Drawing.Point(23, 177);
-            this.dni_user.MaxLength = 32767;
-            this.dni_user.Multiline = true;
-            this.dni_user.Name = "dni_user";
-            this.dni_user.PasswordChar = '\0';
-            this.dni_user.PromptText = "Cédula";
-            this.dni_user.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dni_user.SelectedText = "";
-            this.dni_user.SelectionLength = 0;
-            this.dni_user.SelectionStart = 0;
-            this.dni_user.ShortcutsEnabled = true;
-            this.dni_user.Size = new System.Drawing.Size(413, 51);
-            this.dni_user.TabIndex = 1;
-            this.dni_user.Tag = "";
-            this.dni_user.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dni_user.UseSelectable = true;
-            this.dni_user.WaterMark = "Cédula";
-            this.dni_user.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.dni_user.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dni_user.Click += new System.EventHandler(this.metroTextBox_UserName_Click);
+            this.metroTextBox_UserName.CustomButton.Image = null;
+            this.metroTextBox_UserName.CustomButton.Location = new System.Drawing.Point(379, 1);
+            this.metroTextBox_UserName.CustomButton.Name = "";
+            this.metroTextBox_UserName.CustomButton.Size = new System.Drawing.Size(33, 33);
+            this.metroTextBox_UserName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox_UserName.CustomButton.TabIndex = 1;
+            this.metroTextBox_UserName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox_UserName.CustomButton.UseSelectable = true;
+            this.metroTextBox_UserName.CustomButton.Visible = false;
+            this.metroTextBox_UserName.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.metroTextBox_UserName.Lines = new string[0];
+            this.metroTextBox_UserName.Location = new System.Drawing.Point(23, 177);
+            this.metroTextBox_UserName.MaxLength = 32767;
+            this.metroTextBox_UserName.Multiline = true;
+            this.metroTextBox_UserName.Name = "metroTextBox_UserName";
+            this.metroTextBox_UserName.PasswordChar = '\0';
+            this.metroTextBox_UserName.PromptText = "NOMBRE DE USUARIO";
+            this.metroTextBox_UserName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox_UserName.SelectedText = "";
+            this.metroTextBox_UserName.SelectionLength = 0;
+            this.metroTextBox_UserName.SelectionStart = 0;
+            this.metroTextBox_UserName.ShortcutsEnabled = true;
+            this.metroTextBox_UserName.Size = new System.Drawing.Size(413, 35);
+            this.metroTextBox_UserName.TabIndex = 1;
+            this.metroTextBox_UserName.Tag = "";
+            this.metroTextBox_UserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroTextBox_UserName.UseSelectable = true;
+            this.metroTextBox_UserName.WaterMark = "NOMBRE DE USUARIO";
+            this.metroTextBox_UserName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox_UserName.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // metroCheckBox1
             // 
             this.metroCheckBox1.AutoSize = true;
             this.metroCheckBox1.Location = new System.Drawing.Point(29, 375);
             this.metroCheckBox1.Name = "metroCheckBox1";
-            this.metroCheckBox1.Size = new System.Drawing.Size(96, 17);
+            this.metroCheckBox1.Size = new System.Drawing.Size(87, 15);
             this.metroCheckBox1.TabIndex = 21;
             this.metroCheckBox1.Text = "Recordarme";
             this.metroCheckBox1.UseSelectable = true;
             // 
-            // metroUserControl1
-            // 
-            this.metroUserControl1.Location = new System.Drawing.Point(314, 187);
-            this.metroUserControl1.Name = "metroUserControl1";
-            this.metroUserControl1.Size = new System.Drawing.Size(8, 8);
-            this.metroUserControl1.TabIndex = 22;
-            this.metroUserControl1.UseSelectable = true;
-            // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(459, 596);
-            this.Controls.Add(this.metroUserControl1);
             this.Controls.Add(this.metroCheckBox1);
-            this.Controls.Add(this.dni_user);
+            this.Controls.Add(this.metroTextBox_UserName);
             this.Controls.Add(this.metroTextBox_Password);
             this.Controls.Add(this.metroTile_Register);
             this.Controls.Add(this.metroTile_Entrar);
@@ -198,9 +187,8 @@
         private MetroFramework.Controls.MetroTile metroTile_Entrar;
         private MetroFramework.Controls.MetroTile metroTile_Register;
         private MetroFramework.Controls.MetroTextBox metroTextBox_Password;
-        private MetroFramework.Controls.MetroTextBox dni_user;
+        private MetroFramework.Controls.MetroTextBox metroTextBox_UserName;
         private MetroFramework.Controls.MetroCheckBox metroCheckBox1;
-        private MetroFramework.Controls.MetroUserControl metroUserControl1;
     }
 }
 
