@@ -41,7 +41,7 @@ namespace SistemaContable_UCR_Model
 
 
 
-
+            datos.Close();
 
 
 
