@@ -45,7 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conection.cs" />
+<<<<<<< HEAD
     <Compile Include="Productos.cs" />
+=======
+    <Compile Include="Producto.cs" />
+>>>>>>> 32b68f3c9fa98788ccdef9ce0e5de572d73dfb9d
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tipo.cs" />
     <Compile Include="Transaccion.cs" />
