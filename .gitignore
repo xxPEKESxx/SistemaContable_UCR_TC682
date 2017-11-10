@@ -263,3 +263,5 @@ SistemaContable_UCR/SistemaContable_UCR_Model/SistemaContable_UCR_Model.csproj
 SistemaContable_UCR/SistemaContable_UCR_Model/SistemaContable_UCR_Model.csproj
 SistemaContable_UCR/SistemaContable_UCR_Views/App.config
 SistemaContable_UCR/SistemaContable_UCR_Views/Properties/Resources.Designer.cs
+
+*.cs
