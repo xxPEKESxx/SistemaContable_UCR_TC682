@@ -259,3 +259,8 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+SistemaContable_UCR/SistemaContable_UCR_Model/SistemaContable_UCR_Model.csproj
+SistemaContable_UCR/SistemaContable_UCR_Model/SistemaContable_UCR_Model.csproj
+SistemaContable_UCR/SistemaContable_UCR_Views/App.config
+SistemaContable_UCR/SistemaContable_UCR_Views/Properties/Resources.Designer.cs
+*.cs
