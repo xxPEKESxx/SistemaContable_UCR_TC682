@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SistemaContable_UCR_Model
 {
-    class Producto
+    class Productos
     {
+        public int ID { get; set; }
+        public string Producto { get; set; }
+        public float Precio { get; set; }
+
     }
 }
