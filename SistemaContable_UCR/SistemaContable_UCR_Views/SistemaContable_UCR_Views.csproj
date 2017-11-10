@@ -55,6 +55,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FLM_Compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLM_Compras.Designer.cs">
+      <DependentUpon>FLM_Compras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLM_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLM_Productos.Designer.cs">
+      <DependentUpon>FLM_Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLM_Pruebas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLM_Pruebas.Designer.cs">
+      <DependentUpon>FLM_Pruebas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLM_Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLM_Ventas.Designer.cs">
+      <DependentUpon>FLM_Ventas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +99,18 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FLM_Compras.resx">
+      <DependentUpon>FLM_Compras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLM_Productos.resx">
+      <DependentUpon>FLM_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLM_Pruebas.resx">
+      <DependentUpon>FLM_Pruebas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLM_Ventas.resx">
+      <DependentUpon>FLM_Ventas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
