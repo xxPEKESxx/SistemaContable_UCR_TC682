@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using MetroFramework;
 using SistemaContable_UCR_Model;
 
 namespace SistemaContable_UCR_VIEWS
@@ -28,9 +29,18 @@ namespace SistemaContable_UCR_VIEWS
         {
             Conection conetion = new Conection();
 
-            if (!(conetion.StartSesion(metroTextBox_UserName.Text, metroTextBox_Password.Text))) {
+            if ((conetion.StartSesion(metroTextBox_UserName.Text, metroTextBox_Password.Text)))
+            {
+                Operation__Center Oc = new Operation__Center();
+                Oc.Visible = true;
+                Visible = false;
 
             }
+            else {
+
+                MetroMessageBox.Show(this, "Por favor escriba correctamente la contraseña y la cedula", "Cedula o contrasela erroneos ");
+            }
+
 
         }
     }
