@@ -56,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FRM_Productos.cs" />
+    <Compile Include="FRM_Pruebas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Pruebas.Designer.cs">
+      <DependentUpon>FRM_Pruebas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
