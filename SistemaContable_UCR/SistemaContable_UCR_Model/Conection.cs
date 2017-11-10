@@ -19,9 +19,7 @@ namespace SistemaContable_UCR_Model
         public bool StartSesion(string idUser,string password) {
 
             bool exists = false;
-            try
-            {
-               
+           
                 stringConection = new SQLiteConnection("Data Source=SC_UCR_TC682.s3db");
                 stringConection.Open();
                 string query = "select * from Users where IdUsers=" + idUser;
@@ -39,11 +37,7 @@ namespace SistemaContable_UCR_Model
                 }
 
 
-            }
-            catch (SQLiteException ex)
-            {
-               Console.WriteLine(ex.Message);
-            }
+          
       
 
 
