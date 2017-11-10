@@ -32,7 +32,7 @@
             this.metroTile_Register = new MetroFramework.Controls.MetroTile();
             this.metroTile_Entrar = new MetroFramework.Controls.MetroTile();
             this.metroTextBox_Password = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox_UserName = new MetroFramework.Controls.MetroTextBox();
+            this.idUser = new MetroFramework.Controls.MetroTextBox();
             this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
             this.SuspendLayout();
             // 
@@ -112,41 +112,41 @@
             this.metroTextBox_Password.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox_Password.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // metroTextBox_UserName
+            // idUser
             // 
             // 
             // 
             // 
-            this.metroTextBox_UserName.CustomButton.Image = null;
-            this.metroTextBox_UserName.CustomButton.Location = new System.Drawing.Point(379, 1);
-            this.metroTextBox_UserName.CustomButton.Name = "";
-            this.metroTextBox_UserName.CustomButton.Size = new System.Drawing.Size(33, 33);
-            this.metroTextBox_UserName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox_UserName.CustomButton.TabIndex = 1;
-            this.metroTextBox_UserName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox_UserName.CustomButton.UseSelectable = true;
-            this.metroTextBox_UserName.CustomButton.Visible = false;
-            this.metroTextBox_UserName.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.metroTextBox_UserName.Lines = new string[0];
-            this.metroTextBox_UserName.Location = new System.Drawing.Point(23, 177);
-            this.metroTextBox_UserName.MaxLength = 32767;
-            this.metroTextBox_UserName.Multiline = true;
-            this.metroTextBox_UserName.Name = "metroTextBox_UserName";
-            this.metroTextBox_UserName.PasswordChar = '\0';
-            this.metroTextBox_UserName.PromptText = "NOMBRE DE USUARIO";
-            this.metroTextBox_UserName.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox_UserName.SelectedText = "";
-            this.metroTextBox_UserName.SelectionLength = 0;
-            this.metroTextBox_UserName.SelectionStart = 0;
-            this.metroTextBox_UserName.ShortcutsEnabled = true;
-            this.metroTextBox_UserName.Size = new System.Drawing.Size(413, 35);
-            this.metroTextBox_UserName.TabIndex = 1;
-            this.metroTextBox_UserName.Tag = "";
-            this.metroTextBox_UserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.metroTextBox_UserName.UseSelectable = true;
-            this.metroTextBox_UserName.WaterMark = "NOMBRE DE USUARIO";
-            this.metroTextBox_UserName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox_UserName.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idUser.CustomButton.Image = null;
+            this.idUser.CustomButton.Location = new System.Drawing.Point(379, 1);
+            this.idUser.CustomButton.Name = "";
+            this.idUser.CustomButton.Size = new System.Drawing.Size(33, 33);
+            this.idUser.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.idUser.CustomButton.TabIndex = 1;
+            this.idUser.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.idUser.CustomButton.UseSelectable = true;
+            this.idUser.CustomButton.Visible = false;
+            this.idUser.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.idUser.Lines = new string[0];
+            this.idUser.Location = new System.Drawing.Point(23, 181);
+            this.idUser.MaxLength = 32767;
+            this.idUser.Multiline = true;
+            this.idUser.Name = "idUser";
+            this.idUser.PasswordChar = '\0';
+            this.idUser.PromptText = "CEDULA";
+            this.idUser.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.idUser.SelectedText = "";
+            this.idUser.SelectionLength = 0;
+            this.idUser.SelectionStart = 0;
+            this.idUser.ShortcutsEnabled = true;
+            this.idUser.Size = new System.Drawing.Size(413, 35);
+            this.idUser.TabIndex = 1;
+            this.idUser.Tag = "";
+            this.idUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.idUser.UseSelectable = true;
+            this.idUser.WaterMark = "CEDULA";
+            this.idUser.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.idUser.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // metroCheckBox1
             // 
@@ -164,7 +164,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(459, 596);
             this.Controls.Add(this.metroCheckBox1);
-            this.Controls.Add(this.metroTextBox_UserName);
+            this.Controls.Add(this.idUser);
             this.Controls.Add(this.metroTextBox_Password);
             this.Controls.Add(this.metroTile_Register);
             this.Controls.Add(this.metroTile_Entrar);
@@ -187,7 +187,7 @@
         private MetroFramework.Controls.MetroTile metroTile_Entrar;
         private MetroFramework.Controls.MetroTile metroTile_Register;
         private MetroFramework.Controls.MetroTextBox metroTextBox_Password;
-        private MetroFramework.Controls.MetroTextBox metroTextBox_UserName;
+        private MetroFramework.Controls.MetroTextBox idUser;
         private MetroFramework.Controls.MetroCheckBox metroCheckBox1;
     }
 }

@@ -29,7 +29,7 @@ namespace SistemaContable_UCR_VIEWS
         {
             Conection conetion = new Conection();
 
-            if ((conetion.StartSesion(metroTextBox_UserName.Text, metroTextBox_Password.Text)))
+            if ((conetion.StartSesion(idUser.Text, metroTextBox_Password.Text)))
             {
                 Operation__Center Oc = new Operation__Center();
                 Oc.Visible = true;
