@@ -26,7 +26,7 @@ namespace SistemaContable_UCR_VIEWS
             CoordinadorDeProductos cp = new CoordinadorDeProductos();
             DataTable _table = new DataTable();
 
-            dataGrip_listaProductos.DataSource = _table;
+            
             List<Productos> data  = cp.getAllProducts();
             foreach (Productos item in data)
             {
@@ -34,6 +34,7 @@ namespace SistemaContable_UCR_VIEWS
                 dr[0] = item;
                 _table.Rows.Add(dr);
             }
+            dataGrip_listaProductos.DataSource = _table;
             //pr = cp.getAllProducts();
             //DataTable table = new DataTable();
             //using (var reader = ObjectReader.Create(data, "Id", "Name", "Description"))
