@@ -20,9 +20,9 @@ namespace SistemaContable_UCR_DataAccess
 
                 stringConection = Conection.getConection();
                 stringConection.Open();
-                string query = "insert into Transacciones (IdProducto, Cantidad, Total, Fecha, IdTipo) values ('" + laNuevaTransaccion.IdProducto +
-                    "', '" + laNuevaTransaccion.Cantidad + "', '" + laNuevaTransaccion.Total + "', '" +
-                    laNuevaTransaccion.Fecha + "', '" + laNuevaTransaccion.IdTipo + "')";
+                string query = "insert into Transacciones (IdProducto, Cantidad, Total, Fecha, IdTipo) values ('" + 
+                    laNuevaTransaccion.IdProducto + "', '" + laNuevaTransaccion.Cantidad + "', '" + 
+                    laNuevaTransaccion.Total + "', '" + laNuevaTransaccion.Fecha + "', '" + laNuevaTransaccion.IdTipo + "')";
 
                 SQLiteCommand command = new SQLiteCommand(query, stringConection);
 

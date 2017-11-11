@@ -8,11 +8,8 @@ namespace SistemaContable_UCR_Model
 {
     public enum Tipos 
     {
-
-        ProductoVenta = 1,
-        ProductoCompra = 2,
-        Venta = 3,
-        Compra = 4,
+        Venta = 1,
+        Compra = 2,
 
     }
 }
