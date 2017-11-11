@@ -54,11 +54,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FRM_backup.cs">
+    <Compile Include="FRM_Compras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRM_backup.Designer.cs">
-      <DependentUpon>FRM_backup.cs</DependentUpon>
+    <Compile Include="FRM_Compras.Designer.cs">
+      <DependentUpon>FRM_Compras.cs</DependentUpon>
     </Compile>
     <Compile Include="FRM_Productos.cs">
       <SubType>Form</SubType>
@@ -92,8 +92,8 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FRM_backup.resx">
-      <DependentUpon>FRM_backup.cs</DependentUpon>
+    <EmbeddedResource Include="FRM_Compras.resx">
+      <DependentUpon>FRM_Compras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_Productos.resx">
       <DependentUpon>FRM_Productos.cs</DependentUpon>
