@@ -33,7 +33,6 @@
             this.registro_apellidos = new MetroFramework.Controls.MetroTextBox();
             this.register_password = new MetroFramework.Controls.MetroTextBox();
             this.registro_passwordConfirn = new MetroFramework.Controls.MetroTextBox();
-            this.checkbox_vistaContrasela = new MetroFramework.Controls.MetroCheckBox();
             this.icoUCR = new System.Windows.Forms.Label();
             this.registro_Atras = new MetroFramework.Controls.MetroTile();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
@@ -211,19 +210,6 @@
             this.registro_passwordConfirn.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.registro_passwordConfirn.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // checkbox_vistaContrasela
-            // 
-            this.checkbox_vistaContrasela.AutoSize = true;
-            this.checkbox_vistaContrasela.Location = new System.Drawing.Point(23, 376);
-            this.checkbox_vistaContrasela.Name = "checkbox_vistaContrasela";
-            this.checkbox_vistaContrasela.Size = new System.Drawing.Size(102, 15);
-            this.checkbox_vistaContrasela.TabIndex = 3;
-            this.checkbox_vistaContrasela.Text = "Ver Contraseña";
-            this.checkbox_vistaContrasela.UseSelectable = true;
-            this.checkbox_vistaContrasela.CheckedChanged += new System.EventHandler(this.Register_Load);
-            this.checkbox_vistaContrasela.CheckStateChanged += new System.EventHandler(this.Register_Load);
-            this.checkbox_vistaContrasela.MouseClick += new System.Windows.Forms.MouseEventHandler(this.hacerClick);
-            // 
             // icoUCR
             // 
             this.icoUCR.Image = global::SistemaContable_UCR_VIEWS.Properties.Resources.ucr_favicon;
@@ -264,13 +250,13 @@
             this.metroTile1.UseCustomBackColor = true;
             this.metroTile1.UseSelectable = true;
             this.metroTile1.UseTileImage = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(374, 542);
-            this.Controls.Add(this.checkbox_vistaContrasela);
             this.Controls.Add(this.icoUCR);
             this.Controls.Add(this.registro_Atras);
             this.Controls.Add(this.metroTile1);
@@ -287,7 +273,6 @@
             this.Load += new System.EventHandler(this.Register_Load);
             this.Click += new System.EventHandler(this.Register_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -301,6 +286,5 @@
         private MetroFramework.Controls.MetroTile metroTile1;
         private MetroFramework.Controls.MetroTile registro_Atras;
         private System.Windows.Forms.Label icoUCR;
-        private MetroFramework.Controls.MetroCheckBox checkbox_vistaContrasela;
     }
 }
