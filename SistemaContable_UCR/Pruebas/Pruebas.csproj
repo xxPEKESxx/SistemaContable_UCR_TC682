@@ -54,8 +54,7 @@
   <ItemGroup>
     <Compile Include="GestorDeProductos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PruebaGestorDeTransacciones.cs" />
-    <Compile Include="PruebaGestorDeProductos.cs" />
+    <Compile Include="GestorDeTransacciones.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
