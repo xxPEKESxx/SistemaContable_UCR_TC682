@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace SistemaContable_UCR_VIEWS
 {
-    public partial class FRM_Ventas : Form
+    public partial class FRM_Ventas : MetroForm
     {
         public FRM_Ventas()
         {
