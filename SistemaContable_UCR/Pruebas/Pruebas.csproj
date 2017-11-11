@@ -51,10 +51,19 @@
     <Compile Include="GestorDeProductos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GestorDeTransacciones.cs" />
-    <Compile Include="PruebaGestorDeProductos.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaContable_UCR_Busisness\SistemaContable_UCR_Busisness.csproj">
+      <Project>{83e18b50-cd6b-4016-9a0f-52762c004872}</Project>
+      <Name>SistemaContable_UCR_Busisness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SistemaContable_UCR_Model\SistemaContable_UCR_Model.csproj">
+      <Project>{e86ac33a-86f7-4846-9f03-cde622d18c7c}</Project>
+      <Name>SistemaContable_UCR_Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
