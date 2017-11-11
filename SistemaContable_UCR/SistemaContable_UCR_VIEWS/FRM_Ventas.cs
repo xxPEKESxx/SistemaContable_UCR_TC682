@@ -28,7 +28,7 @@ namespace SistemaContable_UCR_VIEWS
             Transacciones pr = new Transacciones();
 
             CoordinadorDeTransacciones cp = new CoordinadorDeTransacciones();
-            List<Transacciones> data = cp.getByType(2);
+            List<Transacciones> data = cp.getByType(1);
             DataTable _table = ConvertirListaToDataTable(data);
 
 
@@ -93,25 +93,7 @@ namespace SistemaContable_UCR_VIEWS
         private void dataGrip_listaProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            //Productos pr = new Productos();
-            //DataGridView dgv = sender as DataGridView;
-
-            //if (dgv == null)
-            //    return;
-            //if (dgv.CurrentRow.Selected)
-            //{
-            //    Productos pro = new Productos
-            //    {
-            //        ID = (int)dgv.CurrentRow.Cells["ID"].Value,
-
-
-            //    };
-            //    IDProducto = pr.ID;
-            //    CoordinadorDeProductos cp = new CoordinadorDeProductos();
-            //    pr = cp.getById(pro.ID);
-            //}
-
-            //txtVentas_Name.Text = (pr.Precio.ToString());
+          
             
         }
 
@@ -123,12 +105,36 @@ namespace SistemaContable_UCR_VIEWS
 
             CoordinadorDeProductos cp = new CoordinadorDeProductos();
             CoordinadorDeTransacciones ct = new CoordinadorDeTransacciones();
-            tran.Cantidad = int.Parse(txtVentas_Cantidad.Text);
-            tran.IdProducto= IDProducto;
-            
-            tran.IdTipo = 1;
 
-            ct.Save(tran);
+
+            if (txtVentas_Cantidad.Text != "")
+            {
+                tran.Cantidad = int.Parse(txtVentas_Cantidad.Text);
+                tran.IdProducto = IDProducto;
+
+                tran.IdTipo = 1;
+
+                if (ct.Save(tran) != 0)
+                {
+
+                    MetroMessageBox.Show(this, "COMPRA REGISTRADA CON EXITO.", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+
+                    MetroMessageBox.Show(this, "ERROR DE REGISTROS ", "NO SE REGISTRO LA COMPRA!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+
+
+            }
+            else
+            {
+
+                MetroMessageBox.Show(this, "LLENE EL CAMPO DE CANTIDAD.", "ES NECESARIO LLENAR EL CAMPO DE CANTIDADES!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            }
         }
 
         private void dataGrip_listaProductos_CellClick(object sender, DataGridViewCellEventArgs e)
