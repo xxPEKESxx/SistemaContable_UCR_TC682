@@ -10,5 +10,8 @@ namespace SistemaContable_UCR_Model
     {
         public int ID { get; set; }
         public string Producto { get; set; }
+        public float Precio { get; set; }
+        public Tipos IdTipo { get; set; }
+        public string Descripcion { get; set; }
     }
 }
