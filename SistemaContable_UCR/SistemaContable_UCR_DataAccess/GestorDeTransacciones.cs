@@ -57,7 +57,7 @@ namespace SistemaContable_UCR_DataAccess
             }
         }
 
-        public Transacciones Find(int Id)
+        public Transacciones getBId(int Id)
         {
             Transacciones transaccion = null;
             try

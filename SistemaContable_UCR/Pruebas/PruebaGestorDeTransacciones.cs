@@ -38,7 +38,7 @@ namespace SistemaContable_UCR_Pruebas
         {
             CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
 
-            coordinadorTransacciones.Find(26);
+            coordinadorTransacciones.getById(26);
         }
 
         [TestMethod]
@@ -62,7 +62,7 @@ namespace SistemaContable_UCR_Pruebas
         {
             CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
 
-            Transacciones transaccion = coordinadorTransacciones.Find(29);
+            Transacciones transaccion = coordinadorTransacciones.getById(29);
 
             transaccion.IdProducto = 4;
 

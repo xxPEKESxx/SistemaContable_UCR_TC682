@@ -16,7 +16,11 @@ namespace SistemaContable_UCR_Busisness
         {
             GestorDeTransacciones gestor = new GestorDeTransacciones();
 
+            CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
 
+            Productos producto = coordinadorDeProductos.getById(laNuevaTransaccion.IdProducto);
+
+            laNuevaTransaccion.Total = laNuevaTransaccion.Cantidad * producto.Precio;
             laNuevaTransaccion.Fecha = DateTimeSQLite(DateTime.Now);
 
             gestor.Save(laNuevaTransaccion);
@@ -38,11 +42,11 @@ namespace SistemaContable_UCR_Busisness
             gestor.Update(laTransaccion);
         }
 
-        public Transacciones Find(int Id)
+        public Transacciones getById(int Id)
         {
             GestorDeTransacciones gestor = new GestorDeTransacciones();
 
-            return gestor.Find(Id);
+            return gestor.getById(Id);
         }
 
         public void Delete(int Id)
