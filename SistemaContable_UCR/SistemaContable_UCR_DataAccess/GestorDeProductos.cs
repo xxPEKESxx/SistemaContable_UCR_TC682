@@ -135,5 +135,30 @@ namespace SistemaContable_UCR_DataAccess
                 return 0;
             }
         }
+        public int delete(int Id)
+        {
+            SQLiteConnection stringConection;
+            try
+            {
+                Conection Conection = new Conection();
+
+                stringConection = Conection.getConection();
+                stringConection.Open();
+
+                string query = "delete from Productos where ID='" + Id+"'";
+
+                SQLiteCommand command = new SQLiteCommand(query, stringConection);
+
+                int result = command.ExecuteNonQuery();
+
+                stringConection.Close();
+                return result;
+            }
+            catch (SQLiteException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return 0;
+            }
+        }
     }
 }
