@@ -62,8 +62,7 @@ namespace SistemaContable_UCR_VIEWS
                 pr.Precio = precio;
                 pr.Descripcion = txtproducto_descriocion.Text;
                 pr.Producto = txtproducto_name.Text;
-
-                cp.saveProduct(pr);
+                
 
                 if (cp.saveProduct(pr))
                 {
