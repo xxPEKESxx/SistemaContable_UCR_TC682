@@ -24,16 +24,17 @@ namespace SistemaContable_UCR_VIEWS
             Productos pr = new Productos();
 
             CoordinadorDeProductos cp = new CoordinadorDeProductos();
-            DataTable _table = new DataTable();
+            List<Productos> data = cp.getAllProducts();
+            DataTable _table = ConvertirListaToDataTable(data);
 
             
-            List<Productos> data  = cp.getAllProducts();
-            foreach (Productos item in data)
-            {
-                DataRow dr = _table.NewRow();
-                dr[0] = item;
-                _table.Rows.Add(dr);
-            }
+            
+            //foreach (Productos item in data)
+            //{
+             //   DataRow dr = _table.NewRow();
+              //  dr[0] = item;
+              //  _table.Rows.Add(dr);
+            //}
             dataGrip_listaProductos.DataSource = _table;
             //pr = cp.getAllProducts();
             //DataTable table = new DataTable();
@@ -106,5 +107,24 @@ namespace SistemaContable_UCR_VIEWS
 
 
         }
+
+        public DataTable ConvertirListaToDataTable(System.Collections.IList data)
+        {
+            Productos pr = new Productos();
+            PropertyDescriptorCollection properties = TypeDescriptor.GetProperties(typeof(Productos));
+
+            DataTable table = new DataTable();
+
+            foreach (PropertyDescriptor prop in properties) table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType);
+
+            foreach (Productos item in data)
+            {
+                DataRow row = table.NewRow();
+                foreach (PropertyDescriptor prop in properties) row[prop.Name] = prop.GetValue(item) ?? DBNull.Value;
+                table.Rows.Add(row);
+            }
+            return table;
+        }
+
     }
 }
