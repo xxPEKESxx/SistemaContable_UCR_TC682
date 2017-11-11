@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Operation__Center));
             this.metroPanel_Administration = new MetroFramework.Controls.MetroPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.label1 = new System.Windows.Forms.Label();
             this.metroPanel_Administration.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +61,14 @@
             this.metroPanel_Administration.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel_Administration.VerticalScrollbarSize = 10;
             this.metroPanel_Administration.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel_Administration_Paint);
+            // 
+            // label1
+            // 
+            this.label1.Image = global::SistemaContable_UCR_VIEWS.Properties.Resources.ucr_favicon;
+            this.label1.Location = new System.Drawing.Point(-25, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 43);
+            this.label1.TabIndex = 3;
             // 
             // metroTile5
             // 
@@ -141,21 +150,16 @@
             this.metroTile1.UseStyleColors = true;
             this.metroTile1.UseTileImage = true;
             // 
-            // label1
-            // 
-            this.label1.Image = global::SistemaContable_UCR_VIEWS.Properties.Resources.ucr_favicon;
-            this.label1.Location = new System.Drawing.Point(-25, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 43);
-            this.label1.TabIndex = 3;
-            // 
             // Operation__Center
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1075, 610);
             this.Controls.Add(this.metroPanel_Administration);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Operation__Center";
+            this.Resizable = false;
             this.Text = "Sistema Contable UCR (tc682)";
             this.Load += new System.EventHandler(this.Operation__Center_Load);
             this.metroPanel_Administration.ResumeLayout(false);
