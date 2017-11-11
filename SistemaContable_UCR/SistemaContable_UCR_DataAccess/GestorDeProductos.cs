@@ -87,5 +87,30 @@ namespace SistemaContable_UCR_DataAccess
             stringConection.Close();
             return listaProductos;
         }
+        public int update(Productos producto)
+        {
+            try
+            {
+                SQLiteConnection stringConection;
+                Conection Conection = new Conection();
+
+                stringConection = Conection.getConection();
+                stringConection.Open();
+
+                string query = "update Productos set Producto = '" + producto.Producto + 
+                    "', Precio = '" + producto.Precio + "', IdTipo='" + producto.IdTipo +
+                    "', Descripcion='" + producto.Descripcion + "'where ID='" + producto.ID+"'";
+
+                SQLiteCommand command = new SQLiteCommand(query, stringConection);
+                int result = command.ExecuteNonQuery();
+                stringConection.Close();
+                return result;
+            }
+            catch (SQLiteException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return 0;
+            }
+        }
     }
 }

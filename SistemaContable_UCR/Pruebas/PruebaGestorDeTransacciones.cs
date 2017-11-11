@@ -2,7 +2,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SistemaContable_UCR_Busisness;
 using SistemaContable_UCR_Model;
-using System.Globalization;
 
 namespace SistemaContable_UCR_Pruebas
 {
@@ -31,7 +30,7 @@ namespace SistemaContable_UCR_Pruebas
         {
             CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
 
-            coordinadorTransacciones.getAll();
+            Console.WriteLine(coordinadorTransacciones.getAll().Count);
         }
 
         [TestMethod]
@@ -39,7 +38,7 @@ namespace SistemaContable_UCR_Pruebas
         {
             CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
 
-            coordinadorTransacciones.Find(25);
+            coordinadorTransacciones.Find(26);
         }
 
         [TestMethod]
@@ -53,10 +52,21 @@ namespace SistemaContable_UCR_Pruebas
         [TestMethod]
         public void TestMethod5()
         {
-            
             CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
 
-            coordinadorTransacciones.getByDate(DateTime.Now);
+            Console.WriteLine(coordinadorTransacciones.getByDate(DateTime.Now).Count);
+        }
+
+        [TestMethod]
+        public void TestMethod6()
+        {
+            CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
+
+            Transacciones transaccion = coordinadorTransacciones.Find(29);
+
+            transaccion.IdProducto = 3;
+
+            coordinadorTransacciones.Update(transaccion);
         }
     }
 }

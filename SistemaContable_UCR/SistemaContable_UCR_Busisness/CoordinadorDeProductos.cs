@@ -32,5 +32,17 @@ namespace SistemaContable_UCR_Busisness
             listaProductos = gestordeProductos.getForTipe(idTipe);
             return listaProductos;
         }
+        public bool updateProduct(Productos producto)
+        {
+            GestorDeProductos gestordeProductos = new GestorDeProductos();
+            if (gestordeProductos.update(producto)>0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
