@@ -35,7 +35,7 @@ namespace SistemaContable_UCR_DataAccess
                 return 1;
             }
         }
-        public Productos getById(string id)
+        public Productos getById(int id)
         {
             Productos producto = new Productos();
             SQLiteConnection stringConection;

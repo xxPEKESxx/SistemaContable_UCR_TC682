@@ -18,7 +18,7 @@ namespace SistemaContable_UCR_Busisness
             else
                 return false;
         }
-        public Productos getById(string id)
+        public Productos getById(int id)
         {
             GestorDeProductos gestordeProductos = new GestorDeProductos();
             return gestordeProductos.getById(id);
