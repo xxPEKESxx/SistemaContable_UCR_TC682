@@ -28,6 +28,8 @@ namespace SistemaContable_UCR_DataAccess
                 SQLiteCommand command = new SQLiteCommand(query, stringConection);
 
                 int result = command.ExecuteNonQuery();
+
+                stringConection.Close();
             }
             catch (SQLiteException ex)
             {
@@ -50,6 +52,8 @@ namespace SistemaContable_UCR_DataAccess
                 SQLiteCommand command = new SQLiteCommand(query, stringConection);
 
                 int result = command.ExecuteNonQuery();
+
+                stringConection.Close();
             }
             catch (SQLiteException ex)
             {
@@ -70,7 +74,9 @@ namespace SistemaContable_UCR_DataAccess
                 SQLiteCommand command = new SQLiteCommand(query, stringConection);
 
                 SQLiteDataReader datos = command.ExecuteReader();
-                
+
+                command.Dispose();
+
                 while (datos.Read())
                 {
                     transaccion = fillTransaction(datos);
@@ -129,6 +135,8 @@ namespace SistemaContable_UCR_DataAccess
                     {
                         using (SQLiteDataReader datos = cmd.ExecuteReader())
                         {
+                            cmd.Dispose();
+
                             while (datos.Read()){
 
                     laListaDeTransaccciones.Add(fillTransaction(datos));
@@ -160,6 +168,7 @@ namespace SistemaContable_UCR_DataAccess
                 SQLiteCommand command = new SQLiteCommand(query, stringConection);
                 SQLiteDataReader datos = command.ExecuteReader();
 
+                command.Dispose();
 
                 laListaDeTransaccciones = new List<Transacciones>();
 
@@ -194,6 +203,7 @@ namespace SistemaContable_UCR_DataAccess
                 SQLiteCommand command = new SQLiteCommand(query, stringConection);
                 SQLiteDataReader datos = command.ExecuteReader();
 
+                command.Dispose();
 
                 laListaDeTransaccciones = new List<Transacciones>();
 
