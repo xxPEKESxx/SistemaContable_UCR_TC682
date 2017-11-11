@@ -55,6 +55,7 @@
             this.metroPanel_Administration.VerticalScrollbarBarColor = true;
             this.metroPanel_Administration.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel_Administration.VerticalScrollbarSize = 10;
+            this.metroPanel_Administration.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel_Administration_Paint);
             // 
             // metroTile4
             // 

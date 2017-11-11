@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace SistemaContable_UCR_Model
 {
-    class Producto
+    public enum Tipos
     {
+
+        ProductoVenta = 1,
+        ProductoCompra = 2,
+        Venta = 3,
+        Compra = 4,
+
     }
 }

@@ -31,6 +31,7 @@ namespace SistemaContable_UCR_VIEWS
 
             if ((conetion.StartSesion(idUser.Text, metroTextBox_Password.Text)))
             {
+
                 Operation__Center Oc = new Operation__Center();
                 Oc.Visible = true;
                 Visible = false;
@@ -42,6 +43,14 @@ namespace SistemaContable_UCR_VIEWS
             }
 
 
+        }
+
+        private void metroTile_Register_Click(object sender, EventArgs e)
+        {
+            Register re = new Register();
+
+            re.Visible = true;
+            Visible = false;
         }
     }
 }

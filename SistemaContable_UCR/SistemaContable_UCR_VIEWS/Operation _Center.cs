@@ -22,5 +22,10 @@ namespace SistemaContable_UCR_VIEWS
         {
 
         }
+
+        private void metroPanel_Administration_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
