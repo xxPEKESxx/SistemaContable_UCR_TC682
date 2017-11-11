@@ -38,6 +38,12 @@ namespace SistemaContable_UCR_Pruebas
             Console.Write(coordinadorDeProductos.getForIdTipe(1).Count.ToString());
         }
         [TestMethod]
+        public void listarPorProducto()
+        {
+            CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
+            Console.Write(coordinadorDeProductos.getByProducto("n").Count);
+        }
+        [TestMethod]
         public void eliminarProducto()
         {
             CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
