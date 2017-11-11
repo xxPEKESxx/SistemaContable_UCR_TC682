@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Operation__Center));
             this.metroPanel_Administration = new MetroFramework.Controls.MetroPanel();
+            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_cerrar = new MetroFramework.Controls.MetroTile();
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
-            this.btn_cerrar = new MetroFramework.Controls.MetroTile();
             this.metroPanel_Administration.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +65,12 @@
             this.metroPanel_Administration.VerticalScrollbarSize = 10;
             this.metroPanel_Administration.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel_Administration_Paint);
             // 
+            // metroToolTip1
+            // 
+            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroToolTip1.StyleManager = null;
+            this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
             // label1
             // 
             this.label1.Image = global::SistemaContable_UCR_VIEWS.Properties.Resources.ucr_favicon;
@@ -72,6 +78,24 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 43);
             this.label1.TabIndex = 3;
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.ActiveControl = null;
+            this.btn_cerrar.BackColor = System.Drawing.Color.Maroon;
+            this.btn_cerrar.Location = new System.Drawing.Point(729, 225);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(111, 114);
+            this.btn_cerrar.Style = MetroFramework.MetroColorStyle.Red;
+            this.btn_cerrar.TabIndex = 2;
+            this.btn_cerrar.Text = "CERRAR";
+            this.btn_cerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_cerrar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.icons8_Shutdown_48;
+            this.btn_cerrar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_cerrar.UseSelectable = true;
+            this.btn_cerrar.UseStyleColors = true;
+            this.btn_cerrar.UseTileImage = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // metroTile5
             // 
@@ -163,30 +187,6 @@
             this.metroTile1.UseTileImage = true;
             this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
-            // metroToolTip1
-            // 
-            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroToolTip1.StyleManager = null;
-            this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
-            // btn_cerrar
-            // 
-            this.btn_cerrar.ActiveControl = null;
-            this.btn_cerrar.BackColor = System.Drawing.Color.Maroon;
-            this.btn_cerrar.Location = new System.Drawing.Point(729, 225);
-            this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(111, 114);
-            this.btn_cerrar.Style = MetroFramework.MetroColorStyle.Red;
-            this.btn_cerrar.TabIndex = 2;
-            this.btn_cerrar.Text = "CERRAR";
-            this.btn_cerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_cerrar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.icons8_Shutdown_48;
-            this.btn_cerrar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_cerrar.UseSelectable = true;
-            this.btn_cerrar.UseStyleColors = true;
-            this.btn_cerrar.UseTileImage = true;
-            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
-            // 
             // Operation__Center
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,6 +198,7 @@
             this.Name = "Operation__Center";
             this.Resizable = false;
             this.Text = "Sistema Contable UCR (tc682)";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Operation__Center_FormClosed);
             this.Load += new System.EventHandler(this.Operation__Center_Load);
             this.metroPanel_Administration.ResumeLayout(false);
             this.ResumeLayout(false);

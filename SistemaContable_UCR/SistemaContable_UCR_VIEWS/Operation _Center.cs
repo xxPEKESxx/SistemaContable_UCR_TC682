@@ -56,5 +56,10 @@ namespace SistemaContable_UCR_VIEWS
         {
             Application.Exit();
         }
+
+        private void Operation__Center_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
