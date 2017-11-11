@@ -47,6 +47,7 @@
     <Compile Include="Conection.cs" />
     <Compile Include="GestorDeProductos.cs" />
     <Compile Include="GestorDeTransacciones.cs" />
+    <Compile Include="GestorDeUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

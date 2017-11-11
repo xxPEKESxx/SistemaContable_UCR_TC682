@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CoordinadorDeProductos.cs" />
     <Compile Include="CoordinadorDeTransacciones.cs" />
+    <Compile Include="CoordinadorDeUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
