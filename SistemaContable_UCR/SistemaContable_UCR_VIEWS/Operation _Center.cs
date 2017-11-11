@@ -27,5 +27,13 @@ namespace SistemaContable_UCR_VIEWS
         {
 
         }
+
+        private void metroTile3_Click(object sender, EventArgs e)
+        {
+            FRM_Productos pro = new FRM_Productos();
+            pro.Visible = true;
+
+            this.Visible = false;
+        }
     }
 }
