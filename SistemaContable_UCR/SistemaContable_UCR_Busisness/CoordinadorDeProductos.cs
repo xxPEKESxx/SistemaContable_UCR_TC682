@@ -18,5 +18,12 @@ namespace SistemaContable_UCR_Busisness
             else
                 return false;
         }
+        public List<Productos> getAllProducts()
+        {
+            GestorDeProductos gestordeProductos = new GestorDeProductos();
+            List<Productos> listaProductos = new List<Productos>();
+            listaProductos = gestordeProductos.getAllProducts();
+            return listaProductos;
+        }
     }
 }
