@@ -24,7 +24,7 @@ namespace SistemaContable_UCR_VIEWS
             Productos pr = new Productos();
 
             CoordinadorDeProductos cp = new CoordinadorDeProductos();
-            List<Productos> data = cp.getForIdTipe(1);
+            List<Productos> data = cp.getAllProducts();
             DataTable _table = ConvertirListaToDataTable(data);
 
             
