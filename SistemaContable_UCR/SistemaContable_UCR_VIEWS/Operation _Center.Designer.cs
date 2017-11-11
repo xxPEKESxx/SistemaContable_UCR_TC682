@@ -37,12 +37,14 @@
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
+            this.btn_cerrar = new MetroFramework.Controls.MetroTile();
             this.metroPanel_Administration.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroPanel_Administration
             // 
             this.metroPanel_Administration.Controls.Add(this.label1);
+            this.metroPanel_Administration.Controls.Add(this.btn_cerrar);
             this.metroPanel_Administration.Controls.Add(this.metroTile5);
             this.metroPanel_Administration.Controls.Add(this.metroTile4);
             this.metroPanel_Administration.Controls.Add(this.metroTile3);
@@ -77,7 +79,7 @@
             this.metroTile5.BackColor = System.Drawing.Color.Maroon;
             this.metroTile5.Location = new System.Drawing.Point(729, 65);
             this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(111, 274);
+            this.metroTile5.Size = new System.Drawing.Size(111, 114);
             this.metroTile5.Style = MetroFramework.MetroColorStyle.Red;
             this.metroTile5.TabIndex = 2;
             this.metroTile5.Text = "Creditos";
@@ -167,6 +169,24 @@
             this.metroToolTip1.StyleManager = null;
             this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.ActiveControl = null;
+            this.btn_cerrar.BackColor = System.Drawing.Color.Maroon;
+            this.btn_cerrar.Location = new System.Drawing.Point(729, 225);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(111, 114);
+            this.btn_cerrar.Style = MetroFramework.MetroColorStyle.Red;
+            this.btn_cerrar.TabIndex = 2;
+            this.btn_cerrar.Text = "CERRAR";
+            this.btn_cerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_cerrar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.icons8_Shutdown_48;
+            this.btn_cerrar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_cerrar.UseSelectable = true;
+            this.btn_cerrar.UseStyleColors = true;
+            this.btn_cerrar.UseTileImage = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            // 
             // Operation__Center
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,5 +213,6 @@
         private MetroFramework.Controls.MetroTile metroTile1;
         private System.Windows.Forms.Label label1;
         private MetroFramework.Components.MetroToolTip metroToolTip1;
+        private MetroFramework.Controls.MetroTile btn_cerrar;
     }
 }

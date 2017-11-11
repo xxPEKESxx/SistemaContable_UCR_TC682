@@ -115,6 +115,13 @@ namespace SistemaContable_UCR_VIEWS
         private void btn_agreagar_producto_Click(object sender, EventArgs e)
         {
 
+        
+
+
+        }
+
+        private void btn_agregarProducto_Click(object sender, EventArgs e)
+        {
             Productos pr = new Productos();
 
             CoordinadorDeProductos cp = new CoordinadorDeProductos();
@@ -148,8 +155,6 @@ namespace SistemaContable_UCR_VIEWS
             {
                 MetroMessageBox.Show(this, "FAVOR NO DEJAR CAMPOS EN BLANCO", "peligro!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-
 
 
 
