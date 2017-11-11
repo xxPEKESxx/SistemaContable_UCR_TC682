@@ -12,13 +12,14 @@ namespace SistemaContable_UCR_Pruebas
         public void TestMethod1()
         {
             CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
-            Transacciones transaccion = new Transacciones();
-
-            transaccion.IdProducto = 1;
-            transaccion.Cantidad = 1;
-            transaccion.Total = 1;
-            transaccion.Fecha = DateTime.Now;
-            transaccion.IdTipo = 1;
+            Transacciones transaccion = new Transacciones
+            {
+            IdProducto = 1,
+            Cantidad = 1,
+            Total = 1,
+            Fecha = DateTime.Now,
+            IdTipo = 1,
+        };
 
             coordinadorTransacciones.Save(transaccion);
         }
