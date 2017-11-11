@@ -17,7 +17,7 @@ namespace SistemaContable_UCR_Model
 
         public float Total { get; set; }
 
-        public DateTime Fecha { get; set; }
+        public String Fecha { get; set; }
 
         public int IdTipo { get; set; }
     }

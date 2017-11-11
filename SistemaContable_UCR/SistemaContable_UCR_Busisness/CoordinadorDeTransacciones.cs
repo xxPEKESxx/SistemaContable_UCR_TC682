@@ -16,7 +16,17 @@ namespace SistemaContable_UCR_Busisness
         {
             GestorDeTransacciones gestor = new GestorDeTransacciones();
 
+
+            laNuevaTransaccion.Fecha = DateTimeSQLite(DateTime.Now);
+
             gestor.Save(laNuevaTransaccion);
+        }
+
+        private string DateTimeSQLite(DateTime datetime)
+        {
+            string dateTimeFormat = "{0}-{1}-{2}";
+
+            return string.Format(dateTimeFormat, datetime.Year, datetime.Month, datetime.Day);
         }
 
         public void Update(SistemaContable_UCR_Model.Transacciones laTransaccion)

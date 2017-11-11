@@ -56,6 +56,7 @@ namespace SistemaContable_UCR_DataAccess
                 stringConection.Open();
 
                 int result;
+
                 string query = "update Transacciones set IdProducto=" + laTransaccion.IdProducto +
                     ", Cantidad=" + laTransaccion.Cantidad + ", Total=" + laTransaccion.Total +
                     ", Fecha=" + laTransaccion.Fecha + ", IdTipo=" + laTransaccion.IdTipo +
@@ -103,11 +104,11 @@ namespace SistemaContable_UCR_DataAccess
                     IdProducto = datos.GetInt32(1),
                     Cantidad = datos.GetInt32(2),
                     Total = datos.GetFloat(3),
-                    Fecha = datos.GetDateTime(4),
+                    Fecha = datos[4].ToString(),
                     IdTipo = datos.GetInt32(5),
                 };
 
-                Console.WriteLine("si trae");
+                laListaDeTransaccciones.Add(transaccion);
             }
 
             return laListaDeTransaccciones;
