@@ -11,7 +11,7 @@ namespace SistemaContable_UCR_DataAccess
     public class GestorDeTransacciones
     {
 
-        public void Agregar(Transacciones laNuevaTransaccion)
+        public void saveTransaction(Transacciones laNuevaTransaccion)
         {
             try {
                 SQLiteConnection stringConection;
