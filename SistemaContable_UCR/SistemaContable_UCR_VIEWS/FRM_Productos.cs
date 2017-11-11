@@ -21,29 +21,20 @@ namespace SistemaContable_UCR_VIEWS
         public FRM_Productos()
         {
             InitializeComponent();
+
+            cargarLista();
+            
+            
+        }
+        public void cargarLista() {
             Productos pr = new Productos();
 
             CoordinadorDeProductos cp = new CoordinadorDeProductos();
             List<Productos> data = cp.getAllProducts();
             DataTable _table = ConvertirListaToDataTable(data);
 
-            
-            
-            //foreach (Productos item in data)
-            //{
-             //   DataRow dr = _table.NewRow();
-              //  dr[0] = item;
-              //  _table.Rows.Add(dr);
-            //}
             dataGrip_listaProductos.DataSource = _table;
-            //pr = cp.getAllProducts();
-            //DataTable table = new DataTable();
-            //using (var reader = ObjectReader.Create(data, "Id", "Name", "Description"))
-            //{
-            //    _table.Load(reader);
-            //}
         }
-
         private void FRM_Productos_Load(object sender, EventArgs e)
         {
 
@@ -64,29 +55,27 @@ namespace SistemaContable_UCR_VIEWS
 
             float precio = 0;
             if (txtproducto_descriocion.Text != "" && txtproducto_precio.Text != ""
-                && txtproducto_name.Text != "" && cbx_tipoProducto.Text != "")
-            {
-                pr.ID = 20;
-                pr.Producto = "perra";
-                pr.Precio = 5896;
-                pr.IdTipo = 1;
-                pr.Descripcion = "gtgtgt";
+                && txtproducto_name.Text != "") { 
+          
 
-                //if (cbx_tipoProducto.Text.Equals("Compras"))
-                //{
-                //    pr.IdTipo = 1;
-                //}
-                //else
-                //{
-                //    pr.IdTipo = 2;
-                //}
+                precio = float.Parse(txtproducto_precio.Text.ToString());
+                pr.Precio = precio;
+                pr.Descripcion = txtproducto_descriocion.Text;
+                pr.Producto = txtproducto_name.Text;
 
-                //precio = float.Parse(txtproducto_precio.Text.ToString());
-                //pr.Precio = precio;
-                //pr.Descripcion = txtproducto_descriocion.Text;
-                //pr.Producto = txtproducto_name.Text;
+                cp.saveProduct(pr);
 
-            cp.saveProduct(pr);
+                if (cp.saveProduct(pr))
+                {
+
+                    MetroMessageBox.Show(this, "Producto registrado con exito", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargarLista();
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "Producto no registrado", "Por favor verificar los capos en blanco," + "\n O verifique que el nombre del producto no esta repetido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargarLista();
+                }
             }
             else
             {
@@ -95,15 +84,8 @@ namespace SistemaContable_UCR_VIEWS
 
 
 
-            if (true)
-            {
-                MetroMessageBox.Show(this, "Producto registrado con exito", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            else
-            {
-                MetroMessageBox.Show(this, "Producto no registrado", "Por favor verificar los capos en blanco," + "\n O verifique que el nombre del producto no esta repetido", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+           
+           
 
 
         }
