@@ -42,6 +42,7 @@
             this.producto_Atras = new MetroFramework.Controls.MetroTile();
             this.producto_Eliminar = new MetroFramework.Controls.MetroTile();
             this.btn_Agregar = new MetroFramework.Controls.MetroTile();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrip_listaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -267,14 +268,25 @@
             this.btn_Agregar.Size = new System.Drawing.Size(80, 106);
             this.btn_Agregar.TabIndex = 4;
             this.btn_Agregar.Text = "AGREGAR";
+            this.btn_Agregar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_thumb_up_add;
             this.btn_Agregar.UseSelectable = true;
+            this.btn_Agregar.UseTileImage = true;
             this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
+            // 
+            // label1
+            // 
+            this.label1.Image = global::SistemaContable_UCR_VIEWS.Properties.Resources.ucr_favicon;
+            this.label1.Location = new System.Drawing.Point(-30, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 37);
+            this.label1.TabIndex = 5;
             // 
             // FRM_Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(468, 629);
+            this.ClientSize = new System.Drawing.Size(471, 635);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Agregar);
             this.Controls.Add(this.producto_Buscar);
             this.Controls.Add(this.producto_Edita);
@@ -286,6 +298,7 @@
             this.Controls.Add(this.dataGrip_listaProductos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FRM_Productos";
+            this.Resizable = false;
             this.Text = "Gestion de Productos";
             this.Load += new System.EventHandler(this.FRM_Productos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrip_listaProductos)).EndInit();
@@ -305,5 +318,6 @@
         private MetroFramework.Controls.MetroTile producto_Atras;
         private MetroFramework.Components.MetroToolTip metroToolTip1;
         private MetroFramework.Controls.MetroTile btn_Agregar;
+        private System.Windows.Forms.Label label1;
     }
 }
