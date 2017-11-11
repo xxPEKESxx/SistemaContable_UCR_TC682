@@ -11,6 +11,7 @@ using MetroFramework;
 using MetroFramework.Forms;
 using SistemaContable_UCR_Busisness;
 using SistemaContable_UCR_Model;
+using ObjectReader;
 
 
 namespace SistemaContable_UCR_VIEWS
@@ -20,6 +21,25 @@ namespace SistemaContable_UCR_VIEWS
         public FRM_Productos()
         {
             InitializeComponent();
+            Productos pr = new Productos();
+
+            CoordinadorDeProductos cp = new CoordinadorDeProductos();
+            DataTable _table = new DataTable();
+
+            dataGrip_listaProductos.DataSource = _table;
+            List<Productos> data  = cp.getAllProducts();
+            foreach (Productos item in data)
+            {
+                DataRow dr = _table.NewRow();
+                dr[0] = item;
+                _table.Rows.Add(dr);
+            }
+            //pr = cp.getAllProducts();
+            //DataTable table = new DataTable();
+            //using (var reader = ObjectReader.Create(data, "Id", "Name", "Description"))
+            //{
+            //    _table.Load(reader);
+            //}
         }
 
         private void FRM_Productos_Load(object sender, EventArgs e)
