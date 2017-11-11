@@ -24,7 +24,7 @@ namespace SistemaContable_UCR_VIEWS
             Productos pr = new Productos();
 
             CoordinadorDeProductos cp = new CoordinadorDeProductos();
-            List<Productos> data = cp.getAllProducts();
+            List<Productos> data = cp.getForIdTipe(1);
             DataTable _table = ConvertirListaToDataTable(data);
 
             
@@ -121,6 +121,7 @@ namespace SistemaContable_UCR_VIEWS
             {
                 DataRow row = table.NewRow();
                 foreach (PropertyDescriptor prop in properties) row[prop.Name] = prop.GetValue(item) ?? DBNull.Value;
+                
                 table.Rows.Add(row);
             }
             return table;
