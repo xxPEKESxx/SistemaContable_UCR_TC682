@@ -151,5 +151,20 @@
   <ItemGroup>
     <None Include="Resources\icons8_Long_Arrow_Left_48.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.book.list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.people.multiple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.clean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.book.hardcover.open.writing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.list.hidden.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
