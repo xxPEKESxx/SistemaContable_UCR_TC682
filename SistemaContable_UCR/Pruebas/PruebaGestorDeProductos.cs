@@ -13,7 +13,7 @@ namespace SistemaContable_UCR_Pruebas
         {
             CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
             Productos producto = new Productos();
-            producto.Producto = "Yuca";
+            producto.Producto = "Yuca1";
             producto.Precio = 2000;
             producto.Descripcion = "Sabroson";
             coordinadorDeProductos.saveProduct(producto);

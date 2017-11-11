@@ -10,15 +10,15 @@ namespace SistemaContable_UCR_DataAccess
 {
     public class GestorDeProductos
     {
-        Conection conection = new Conection();
-
+        Conection conection;
+        SQLiteConnection stringConection;
+        
         public int saveProduct(Productos producto)
         {
-            SQLiteConnection stringConection = conection.getConection();
-
+            conection = new Conection();
+            stringConection = new SQLiteConnection();
+            stringConection = conection.getConection();
             int result;
-            try
-            {
                 stringConection.Open();
                 string query = "insert into Productos (Producto, Precio, Descripcion) values('" +
                      producto.Producto + "','" + producto.Precio + "','" + producto.Descripcion + "')";
@@ -27,13 +27,25 @@ namespace SistemaContable_UCR_DataAccess
                 cmd.CommandText = query;
                 result = cmd.ExecuteNonQuery();
                 stringConection.Close();
-                return result;
-            }
-            catch (SQLiteException ex)
+            return result;
+            
+        }
+        public bool validateProducto(string producto)
+        {
+            conection = new Conection();
+            stringConection = new SQLiteConnection();
+            stringConection = conection.getConection();
+            stringConection.Open();
+            string query = "select * from Productos where Producto='" + producto + "'";
+            SQLiteCommand command = new SQLiteCommand(query, stringConection);
+            SQLiteDataReader datos = command.ExecuteReader();
+            if (datos.Read())
             {
-                Console.WriteLine(ex.Message);
-                return 1;
+                stringConection.Close();
+                return true;
             }
+            stringConection.Close();
+            return false;
         }
         public Productos getById(int id)
         {
