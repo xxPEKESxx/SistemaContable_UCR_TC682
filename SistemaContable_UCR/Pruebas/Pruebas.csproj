@@ -51,6 +51,7 @@
     <Compile Include="GestorDeProductos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GestorDeTransacciones.cs" />
+    <Compile Include="PruebaGestorDeProductos.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
