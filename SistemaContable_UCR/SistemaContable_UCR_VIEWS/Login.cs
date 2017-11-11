@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using MetroFramework;
 using SistemaContable_UCR_Model;
+using SistemaContable_UCR_Busisness;
 
 namespace SistemaContable_UCR_VIEWS
 {
@@ -27,9 +28,11 @@ namespace SistemaContable_UCR_VIEWS
 
         private void metroTile_Entrar_Click(object sender, EventArgs e)
         {
+            CoordinadorDeUsuarios cu = new CoordinadorDeUsuarios();
+            
             Conection conetion = new Conection();
 
-            if ((conetion.StartSesion(idUser.Text, metroTextBox_Password.Text)))
+            if ((cu.login(idUser.Text,metroTextBox_Password.Text)))
             {
 
                 Operation__Center Oc = new Operation__Center();

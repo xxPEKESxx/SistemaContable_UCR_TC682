@@ -117,6 +117,7 @@
             this.metroTile3.UseSelectable = true;
             this.metroTile3.UseStyleColors = true;
             this.metroTile3.UseTileImage = true;
+            this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click);
             // 
             // metroTile2
             // 
@@ -127,7 +128,7 @@
             this.metroTile2.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTile2.TabIndex = 2;
             this.metroTile2.Text = "Usuarios";
-            this.metroTile2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTile2.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroTile2.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_people_multiple;
             this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile2.UseSelectable = true;
