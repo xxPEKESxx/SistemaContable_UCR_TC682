@@ -56,24 +56,27 @@ namespace SistemaContable_UCR_DataAccess
         }
         public Productos getById(int id)
         {
+            Conection conection = new Conection();
             Productos producto = new Productos();
-            SQLiteConnection stringConection;
-            Conection myconection = new Conection();
-
-            stringConection = myconection.getConection();
-
-            stringConection.Open();
-            string query = "select * from Productos where ID='"+id+"'";
-            SQLiteCommand command = new SQLiteCommand(query, stringConection);
-            SQLiteDataReader datos = command.ExecuteReader();
-            if (datos.Read())
+            string query = "select * from Productos where ID='" + id + "'";
+            using (SQLiteConnection stringConection = new SQLiteConnection(conection.getConection()))
             {
-                producto.ID = datos.GetInt32(0);
-                producto.Producto = datos.GetString(1);
-                producto.Precio = datos.GetFloat(2);
-                producto.Descripcion = datos.GetString(3);
+                stringConection.Open();
+                using (SQLiteCommand cmd = new SQLiteCommand(query, stringConection))
+                {
+                    using (SQLiteDataReader rdr = cmd.ExecuteReader())
+                    {
+                        cmd.Dispose();
+
+                        while (rdr.Read())
+                        {
+                            producto = fillProduct(rdr);
+                        }
+                        rdr.Close();
+                    }
+                }
+                stringConection.Close();
             }
-            stringConection.Close();
             return producto;
         }
         public List<Productos> getAllProducts()
@@ -104,7 +107,6 @@ namespace SistemaContable_UCR_DataAccess
         }
         public List<Productos> getByProduct(string product)
         {
-            Productos producto;
             List<Productos> listaProductos = new List<Productos>();
             SQLiteConnection stringConection;
             Conection myconection = new Conection();
@@ -138,6 +140,7 @@ namespace SistemaContable_UCR_DataAccess
 
                 SQLiteCommand command = new SQLiteCommand(query, stringConection);
                 int result = command.ExecuteNonQuery();
+                command.Dispose();
                 stringConection.Close();
                 return result;
             }
@@ -162,7 +165,7 @@ namespace SistemaContable_UCR_DataAccess
                 SQLiteCommand command = new SQLiteCommand(query, stringConection);
 
                 int result = command.ExecuteNonQuery();
-
+                command.Dispose();
                 stringConection.Close();
                 return result;
             }
