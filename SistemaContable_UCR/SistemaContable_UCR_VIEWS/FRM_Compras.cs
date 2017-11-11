@@ -58,5 +58,10 @@ namespace SistemaContable_UCR_VIEWS
             }
             return table;
         }
+
+        private void dataGrip_listaProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

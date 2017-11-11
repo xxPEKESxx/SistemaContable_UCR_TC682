@@ -156,5 +156,19 @@ namespace SistemaContable_UCR_VIEWS
             txtVentas_Name.Text = (pr.Producto);
 
         }
+
+        private void producto_Atras_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Operation__Center oc = new Operation__Center();
+            oc.Visible = true;
+
+        }
+
+        private void FRM_Ventas_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Operation__Center oc = new Operation__Center();
+            oc.Visible = true;
+        }
     }
 }
