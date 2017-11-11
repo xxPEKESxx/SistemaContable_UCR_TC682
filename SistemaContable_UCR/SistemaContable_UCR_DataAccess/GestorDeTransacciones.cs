@@ -75,6 +75,7 @@ namespace SistemaContable_UCR_DataAccess
                 {
                     transaccion = fillTransaction(datos);
                 }
+                datos.Close();
 
                 stringConection.Close();
             }
@@ -132,6 +133,7 @@ namespace SistemaContable_UCR_DataAccess
 
                     laListaDeTransaccciones.Add(fillTransaction(datos));
                 }
+                            datos.Close();
         }
                     }
                     c.Close();
@@ -166,6 +168,7 @@ namespace SistemaContable_UCR_DataAccess
                     laListaDeTransaccciones.Add(fillTransaction(datos));
                 }
 
+                datos.Close();
                 stringConection.Close();
             }
             catch (SQLiteException ex)
@@ -199,6 +202,7 @@ namespace SistemaContable_UCR_DataAccess
                     laListaDeTransaccciones.Add(fillTransaction(datos));
                 }
 
+                datos.Close();
                 stringConection.Close();
             }
             catch (SQLiteException ex)
