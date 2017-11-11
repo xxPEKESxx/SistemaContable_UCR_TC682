@@ -30,7 +30,7 @@ namespace SistemaContable_UCR_VIEWS
         {
             CoordinadorDeUsuarios cu = new CoordinadorDeUsuarios();
             
-            Conection conetion = new Conection();
+       
 
             if ((cu.login(idUser.Text,metroTextBox_Password.Text)))
             {
