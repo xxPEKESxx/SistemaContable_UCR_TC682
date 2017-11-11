@@ -93,6 +93,45 @@ namespace SistemaContable_UCR_VIEWS
         private void dataGrip_listaProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+            //Productos pr = new Productos();
+            //DataGridView dgv = sender as DataGridView;
+
+            //if (dgv == null)
+            //    return;
+            //if (dgv.CurrentRow.Selected)
+            //{
+            //    Productos pro = new Productos
+            //    {
+            //        ID = (int)dgv.CurrentRow.Cells["ID"].Value,
+
+
+            //    };
+            //    IDProducto = pr.ID;
+            //    CoordinadorDeProductos cp = new CoordinadorDeProductos();
+            //    pr = cp.getById(pro.ID);
+            //}
+
+            //txtVentas_Name.Text = (pr.Precio.ToString());
+            
+        }
+
+        private void btn_agreagar_user_Click(object sender, EventArgs e)
+        {
+            Transacciones tran = new Transacciones();
+
+            Productos pro = new Productos();
+
+            CoordinadorDeProductos cp = new CoordinadorDeProductos();
+            CoordinadorDeTransacciones ct = new CoordinadorDeTransacciones();
+            tran.Cantidad = int.Parse(txtVentas_Cantidad.Text);
+            tran.IdProducto= IDProducto;
+            tran.IdTipo = 1;
+
+            ct.Save(tran);
+        }
+
+        private void dataGrip_listaProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             Productos pr = new Productos();
             DataGridView dgv = sender as DataGridView;
 
@@ -112,22 +151,7 @@ namespace SistemaContable_UCR_VIEWS
             }
 
             txtVentas_Name.Text = (pr.Precio.ToString());
-            
-        }
 
-        private void btn_agreagar_user_Click(object sender, EventArgs e)
-        {
-            Transacciones tran = new Transacciones();
-
-            Productos pro = new Productos();
-
-            CoordinadorDeProductos cp = new CoordinadorDeProductos();
-            CoordinadorDeTransacciones ct = new CoordinadorDeTransacciones();
-            tran.Cantidad = int.Parse(txtVentas_Cantidad.Text);
-            tran.IdProducto= IDProducto;
-            tran.IdTipo = 1;
-
-            ct.Save(tran);
         }
     }
 }
