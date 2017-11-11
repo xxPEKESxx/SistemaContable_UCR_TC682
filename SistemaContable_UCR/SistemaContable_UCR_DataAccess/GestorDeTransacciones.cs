@@ -12,8 +12,10 @@ namespace SistemaContable_UCR_DataAccess
     {
 
 
-        public void Save(Transacciones laNuevaTransaccion)
+        public int Save(Transacciones laNuevaTransaccion)
         {
+            int result = 0;
+
             Conection Conection = new Conection();
             string query = "insert into Transacciones (IdProducto, Cantidad, Total, Fecha, IdTipo) values ('" + 
                     laNuevaTransaccion.IdProducto + "', '" + laNuevaTransaccion.Cantidad + "', '" + 
@@ -24,15 +26,18 @@ namespace SistemaContable_UCR_DataAccess
                     stringConection.Open();
                     using (SQLiteCommand cmd = new SQLiteCommand(query, stringConection))
                     {
-                        cmd.ExecuteNonQuery();
+                       result = cmd.ExecuteNonQuery();
                         cmd.Dispose();
                     }
                     stringConection.Close();
                 }
+
+            return result;
         }
 
-        public void Update(Transacciones laTransaccion)
+        public int Update(Transacciones laTransaccion)
         {
+            int result = 0;
             Conection Conection = new Conection();
             try
             {
@@ -46,7 +51,7 @@ namespace SistemaContable_UCR_DataAccess
                     c.Open();
                     using (SQLiteCommand cmd = new SQLiteCommand(query, c))
                     {
-                        cmd.ExecuteNonQuery();
+                        result = cmd.ExecuteNonQuery();
                         cmd.Dispose();
                     }
                     c.Close();
@@ -56,6 +61,8 @@ namespace SistemaContable_UCR_DataAccess
             {
                 Console.WriteLine(ex.Message);
             }
+
+            return result;
         }
 
         public Transacciones getById(int Id)
@@ -93,10 +100,10 @@ namespace SistemaContable_UCR_DataAccess
             return transaccion;
         }
 
-        public Transacciones Delete(int Id)
+        public int Delete(int Id)
         {
+            int result = 0;
         Conection Conection = new Conection();
-        Transacciones transaccion = null;
             try
             {
                 string query = "delete from Transacciones where ID=" + Id;
@@ -106,7 +113,7 @@ namespace SistemaContable_UCR_DataAccess
                     c.Open();
                     using (SQLiteCommand cmd = new SQLiteCommand(query, c))
                     {
-                        cmd.ExecuteNonQuery();
+                        result = cmd.ExecuteNonQuery();
                         cmd.Dispose();
                     }
                     c.Close();
@@ -117,7 +124,7 @@ namespace SistemaContable_UCR_DataAccess
                 Console.WriteLine(ex.Message);
             }
 
-            return transaccion;
+            return result;
         }
 
         public List<Transacciones> getAll() {

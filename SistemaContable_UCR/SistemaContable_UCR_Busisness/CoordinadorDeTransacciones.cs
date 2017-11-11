@@ -12,7 +12,7 @@ namespace SistemaContable_UCR_Busisness
     public class CoordinadorDeTransacciones
     {
 
-        public void Save(SistemaContable_UCR_Model.Transacciones laNuevaTransaccion)
+        public int Save(SistemaContable_UCR_Model.Transacciones laNuevaTransaccion)
         {
             GestorDeTransacciones gestor = new GestorDeTransacciones();
 
@@ -23,7 +23,7 @@ namespace SistemaContable_UCR_Busisness
             laNuevaTransaccion.Total = laNuevaTransaccion.Cantidad * producto.Precio;
             laNuevaTransaccion.Fecha = DateTimeSQLite(DateTime.Now);
 
-            gestor.Save(laNuevaTransaccion);
+            return gestor.Save(laNuevaTransaccion);
         }
 
         private string DateTimeSQLite(DateTime datetime)
@@ -33,13 +33,13 @@ namespace SistemaContable_UCR_Busisness
             return string.Format(dateTimeFormat, datetime.Year, datetime.Month, datetime.Day);
         }
 
-        public void Update(SistemaContable_UCR_Model.Transacciones laTransaccion)
+        public int Update(SistemaContable_UCR_Model.Transacciones laTransaccion)
         {
             GestorDeTransacciones gestor = new GestorDeTransacciones();
             DateTime fecha = DateTime.Parse(laTransaccion.Fecha);
             laTransaccion.Fecha = DateTimeSQLite(fecha);
 
-            gestor.Update(laTransaccion);
+            return gestor.Update(laTransaccion);
         }
 
         public Transacciones getById(int Id)
@@ -49,11 +49,11 @@ namespace SistemaContable_UCR_Busisness
             return gestor.getById(Id);
         }
 
-        public void Delete(int Id)
+        public int Delete(int Id)
         {
             GestorDeTransacciones gestor = new GestorDeTransacciones();
 
-            gestor.Delete(Id);
+            return gestor.Delete(Id);
         }
 
         public List<Transacciones> getAll() {
