@@ -11,7 +11,7 @@ using MetroFramework;
 using MetroFramework.Forms;
 using SistemaContable_UCR_Busisness;
 using SistemaContable_UCR_Model;
-using ObjectReader;
+
 
 
 namespace SistemaContable_UCR_VIEWS
