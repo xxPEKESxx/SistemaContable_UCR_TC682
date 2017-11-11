@@ -87,6 +87,7 @@
             this.dataGrip_listaProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGrip_listaProductos.Size = new System.Drawing.Size(424, 283);
             this.dataGrip_listaProductos.TabIndex = 0;
+            this.dataGrip_listaProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrip_listaProductos_CellClick);
             // 
             // txtproducto_precio
             // 
@@ -218,6 +219,7 @@
         " dar click izquierdo\r\ncon tu mouse.");
             this.producto_Edita.UseSelectable = true;
             this.producto_Edita.UseTileImage = true;
+            this.producto_Edita.Click += new System.EventHandler(this.producto_Edita_Click);
             // 
             // producto_Atras
             // 

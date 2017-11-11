@@ -18,6 +18,7 @@ namespace SistemaContable_UCR_VIEWS
 {
     public partial class FRM_Productos : MetroForm
     {
+        
         public FRM_Productos()
         {
             InitializeComponent();
@@ -108,5 +109,46 @@ namespace SistemaContable_UCR_VIEWS
             return table;
         }
 
+        private void dataGrip_listaProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Productos pr = new Productos();
+            //Productos aStudent = (Productos)dataGrip_listaProductos.CurrentRow.DataBoundItem;
+
+            //DataGridViewImageCell cell = (DataGridViewImageCell)
+            //dataGrip_listaProductos.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+            DataGridView dgv = sender as DataGridView;
+            if (dgv == null)
+                return;
+            if (dgv.CurrentRow.Selected)
+            {
+                Productos pro = new Productos
+                {
+                    ID = (int)dgv.CurrentRow.Cells["ID"].Value,
+
+                };
+
+                CoordinadorDeProductos cp = new CoordinadorDeProductos();
+                pr = cp.getById(pro.ID);
+            }
+
+            txtproducto_precio.Text = (pr.Precio.ToString());
+
+
+        }
+
+        private void producto_Edita_Click(object sender, EventArgs e)
+        {
+            Productos pr = new Productos();
+
+            CoordinadorDeProductos cp = new CoordinadorDeProductos();
+            Productos aStudent = (Productos)dataGrip_listaProductos.CurrentRow.DataBoundItem;
+
+            pr = cp.getById(aStudent.ID);
+
+            
+            txtproducto_precio.Text=(pr.Precio.ToString());
+            //Productos pro = (Productos).SelectedItem;
+        }
     }
 }
