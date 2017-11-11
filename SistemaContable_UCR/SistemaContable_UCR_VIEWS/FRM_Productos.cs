@@ -133,21 +133,27 @@ namespace SistemaContable_UCR_VIEWS
             }
 
             txtproducto_precio.Text = (pr.Precio.ToString());
+            txtproducto_name.Text = (pr.Producto.ToString());
+            txtproducto_descriocion.Text = (pr.Descripcion.ToString());
 
 
         }
 
         private void producto_Edita_Click(object sender, EventArgs e)
         {
-            Productos pr = new Productos();
+            Productos producto = new Productos();
 
-            CoordinadorDeProductos cp = new CoordinadorDeProductos();
-            Productos aStudent = (Productos)dataGrip_listaProductos.CurrentRow.DataBoundItem;
+            CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
 
-            pr = cp.getById(aStudent.ID);
+            float precio = float.Parse(txtproducto_precio.Text.ToString());
+            producto.Precio = precio;
+            producto.Descripcion = txtproducto_descriocion.Text;
+            producto.Producto = txtproducto_name.Text;
+            coordinadorDeProductos.updateProduct(producto);
+            
 
             
-            txtproducto_precio.Text=(pr.Precio.ToString());
+            
             //Productos pro = (Productos).SelectedItem;
         }
     }
