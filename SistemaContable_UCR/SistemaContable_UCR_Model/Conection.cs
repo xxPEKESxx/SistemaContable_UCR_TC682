@@ -24,19 +24,22 @@ namespace SistemaContable_UCR_Model
                
                 stringConection = new SQLiteConnection("Data Source=SC_UCR_TC682.s3db");
                 stringConection.Open();
-                string query = "select * from Users where IdUsers=" + idUser;
+                string query = "select * from Users";
                 SQLiteCommand command = new SQLiteCommand(query, stringConection);
                 SQLiteDataReader datos = command.ExecuteReader();
 
-                if (datos.GetString(1).Equals(idUser) && datos.GetString(4).Equals(password))
-                {
-                    exists = true;
+                while (datos.Read()) {
+                    if (datos.GetString(1).Equals(idUser) && datos.GetString(4).Equals(password))
+                    {
+                        exists = true;
 
+                    }
+                    else
+                    {
+                        exists = false;
+                    }
                 }
-                else
-                {
-                    exists = false;
-                }
+               
 
 
             }
