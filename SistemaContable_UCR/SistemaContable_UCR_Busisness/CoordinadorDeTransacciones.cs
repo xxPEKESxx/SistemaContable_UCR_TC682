@@ -32,15 +32,17 @@ namespace SistemaContable_UCR_Busisness
         public void Update(SistemaContable_UCR_Model.Transacciones laTransaccion)
         {
             GestorDeTransacciones gestor = new GestorDeTransacciones();
+            DateTime fecha = DateTime.Parse(laTransaccion.Fecha);
+            laTransaccion.Fecha = DateTimeSQLite(fecha);
 
             gestor.Update(laTransaccion);
         }
 
-        public void Find(int Id)
+        public Transacciones Find(int Id)
         {
             GestorDeTransacciones gestor = new GestorDeTransacciones();
 
-            gestor.Find(Id);
+            return gestor.Find(Id);
         }
 
         public void Delete(int Id)
