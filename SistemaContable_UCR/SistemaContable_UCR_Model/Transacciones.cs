@@ -11,10 +11,14 @@ namespace SistemaContable_UCR_Model
 
         public int ID { get; set; }
 
-        public string IdProducto { get; set; }
+        public int IdProducto { get; set; }
 
-        public string Cantidad { get; set; }
+        public int Cantidad { get; set; }
 
-        public string Apellidos { get; set; }
+        public float Total { get; set; }
+
+        public DateTime Fecha { get; set; }
+
+        public int IdTipo { get; set; }
     }
 }
