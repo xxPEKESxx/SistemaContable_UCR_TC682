@@ -10,50 +10,47 @@ namespace SistemaContable_UCR_DataAccess
 {
     public class GestorDeTransacciones
     {
-        private Conection Conection = new Conection();
 
-        
 
         public void Save(Transacciones laNuevaTransaccion)
         {
-            try
-            {
-                SQLiteConnection stringConection = Conection.getConection();
-                stringConection.Open();
-
-                string query = "insert into Transacciones (IdProducto, Cantidad, Total, Fecha, IdTipo) values ('" + 
+            Conection Conection = new Conection();
+            string query = "insert into Transacciones (IdProducto, Cantidad, Total, Fecha, IdTipo) values ('" + 
                     laNuevaTransaccion.IdProducto + "', '" + laNuevaTransaccion.Cantidad + "', '" + 
                     laNuevaTransaccion.Total + "', '" + laNuevaTransaccion.Fecha + "', '" + laNuevaTransaccion.IdTipo + "')";
-
-                SQLiteCommand command = new SQLiteCommand(query, stringConection);
-
-                int result = command.ExecuteNonQuery();
-
-                stringConection.Close();
-            }
-            catch (SQLiteException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+                
+                using (SQLiteConnection stringConection = new SQLiteConnection(Conection.getConection()))
+                {
+                    stringConection.Open();
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, stringConection))
+                    {
+                        cmd.ExecuteNonQuery();
+                        cmd.Dispose();
+                    }
+                    stringConection.Close();
+                }
         }
 
         public void Update(Transacciones laTransaccion)
         {
+            Conection Conection = new Conection();
             try
             {
-                SQLiteConnection stringConection = Conection.getConection();
-                stringConection.Open();
-
                 string query = "update Transacciones set IdProducto='" + laTransaccion.IdProducto +
                     "', Cantidad='" + laTransaccion.Cantidad + "', Total='" + laTransaccion.Total +
                     "', Fecha='" + laTransaccion.Fecha + "', IdTipo='" + laTransaccion.IdTipo +
                     "' where ID='" + laTransaccion.ID + "'";
 
-                SQLiteCommand command = new SQLiteCommand(query, stringConection);
-
-                int result = command.ExecuteNonQuery();
-
-                stringConection.Close();
+                using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
+                {
+                    c.Open();
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, c))
+                    {
+                        cmd.ExecuteNonQuery();
+                        cmd.Dispose();
+                    }
+                    c.Close();
+                }
             }
             catch (SQLiteException ex)
             {
@@ -63,27 +60,30 @@ namespace SistemaContable_UCR_DataAccess
 
         public Transacciones getById(int Id)
         {
-            Transacciones transaccion = null;
+            Conection Conection = new Conection();
+        Transacciones transaccion = null;
             try
             {
-                SQLiteConnection stringConection = Conection.getConection();
-                stringConection.Open();
-
                 string query = "select * from Transacciones where ID="+ Id;
 
-                SQLiteCommand command = new SQLiteCommand(query, stringConection);
-
-                SQLiteDataReader datos = command.ExecuteReader();
-
-                command.Dispose();
-
-                while (datos.Read())
+                using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
                 {
-                    transaccion = fillTransaction(datos);
-                }
-                datos.Close();
+                    c.Open();
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, c))
+                    {
+                        using (SQLiteDataReader datos = cmd.ExecuteReader())
+                        {
+                            cmd.Dispose();
 
-                stringConection.Close();
+                            while (datos.Read())
+                            {
+                                transaccion = fillTransaction(datos);
+                            }
+                            datos.Close();
+                        }
+                    }
+                    c.Close();
+                }
             }
             catch (SQLiteException ex)
             {
@@ -95,19 +95,22 @@ namespace SistemaContable_UCR_DataAccess
 
         public Transacciones Delete(int Id)
         {
-            Transacciones transaccion = null;
+        Conection Conection = new Conection();
+        Transacciones transaccion = null;
             try
             {
-                SQLiteConnection stringConection = Conection.getConection();
-                stringConection.Open();
-
                 string query = "delete from Transacciones where ID=" + Id;
 
-                SQLiteCommand command = new SQLiteCommand(query, stringConection);
-
-                int result = command.ExecuteNonQuery();
-
-                stringConection.Close();
+                using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
+                {
+                    c.Open();
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, c))
+                    {
+                        cmd.ExecuteNonQuery();
+                        cmd.Dispose();
+                    }
+                    c.Close();
+                }
             }
             catch (SQLiteException ex)
             {
@@ -118,8 +121,8 @@ namespace SistemaContable_UCR_DataAccess
         }
 
         public List<Transacciones> getAll() {
-
-            List<Transacciones> laListaDeTransaccciones = null;
+        Conection Conection = new Conection();
+        List<Transacciones> laListaDeTransaccciones = null;
 
 
             try {
@@ -157,28 +160,32 @@ namespace SistemaContable_UCR_DataAccess
 
         public List<Transacciones> getByDate(String Desde, String Hasta)
         {
-            List<Transacciones> laListaDeTransaccciones = null;
+        Conection Conection = new Conection();
+        List<Transacciones> laListaDeTransaccciones = null;
 
             try {
-                SQLiteConnection stringConection = Conection.getConection();
-                stringConection.Open();
 
                 string query = "select * from Transacciones where Fecha BETWEEN '" + Desde + "' AND '" + Hasta + "'";
-                
-                SQLiteCommand command = new SQLiteCommand(query, stringConection);
-                SQLiteDataReader datos = command.ExecuteReader();
 
-                command.Dispose();
-
-                laListaDeTransaccciones = new List<Transacciones>();
-
-                while (datos.Read())
+                using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
                 {
-                    laListaDeTransaccciones.Add(fillTransaction(datos));
-                }
+                    c.Open();
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, c))
+                    {
+                        using (SQLiteDataReader datos = cmd.ExecuteReader())
+                        {
+                            cmd.Dispose();
 
-                datos.Close();
-                stringConection.Close();
+                            while (datos.Read())
+                            {
+
+                                laListaDeTransaccciones.Add(fillTransaction(datos));
+                            }
+                            datos.Close();
+                        }
+                    }
+                    c.Close();
+                }
             }
             catch (SQLiteException ex)
             {
@@ -191,29 +198,33 @@ namespace SistemaContable_UCR_DataAccess
 
         public List<Transacciones> getByType(int Tipo)
         {
-            List<Transacciones> laListaDeTransaccciones = null;
+        Conection Conection = new Conection();
+        List<Transacciones> laListaDeTransaccciones = null;
 
             try
             {
-                SQLiteConnection stringConection = Conection.getConection();
-                stringConection.Open();
 
                 string query = "select * from Transacciones where IdTipo='" + Tipo + "'";
 
-                SQLiteCommand command = new SQLiteCommand(query, stringConection);
-                SQLiteDataReader datos = command.ExecuteReader();
-
-                command.Dispose();
-
-                laListaDeTransaccciones = new List<Transacciones>();
-
-                while (datos.Read())
+                using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
                 {
-                    laListaDeTransaccciones.Add(fillTransaction(datos));
-                }
+                    c.Open();
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, c))
+                    {
+                        using (SQLiteDataReader datos = cmd.ExecuteReader())
+                        {
+                            cmd.Dispose();
 
-                datos.Close();
-                stringConection.Close();
+                            while (datos.Read())
+                            {
+
+                                laListaDeTransaccciones.Add(fillTransaction(datos));
+                            }
+                            datos.Close();
+                        }
+                    }
+                    c.Close();
+                }
             }
             catch (SQLiteException ex)
             {

@@ -125,6 +125,7 @@ namespace SistemaContable_UCR_VIEWS
             CoordinadorDeTransacciones ct = new CoordinadorDeTransacciones();
             tran.Cantidad = int.Parse(txtVentas_Cantidad.Text);
             tran.IdProducto= IDProducto;
+            
             tran.IdTipo = 1;
 
             ct.Save(tran);
@@ -143,14 +144,16 @@ namespace SistemaContable_UCR_VIEWS
                 {
                     ID = (int)dgv.CurrentRow.Cells["ID"].Value,
 
-
                 };
-                IDProducto = pr.ID;
+                
+                
                 CoordinadorDeProductos cp = new CoordinadorDeProductos();
+
                 pr = cp.getById(pro.ID);
+                this.IDProducto = pr.ID;
             }
 
-            txtVentas_Name.Text = (pr.Precio.ToString());
+            txtVentas_Name.Text = (pr.Producto);
 
         }
     }
