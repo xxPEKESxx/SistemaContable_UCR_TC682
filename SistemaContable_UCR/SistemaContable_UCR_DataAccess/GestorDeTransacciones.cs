@@ -11,9 +11,10 @@ namespace SistemaContable_UCR_DataAccess
     public class GestorDeTransacciones
     {
 
-        public void Agregar(Transacciones laNuevaTransaccion)
+        public void Save(Transacciones laNuevaTransaccion)
         {
-            try {
+            try
+            {
                 SQLiteConnection stringConection;
                 Conection Conection = new Conection();
 
@@ -21,9 +22,9 @@ namespace SistemaContable_UCR_DataAccess
                 stringConection.Open();
 
                 int result;
-                string query = "insert into Transacciones values ("+ laNuevaTransaccion.IdProducto +
-                    ", "+ laNuevaTransaccion.Cantidad + ", "+ laNuevaTransaccion.Total + ", "+
-                    laNuevaTransaccion.Fecha + ", "+ laNuevaTransaccion.IdTipo +")";
+                string query = "insert into Transacciones values (" + laNuevaTransaccion.IdProducto +
+                    ", " + laNuevaTransaccion.Cantidad + ", " + laNuevaTransaccion.Total + ", " +
+                    laNuevaTransaccion.Fecha + ", " + laNuevaTransaccion.IdTipo + ")";
 
                 SQLiteCommand command = new SQLiteCommand(query, stringConection);
 
@@ -33,7 +34,43 @@ namespace SistemaContable_UCR_DataAccess
                 {
                     Console.WriteLine("exito");
                 }
-                else {
+                else
+                {
+                    Console.WriteLine("ocurrió un error");
+                }
+            }
+            catch (SQLiteException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        public void Update(Transacciones laTransaccion)
+        {
+            try
+            {
+                SQLiteConnection stringConection;
+                Conection Conection = new Conection();
+
+                stringConection = Conection.getConection();
+                stringConection.Open();
+
+                int result;
+                string query = "update Transacciones set IdProducto=" + laTransaccion.IdProducto +
+                    ", Cantidad=" + laTransaccion.Cantidad + ", Total=" + laTransaccion.Total +
+                    ", Fecha=" + laTransaccion.Fecha + ", IdTipo=" + laTransaccion.IdTipo +
+                    "where ID=" + laTransaccion.ID;
+
+                SQLiteCommand command = new SQLiteCommand(query, stringConection);
+
+                result = command.ExecuteNonQuery();
+
+                if (result != 0)
+                {
+                    Console.WriteLine("exito");
+                }
+                else
+                {
                     Console.WriteLine("ocurrió un error");
                 }
             }

@@ -20,8 +20,8 @@ namespace SistemaContable_UCR_DataAccess
             try
             {
                 stringConection.Open();
-                string query = "insert into Productos values("
-                   + producto.Producto + "," + producto.Precio + "," + producto.IdTipo + "," + producto.Descripcion + ")";
+                string query = "insert into Productos (Producto, Precio, IdTipo, Descripcion) values('" +
+                     producto.Producto + "','" + producto.Precio + "','" + producto.IdTipo + "','" + producto.Descripcion + "')";
                 SQLiteCommand cmd = new SQLiteCommand();
                 cmd.Connection = stringConection;
                 cmd.CommandText = query;
