@@ -259,6 +259,7 @@
         "zquierdo\r\ncon tu mouse.");
             this.producto_Eliminar.UseSelectable = true;
             this.producto_Eliminar.UseTileImage = true;
+            this.producto_Eliminar.Click += new System.EventHandler(this.producto_Eliminar_Click);
             // 
             // btn_Agregar
             // 
