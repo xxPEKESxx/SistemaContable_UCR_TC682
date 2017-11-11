@@ -142,5 +142,14 @@
       <Name>SistemaContable_UCR_Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ucr-favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Rewind_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Long_Arrow_Left_48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
