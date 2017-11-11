@@ -20,6 +20,12 @@ namespace SistemaContable_UCR_Pruebas
             coordinadorDeProductos.saveProduct(producto);
         }
         [TestMethod]
+        public void getById()
+        {
+            CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
+            Console.Write(coordinadorDeProductos.getById("8").Producto);
+        }
+        [TestMethod]
         public void listarProductos()
         {
             CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();

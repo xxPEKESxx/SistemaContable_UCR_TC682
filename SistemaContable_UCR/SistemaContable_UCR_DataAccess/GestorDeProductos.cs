@@ -35,6 +35,29 @@ namespace SistemaContable_UCR_DataAccess
                 return 1;
             }
         }
+        public Productos getById(string id)
+        {
+            Productos producto = new Productos();
+            SQLiteConnection stringConection;
+            Conection myconection = new Conection();
+
+            stringConection = myconection.getConection();
+
+            stringConection.Open();
+            string query = "select * from Productos where ID='"+id+"'";
+            SQLiteCommand command = new SQLiteCommand(query, stringConection);
+            SQLiteDataReader datos = command.ExecuteReader();
+            if (datos.Read())
+            {
+                producto.ID = datos.GetInt32(0);
+                producto.Producto = datos.GetString(1);
+                producto.Precio = datos.GetFloat(2);
+                producto.IdTipo = datos.GetInt32(3);
+                producto.Descripcion = datos.GetString(4);
+            }
+            stringConection.Close();
+            return producto;
+        }
         public List<Productos> getAllProducts()
         {
             Productos producto;
@@ -61,7 +84,7 @@ namespace SistemaContable_UCR_DataAccess
             stringConection.Close();
             return listaProductos;
         }
-        public List<Productos> getForTipe(int tipo)
+        public List<Productos> getByTipe(int tipo)
         {
             Productos producto;
             List<Productos> listaProductos = new List<Productos>();
