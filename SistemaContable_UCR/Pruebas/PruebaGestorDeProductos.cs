@@ -2,10 +2,11 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SistemaContable_UCR_Busisness;
 using SistemaContable_UCR_Model;
-namespace Pruebas
+
+namespace SistemaContable_UCR_Pruebas
 {
     [TestClass]
-    public class GestorDeProductos
+    public class PruebaGestorDeProductos
     {
         [TestMethod]
         public void TestMethod1()
@@ -16,10 +17,7 @@ namespace Pruebas
             producto.Precio = 2000;
             producto.IdTipo = Tipos.Venta;
             producto.Descripcion = "Sabroson";
-            if (coordinadorDeProductos.saveProduct(producto))
-            {
-                Console.Write("Exito");
-            }
+            coordinadorDeProductos.saveProduct(producto);
         }
     }
 }
