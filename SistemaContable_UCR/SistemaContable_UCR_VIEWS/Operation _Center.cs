@@ -35,5 +35,21 @@ namespace SistemaContable_UCR_VIEWS
 
             this.Visible = false;
         }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            FRM_Compras compras = new FRM_Compras();
+            compras.Visible = true;
+
+            this.Visible = false;
+        }
+
+        private void metroTile4_Click(object sender, EventArgs e)
+        {
+            FRM_Ventas ventas = new FRM_Ventas();
+            ventas.Visible = true;
+
+            this.Visible = false;
+        }
     }
 }

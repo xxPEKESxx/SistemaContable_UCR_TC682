@@ -106,6 +106,7 @@
             this.metroTile4.UseSelectable = true;
             this.metroTile4.UseStyleColors = true;
             this.metroTile4.UseTileImage = true;
+            this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);
             // 
             // metroTile3
             // 
@@ -158,6 +159,7 @@
             this.metroTile1.UseSelectable = true;
             this.metroTile1.UseStyleColors = true;
             this.metroTile1.UseTileImage = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // metroToolTip1
             // 
