@@ -40,7 +40,7 @@
             this.producto_Edita = new MetroFramework.Controls.MetroTile();
             this.producto_Atras = new MetroFramework.Controls.MetroTile();
             this.producto_Eliminar = new MetroFramework.Controls.MetroTile();
-            this.btn_agreagar_user = new MetroFramework.Controls.MetroTile();
+            this.btn_agreagar_producto = new MetroFramework.Controls.MetroTile();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrip_listaProductos)).BeginInit();
             this.SuspendLayout();
@@ -253,21 +253,21 @@
             this.producto_Eliminar.UseSelectable = true;
             this.producto_Eliminar.UseTileImage = true;
             // 
-            // btn_agreagar_user
+            // btn_agreagar_producto
             // 
-            this.btn_agreagar_user.ActiveControl = null;
-            this.btn_agreagar_user.Location = new System.Drawing.Point(23, 211);
-            this.btn_agreagar_user.Name = "btn_agreagar_user";
-            this.btn_agreagar_user.Size = new System.Drawing.Size(80, 106);
-            this.btn_agreagar_user.TabIndex = 3;
-            this.btn_agreagar_user.Text = "AGREGAR";
-            this.btn_agreagar_user.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_agreagar_user.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_thumb_up_add;
-            this.btn_agreagar_user.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.metroToolTip1.SetToolTip(this.btn_agreagar_user, "Agrega un producto a la \r\nlista de productos");
-            this.btn_agreagar_user.UseSelectable = true;
-            this.btn_agreagar_user.UseTileImage = true;
-            this.btn_agreagar_user.Click += new System.EventHandler(this.btn_agreagar_user_Click);
+            this.btn_agreagar_producto.ActiveControl = null;
+            this.btn_agreagar_producto.Location = new System.Drawing.Point(23, 211);
+            this.btn_agreagar_producto.Name = "btn_agreagar_producto";
+            this.btn_agreagar_producto.Size = new System.Drawing.Size(80, 106);
+            this.btn_agreagar_producto.TabIndex = 3;
+            this.btn_agreagar_producto.Text = "AGREGAR";
+            this.btn_agreagar_producto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_agreagar_producto.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_thumb_up_add;
+            this.btn_agreagar_producto.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.metroToolTip1.SetToolTip(this.btn_agreagar_producto, "Agrega un producto a la \r\nlista de productos");
+            this.btn_agreagar_producto.UseSelectable = true;
+            this.btn_agreagar_producto.UseTileImage = true;
+            this.btn_agreagar_producto.Click += new System.EventHandler(this.btn_agreagar_producto_Click);
             // 
             // metroToolTip1
             // 
@@ -284,7 +284,7 @@
             this.Controls.Add(this.producto_Edita);
             this.Controls.Add(this.producto_Atras);
             this.Controls.Add(this.producto_Eliminar);
-            this.Controls.Add(this.btn_agreagar_user);
+            this.Controls.Add(this.btn_agreagar_producto);
             this.Controls.Add(this.txtproducto_name);
             this.Controls.Add(this.txtproducto_descriocion);
             this.Controls.Add(this.txtproducto_precio);
@@ -304,7 +304,7 @@
         private MetroFramework.Controls.MetroTextBox txtproducto_precio;
         private MetroFramework.Controls.MetroTextBox txtproducto_name;
         private MetroFramework.Controls.MetroTextBox txtproducto_descriocion;
-        private MetroFramework.Controls.MetroTile btn_agreagar_user;
+        private MetroFramework.Controls.MetroTile btn_agreagar_producto;
         private MetroFramework.Controls.MetroTile producto_Eliminar;
         private MetroFramework.Controls.MetroTile producto_Edita;
         private MetroFramework.Controls.MetroTile producto_Buscar;

@@ -13,10 +13,17 @@ namespace SistemaContable_UCR_Busisness
         public bool saveProduct(Productos producto)
         {
             GestorDeProductos gestordeProductos = new GestorDeProductos();
-            if (gestordeProductos.saveProduct(producto) > 0)
-                return true;
+            if (!gestordeProductos.validateProducto(producto.Producto))
+            {
+                if (gestordeProductos.saveProduct(producto) > 0)
+                    return true;
+                else
+                    return false;
+            }
             else
+            {
                 return false;
+            }
         }
         public Productos getById(int id)
         {

@@ -50,42 +50,6 @@ namespace SistemaContable_UCR_VIEWS
 
         private void btn_agreagar_user_Click(object sender, EventArgs e)
         {
-            Productos pr = new Productos();
-
-            CoordinadorDeProductos cp = new CoordinadorDeProductos();
-
-            float precio = 0;
-            if (txtproducto_descriocion.Text != "" && txtproducto_precio.Text != ""
-                && txtproducto_name.Text != "") { 
-          
-
-                precio = float.Parse(txtproducto_precio.Text.ToString());
-                pr.Precio = precio;
-                pr.Descripcion = txtproducto_descriocion.Text;
-                pr.Producto = txtproducto_name.Text;
-                
-
-                if (cp.saveProduct(pr))
-                {
-
-                    MetroMessageBox.Show(this, "Producto registrado con exito", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    cargarLista();
-                }
-                else
-                {
-                    MetroMessageBox.Show(this, "Producto no registrado", "Por favor verificar los capos en blanco," + "\n O verifique que el nombre del producto no esta repetido", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    cargarLista();
-                }
-            }
-            else
-            {
-                MetroMessageBox.Show(this, "FAVOR NO DEJAR CAMPOS EN BLANCO", "peligro!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-
-
-           
-           
 
 
         }
@@ -112,12 +76,8 @@ namespace SistemaContable_UCR_VIEWS
         private void dataGrip_listaProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Productos pr = new Productos();
-            //Productos aStudent = (Productos)dataGrip_listaProductos.CurrentRow.DataBoundItem;
+         DataGridView dgv = sender as DataGridView;
 
-            //DataGridViewImageCell cell = (DataGridViewImageCell)
-            //dataGrip_listaProductos.Rows[e.RowIndex].Cells[e.ColumnIndex];
-
-            DataGridView dgv = sender as DataGridView;
             if (dgv == null)
                 return;
             if (dgv.CurrentRow.Selected)
@@ -133,28 +93,66 @@ namespace SistemaContable_UCR_VIEWS
             }
 
             txtproducto_precio.Text = (pr.Precio.ToString());
-            txtproducto_name.Text = (pr.Producto.ToString());
-            txtproducto_descriocion.Text = (pr.Descripcion.ToString());
 
 
         }
 
         private void producto_Edita_Click(object sender, EventArgs e)
         {
-            Productos producto = new Productos();
+            Productos pr = new Productos();
 
-            CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
+            CoordinadorDeProductos cp = new CoordinadorDeProductos();
+            Productos aStudent = (Productos)dataGrip_listaProductos.CurrentRow.DataBoundItem;
 
-            float precio = float.Parse(txtproducto_precio.Text.ToString());
-            producto.Precio = precio;
-            producto.Descripcion = txtproducto_descriocion.Text;
-            producto.Producto = txtproducto_name.Text;
-            coordinadorDeProductos.updateProduct(producto);
+            pr = cp.getById(aStudent.ID);
             
 
             
-            
-            //Productos pro = (Productos).SelectedItem;
+            txtproducto_precio.Text=(pr.Precio.ToString());
+           
+        }
+
+        private void btn_agreagar_producto_Click(object sender, EventArgs e)
+        {
+
+            Productos pr = new Productos();
+
+            CoordinadorDeProductos cp = new CoordinadorDeProductos();
+
+            float precio = 0;
+            if (txtproducto_descriocion.Text != "" && txtproducto_precio.Text != ""
+                && txtproducto_name.Text != "")
+            {
+
+
+                precio = float.Parse(txtproducto_precio.Text.ToString());
+                pr.Precio = precio;
+                pr.Descripcion = txtproducto_descriocion.Text;
+                pr.Producto = txtproducto_name.Text;
+
+
+
+                if (cp.saveProduct(pr))
+                {
+
+                    MetroMessageBox.Show(this, "Producto registrado con exito", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargarLista();
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "Producto no registrado", "Por favor verificar los capos en blanco," + "\n O verifique que el nombre del producto no esta repetido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargarLista();
+                }
+            }
+            else
+            {
+                MetroMessageBox.Show(this, "FAVOR NO DEJAR CAMPOS EN BLANCO", "peligro!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+
+
+
+
         }
     }
 }
