@@ -142,7 +142,7 @@ namespace SistemaContable_UCR_DataAccess
             return laListaDeTransaccciones;
         }
 
-        public List<Transacciones> getByDate(String Fecha)
+        public List<Transacciones> getByDate(String Desde, String Hasta)
         {
             List<Transacciones> laListaDeTransaccciones = null;
 
@@ -150,7 +150,7 @@ namespace SistemaContable_UCR_DataAccess
                 SQLiteConnection stringConection = Conection.getConection();
                 stringConection.Open();
 
-                string query = "select * from Transacciones where Fecha='" + Fecha + "'";
+                string query = "select * from Transacciones where Fecha BETWEEN '" + Desde + "' AND '" + Hasta + "'";
                 
                 SQLiteCommand command = new SQLiteCommand(query, stringConection);
                 SQLiteDataReader datos = command.ExecuteReader();

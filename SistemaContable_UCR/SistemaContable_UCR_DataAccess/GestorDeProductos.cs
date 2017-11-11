@@ -110,6 +110,32 @@ namespace SistemaContable_UCR_DataAccess
             stringConection.Close();
             return listaProductos;
         }
+        public List<Productos> getByProduct(string product)
+        {
+            Productos producto;
+            List<Productos> listaProductos = new List<Productos>();
+            SQLiteConnection stringConection;
+            Conection myconection = new Conection();
+
+            stringConection = myconection.getConection();
+
+            stringConection.Open();
+            string query = "select * from Productos where Producto like '%" + product + "%'";
+            SQLiteCommand command = new SQLiteCommand(query, stringConection);
+            SQLiteDataReader datos = command.ExecuteReader();
+            while (datos.Read())
+            {
+                producto = new Productos();
+                producto.ID = datos.GetInt32(0);
+                producto.Producto = datos.GetString(1);
+                producto.Precio = datos.GetFloat(2);
+                producto.IdTipo = datos.GetInt32(3);
+                producto.Descripcion = datos.GetString(4);
+                listaProductos.Add(producto);
+            }
+            stringConection.Close();
+            return listaProductos;
+        }
         public int update(Productos producto)
         {
             try

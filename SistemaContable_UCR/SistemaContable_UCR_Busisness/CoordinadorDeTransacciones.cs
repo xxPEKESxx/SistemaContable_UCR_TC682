@@ -59,13 +59,16 @@ namespace SistemaContable_UCR_Busisness
             return gestor.getAll();
         }
 
-        public List<Transacciones> getByDate(DateTime Fecha)
+        public List<Transacciones> getByDate(DateTime Desde, DateTime Hasta)
         {
             GestorDeTransacciones gestor = new GestorDeTransacciones();
 
-            string fechaBuscar = DateTimeSQLite(DateTime.Now);
+            string buscarDesde = DateTimeSQLite(Desde);
+            string buscarHasta = DateTimeSQLite(Hasta.AddDays(1));
 
-            return gestor.getByDate(fechaBuscar);
+            Console.WriteLine(buscarHasta);
+
+            return gestor.getByDate(buscarDesde, buscarHasta);
         }
 
         public List<Transacciones> getByType(int Tipo)
