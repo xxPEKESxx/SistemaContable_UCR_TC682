@@ -39,39 +39,48 @@ namespace SistemaContable_UCR_VIEWS
             Productos pr = new Productos();
 
             CoordinadorDeProductos cp = new CoordinadorDeProductos();
-          
+
             float precio = 0;
             if (txtproducto_descriocion.Text != "" && txtproducto_precio.Text != ""
                 && txtproducto_name.Text != "" && cbx_tipoProducto.Text != "")
             {
+                pr.ID = 20;
+                pr.Producto = "perra";
+                pr.Precio = 5896;
+                pr.IdTipo = 1;
+                pr.Descripcion = "gtgtgt";
 
-                if (cbx_tipoProducto.Text.Equals("Compras"))
-                {
-                    pr.IdTipo = 1;
-                }
-                else
-                {
-                    pr.IdTipo = 2;
-                }
+                //if (cbx_tipoProducto.Text.Equals("Compras"))
+                //{
+                //    pr.IdTipo = 1;
+                //}
+                //else
+                //{
+                //    pr.IdTipo = 2;
+                //}
 
-                precio = float.Parse(txtproducto_precio.Text.ToString());
-                pr.Precio = precio;
-                pr.Descripcion = txtproducto_descriocion.Text;
-                pr.Producto = txtproducto_name.Text;
+                //precio = float.Parse(txtproducto_precio.Text.ToString());
+                //pr.Precio = precio;
+                //pr.Descripcion = txtproducto_descriocion.Text;
+                //pr.Producto = txtproducto_name.Text;
 
-
+            cp.saveProduct(pr);
             }
-            else { }
+            else
+            {
+                MetroMessageBox.Show(this, "FAVOR NO DEJAR CAMPOS EN BLANCO", "peligro!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
-          
 
-            if (cp.saveProduct(pr)) {
+
+            if (true)
+            {
                 MetroMessageBox.Show(this, "Producto registrado con exito", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else
             {
-                MetroMessageBox.Show(this, "Producto no registrado", "Por favor verificar los capos en blanco,"+"\n O verifique que el nombre del producto no esta repetido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MetroMessageBox.Show(this, "Producto no registrado", "Por favor verificar los capos en blanco," + "\n O verifique que el nombre del producto no esta repetido", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 
