@@ -114,25 +114,28 @@ namespace SistemaContable_UCR_DataAccess
 
             List<Transacciones> laListaDeTransaccciones = null;
 
+
             try {
-                SQLiteConnection stringConection = Conection.getConection();
-                stringConection.Open();
 
                 string query = "select * from Transacciones";
 
-                SQLiteCommand command = new SQLiteCommand(query, stringConection);
-                SQLiteDataReader datos = command.ExecuteReader();
-
                 laListaDeTransaccciones = new List<Transacciones>();
 
-                while (datos.Read())
+                using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
                 {
-                    Transacciones transaccion = fillTransaction(datos);
+                    c.Open();
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, c))
+                    {
+                        using (SQLiteDataReader datos = cmd.ExecuteReader())
+                        {
+                            while (datos.Read()){
 
-                    laListaDeTransaccciones.Add(transaccion);
+                    laListaDeTransaccciones.Add(fillTransaction(datos));
                 }
-
-                stringConection.Close();
+        }
+                    }
+                    c.Close();
+                }
             }
             catch (SQLiteException ex)
             {
@@ -160,9 +163,7 @@ namespace SistemaContable_UCR_DataAccess
 
                 while (datos.Read())
                 {
-                    Transacciones transaccion = fillTransaction(datos);
-
-                    laListaDeTransaccciones.Add(transaccion);
+                    laListaDeTransaccciones.Add(fillTransaction(datos));
                 }
 
                 stringConection.Close();
@@ -195,9 +196,7 @@ namespace SistemaContable_UCR_DataAccess
 
                 while (datos.Read())
                 {
-                    Transacciones transaccion = fillTransaction(datos);
-
-                    laListaDeTransaccciones.Add(transaccion);
+                    laListaDeTransaccciones.Add(fillTransaction(datos));
                 }
 
                 stringConection.Close();
