@@ -67,5 +67,12 @@ namespace SistemaContable_UCR_Busisness
 
             return gestor.getByDate(fechaBuscar);
         }
+
+        public List<Transacciones> getByType(int Tipo)
+        {
+            GestorDeTransacciones gestor = new GestorDeTransacciones();
+
+            return gestor.getByType(Tipo);
+        }
     }
 }

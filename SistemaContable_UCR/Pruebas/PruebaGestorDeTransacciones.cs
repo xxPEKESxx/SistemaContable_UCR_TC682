@@ -19,7 +19,7 @@ namespace SistemaContable_UCR_Pruebas
             IdProducto = 1,
             Cantidad = 1,
             Total = 1,
-            IdTipo = 1,
+            IdTipo = 2,
         };
 
             coordinadorTransacciones.Save(transaccion);
@@ -64,9 +64,17 @@ namespace SistemaContable_UCR_Pruebas
 
             Transacciones transaccion = coordinadorTransacciones.Find(29);
 
-            transaccion.IdProducto = 3;
+            transaccion.IdProducto = 4;
 
             coordinadorTransacciones.Update(transaccion);
+        }
+
+        [TestMethod]
+        public void TestMethod7()
+        {
+            CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
+
+            Console.WriteLine(coordinadorTransacciones.getByType(1).Count);
         }
     }
 }
