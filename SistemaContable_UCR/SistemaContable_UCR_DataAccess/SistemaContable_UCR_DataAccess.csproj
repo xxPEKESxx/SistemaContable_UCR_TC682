@@ -33,7 +33,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite">
-      <HintPath>..\..\..\..\..\Desktop\SistemaContable_UCR_TC682-543ceed71d1465986e9a3c474a92f33fa6dba5e5\SistemaContable_UCR\driver\System.Data.SQLite.dll</HintPath>
+      <HintPath>..\driver\System.Data.SQLite.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
