@@ -95,9 +95,6 @@
     <EmbeddedResource Include="FRM_backup.resx">
       <DependentUpon>FRM_backup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRM_Productos.resx">
-      <DependentUpon>FRM_Productos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,9 +141,6 @@
       <Project>{e86ac33a-86f7-4846-9f03-cde622d18c7c}</Project>
       <Name>SistemaContable_UCR_Model</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\appbar.people.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
