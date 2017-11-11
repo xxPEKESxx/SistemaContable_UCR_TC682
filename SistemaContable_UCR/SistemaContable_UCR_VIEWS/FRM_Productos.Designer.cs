@@ -300,6 +300,7 @@
             this.Name = "FRM_Productos";
             this.Resizable = false;
             this.Text = "Gestion de Productos";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FRM_Productos_FormClosed);
             this.Load += new System.EventHandler(this.FRM_Productos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrip_listaProductos)).EndInit();
             this.ResumeLayout(false);

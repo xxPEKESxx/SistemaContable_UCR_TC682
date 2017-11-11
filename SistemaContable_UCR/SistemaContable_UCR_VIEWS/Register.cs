@@ -101,5 +101,11 @@ namespace SistemaContable_UCR_VIEWS
 
             }
         }
+
+        private void Register_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Login lo = new Login();
+            lo.Visible = true;
+        }
     }
 }

@@ -46,16 +46,12 @@ namespace SistemaContable_UCR_VIEWS
 
         private void producto_Atras_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Visible=false;
             Operation__Center pc = new Operation__Center();
             pc.Visible = true;
         }
 
-        private void btn_agreagar_user_Click(object sender, EventArgs e)
-        {
-
-
-        }
+       
 
         public DataTable ConvertirListaToDataTable(System.Collections.IList data)
         {
@@ -116,17 +112,8 @@ namespace SistemaContable_UCR_VIEWS
            
         }
 
-        private void btn_agreagar_producto_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void btn_agregarProducto_Click(object sender, EventArgs e)
-        {
-
-
-        }
+     
+     
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
@@ -167,6 +154,13 @@ namespace SistemaContable_UCR_VIEWS
                 MetroMessageBox.Show(this, "FAVOR NO DEJAR CAMPOS EN BLANCO", "peligro!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+        }
+
+        private void FRM_Productos_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Operation__Center oc = new Operation__Center();
+            this.Visible = false;
+            oc.Visible = true;
         }
     }
 }

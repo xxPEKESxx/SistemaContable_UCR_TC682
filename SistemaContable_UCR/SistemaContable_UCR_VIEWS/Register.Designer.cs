@@ -270,6 +270,7 @@
             this.Resizable = false;
             this.Text = "Registro";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Register_FormClosed);
             this.Load += new System.EventHandler(this.Register_Load);
             this.Click += new System.EventHandler(this.Register_Load);
             this.ResumeLayout(false);
