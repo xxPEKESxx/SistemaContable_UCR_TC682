@@ -26,6 +26,11 @@ namespace SistemaContable_UCR_Busisness
                 return false;
             }
         }
+        public Usuarios searchUserForDNI(string dni)
+        {
+            GestorDeUsuarios gestorUsuarios = new GestorDeUsuarios();
+            return gestorUsuarios.getUserForDNI(dni);            
+        }
     }
 }
 

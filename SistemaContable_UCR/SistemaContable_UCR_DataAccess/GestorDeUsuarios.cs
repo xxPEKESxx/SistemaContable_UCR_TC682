@@ -58,5 +58,33 @@ namespace SistemaContable_UCR_DataAccess
             }
 
         }
+        public Usuarios getUserForDNI(string DNI)
+        {
+            Usuarios user = new Usuarios();
+            SQLiteConnection stringConection;
+            Conection myconection = new Conection();
+
+            stringConection = myconection.getConection();
+
+            stringConection.Open();
+            string query = "select * from Users Where DNI='" + DNI + "'";
+            SQLiteCommand command = new SQLiteCommand(query, stringConection);
+            SQLiteDataReader datos = command.ExecuteReader();
+            if (datos.Read())
+            {
+                user.ID = datos.GetInt32(0);
+                user.DNI = datos.GetString(1);
+                user.UserName = datos.GetString(2);
+                user.UserLastName = datos.GetString(3);
+                user.UserPassword = datos.GetString(4);
+                stringConection.Close();
+                return user;
+            }
+            else
+            {
+                stringConection.Close();
+                return user;
+            }
+        }
     }
 }

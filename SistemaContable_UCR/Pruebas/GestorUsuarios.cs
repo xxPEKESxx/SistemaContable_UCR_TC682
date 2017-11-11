@@ -24,6 +24,14 @@ namespace Pruebas
             user.UserPassword = "222";
             Console.Write(coordinadorUsuarios.register(user));
         }
+        [TestMethod]
+        public void searchUser()
+        {
+            CoordinadorDeUsuarios coordinadorUsuarios = new CoordinadorDeUsuarios();
+            Usuarios user = new Usuarios();
+            user = coordinadorUsuarios.searchUserForDNI("123");
+            Console.Write(user.UserName);
+        }
     }
 
 }
