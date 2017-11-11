@@ -60,10 +60,6 @@
       <Project>{83e18b50-cd6b-4016-9a0f-52762c004872}</Project>
       <Name>SistemaContable_UCR_Busisness</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SistemaContable_UCR_DataAccess\SistemaContable_UCR_DataAccess.csproj">
-      <Project>{04ced627-706c-4c30-92f6-dd6669a19a35}</Project>
-      <Name>SistemaContable_UCR_DataAccess</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SistemaContable_UCR_Model\SistemaContable_UCR_Model.csproj">
       <Project>{e86ac33a-86f7-4846-9f03-cde622d18c7c}</Project>
       <Name>SistemaContable_UCR_Model</Name>
