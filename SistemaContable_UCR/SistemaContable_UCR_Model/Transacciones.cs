@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaContable_UCR_Model
 {
-    class Transacciones
+    public class Transacciones
     {
 
         public int ID { get; set; }
