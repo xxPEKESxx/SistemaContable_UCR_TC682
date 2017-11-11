@@ -15,7 +15,6 @@ namespace SistemaContable_UCR_Pruebas
             Productos producto = new Productos();
             producto.Producto = "Yuca";
             producto.Precio = 2000;
-            producto.IdTipo = 1;
             producto.Descripcion = "Sabroson";
             coordinadorDeProductos.saveProduct(producto);
         }
@@ -30,12 +29,6 @@ namespace SistemaContable_UCR_Pruebas
         {
             CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
             Console.Write(coordinadorDeProductos.getAllProducts().Count.ToString());
-        }
-        [TestMethod]
-        public void listarPorTipo()
-        {
-            CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
-            Console.Write(coordinadorDeProductos.getForIdTipe(1).Count.ToString());
         }
         [TestMethod]
         public void listarPorProducto()
@@ -54,10 +47,9 @@ namespace SistemaContable_UCR_Pruebas
         {
             CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
             Productos producto = new Productos();
-            producto.ID = 8;
+            producto.ID = 2;
             producto.Producto = "Papas";
             producto.Precio = 2000;
-            producto.IdTipo = 1;
             producto.Descripcion = "Sabroson";
             Console.Write(coordinadorDeProductos.updateProduct(producto));
         }

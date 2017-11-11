@@ -20,8 +20,8 @@ namespace SistemaContable_UCR_DataAccess
             try
             {
                 stringConection.Open();
-                string query = "insert into Productos (Producto, Precio, IdTipo, Descripcion) values('" +
-                     producto.Producto + "','" + producto.Precio + "','" + producto.IdTipo + "','" + producto.Descripcion + "')";
+                string query = "insert into Productos (Producto, Precio, Descripcion) values('" +
+                     producto.Producto + "','" + producto.Precio + "','" + producto.Descripcion + "')";
                 SQLiteCommand cmd = new SQLiteCommand();
                 cmd.Connection = stringConection;
                 cmd.CommandText = query;
@@ -52,15 +52,13 @@ namespace SistemaContable_UCR_DataAccess
                 producto.ID = datos.GetInt32(0);
                 producto.Producto = datos.GetString(1);
                 producto.Precio = datos.GetFloat(2);
-                producto.IdTipo = datos.GetInt32(3);
-                producto.Descripcion = datos.GetString(4);
+                producto.Descripcion = datos.GetString(3);
             }
             stringConection.Close();
             return producto;
         }
         public List<Productos> getAllProducts()
         {
-            Productos producto;
             List<Productos> listaProductos = new List<Productos>();
             SQLiteConnection stringConection;
             Conection myconection = new Conection();
@@ -73,39 +71,7 @@ namespace SistemaContable_UCR_DataAccess
             SQLiteDataReader datos = command.ExecuteReader();
             while (datos.Read())
             {
-                producto = new Productos();
-                producto.ID = datos.GetInt32(0);
-                producto.Producto = datos.GetString(1);
-                producto.Precio = datos.GetFloat(2);
-                producto.IdTipo = datos.GetInt32(3);
-                producto.Descripcion = datos.GetString(4);
-                listaProductos.Add(producto);
-            }
-            stringConection.Close();
-            return listaProductos;
-        }
-        public List<Productos> getByTipe(int tipo)
-        {
-            Productos producto;
-            List<Productos> listaProductos = new List<Productos>();
-            SQLiteConnection stringConection;
-            Conection myconection = new Conection();
-
-            stringConection = myconection.getConection();
-
-            stringConection.Open();
-            string query = "select * from Productos where IdTipo='"+tipo+"'";
-            SQLiteCommand command = new SQLiteCommand(query, stringConection);
-            SQLiteDataReader datos = command.ExecuteReader();
-            while (datos.Read())
-            {
-                producto = new Productos();
-                producto.ID = datos.GetInt32(0);
-                producto.Producto = datos.GetString(1);
-                producto.Precio = datos.GetFloat(2);
-                producto.IdTipo = datos.GetInt32(3);
-                producto.Descripcion = datos.GetString(4);
-                listaProductos.Add(producto);
+                listaProductos.Add(fillProduct(datos));
             }
             stringConection.Close();
             return listaProductos;
@@ -125,13 +91,7 @@ namespace SistemaContable_UCR_DataAccess
             SQLiteDataReader datos = command.ExecuteReader();
             while (datos.Read())
             {
-                producto = new Productos();
-                producto.ID = datos.GetInt32(0);
-                producto.Producto = datos.GetString(1);
-                producto.Precio = datos.GetFloat(2);
-                producto.IdTipo = datos.GetInt32(3);
-                producto.Descripcion = datos.GetString(4);
-                listaProductos.Add(producto);
+                listaProductos.Add(fillProduct(datos));
             }
             stringConection.Close();
             return listaProductos;
@@ -147,8 +107,8 @@ namespace SistemaContable_UCR_DataAccess
                 stringConection.Open();
 
                 string query = "update Productos set Producto = '" + producto.Producto + 
-                    "', Precio = '" + producto.Precio + "', IdTipo='" + producto.IdTipo +
-                    "', Descripcion='" + producto.Descripcion + "'where ID='" + producto.ID+"'";
+                    "', Precio = '" + producto.Precio + "', Descripcion='" + producto.Descripcion 
+                    + "'where ID='" + producto.ID+"'";
 
                 SQLiteCommand command = new SQLiteCommand(query, stringConection);
                 int result = command.ExecuteNonQuery();
@@ -185,6 +145,15 @@ namespace SistemaContable_UCR_DataAccess
                 Console.WriteLine(ex.Message);
                 return 0;
             }
+        }
+        private Productos fillProduct(SQLiteDataReader datos)
+        {
+            Productos producto = new Productos();
+            producto.ID = datos.GetInt32(0);
+            producto.Producto = datos.GetString(1);
+            producto.Precio = datos.GetFloat(2);
+            producto.Descripcion = datos.GetString(3);
+            return producto;
         }
     }
 }
