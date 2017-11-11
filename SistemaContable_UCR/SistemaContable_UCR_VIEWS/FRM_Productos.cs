@@ -33,8 +33,11 @@ namespace SistemaContable_UCR_VIEWS
             CoordinadorDeProductos cp = new CoordinadorDeProductos();
             List<Productos> data = cp.getAllProducts();
             DataTable _table = ConvertirListaToDataTable(data);
-
+          
             dataGrip_listaProductos.DataSource = _table;
+
+            dataGrip_listaProductos.ReadOnly = true;
+
         }
         private void FRM_Productos_Load(object sender, EventArgs e)
         {
@@ -70,6 +73,7 @@ namespace SistemaContable_UCR_VIEWS
                 
                 table.Rows.Add(row);
             }
+
             return table;
         }
 
@@ -99,29 +103,36 @@ namespace SistemaContable_UCR_VIEWS
 
         private void producto_Edita_Click(object sender, EventArgs e)
         {
-            Productos pr = new Productos();
+            //Productos pr = new Productos();
 
-            CoordinadorDeProductos cp = new CoordinadorDeProductos();
-            Productos aStudent = (Productos)dataGrip_listaProductos.CurrentRow.DataBoundItem;
+            //CoordinadorDeProductos cp = new CoordinadorDeProductos();
+            //Productos aStudent = (Productos)dataGrip_listaProductos.CurrentRow.DataBoundItem;
 
-            pr = cp.getById(aStudent.ID);
+            //pr = cp.getById(aStudent.ID);
             
 
             
-            txtproducto_precio.Text=(pr.Precio.ToString());
+            //txtproducto_precio.Text=(pr.Precio.ToString());
            
         }
 
         private void btn_agreagar_producto_Click(object sender, EventArgs e)
         {
 
-        
-
 
         }
 
         private void btn_agregarProducto_Click(object sender, EventArgs e)
         {
+
+
+        }
+
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+
+
+
             Productos pr = new Productos();
 
             CoordinadorDeProductos cp = new CoordinadorDeProductos();
@@ -155,8 +166,6 @@ namespace SistemaContable_UCR_VIEWS
             {
                 MetroMessageBox.Show(this, "FAVOR NO DEJAR CAMPOS EN BLANCO", "peligro!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-
 
         }
     }

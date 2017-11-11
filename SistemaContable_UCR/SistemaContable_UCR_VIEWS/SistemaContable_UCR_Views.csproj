@@ -191,5 +191,8 @@
   <ItemGroup>
     <None Include="Resources\appbar.arrow.left.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.layer.add.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

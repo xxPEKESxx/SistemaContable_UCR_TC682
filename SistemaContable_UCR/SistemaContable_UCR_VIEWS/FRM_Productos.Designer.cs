@@ -36,12 +36,12 @@
             this.txtproducto_precio = new MetroFramework.Controls.MetroTextBox();
             this.txtproducto_name = new MetroFramework.Controls.MetroTextBox();
             this.txtproducto_descriocion = new MetroFramework.Controls.MetroTextBox();
+            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.producto_Buscar = new MetroFramework.Controls.MetroTile();
             this.producto_Edita = new MetroFramework.Controls.MetroTile();
             this.producto_Atras = new MetroFramework.Controls.MetroTile();
             this.producto_Eliminar = new MetroFramework.Controls.MetroTile();
-            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
-            this.btn_agregarProducto = new MetroFramework.Controls.MetroButton();
+            this.btn_Agregar = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrip_listaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -188,6 +188,12 @@
             this.txtproducto_descriocion.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtproducto_descriocion.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // metroToolTip1
+            // 
+            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroToolTip1.StyleManager = null;
+            this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
             // producto_Buscar
             // 
             this.producto_Buscar.ActiveControl = null;
@@ -253,28 +259,23 @@
             this.producto_Eliminar.UseSelectable = true;
             this.producto_Eliminar.UseTileImage = true;
             // 
-            // metroToolTip1
+            // btn_Agregar
             // 
-            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroToolTip1.StyleManager = null;
-            this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
-            // btn_agregarProducto
-            // 
-            this.btn_agregarProducto.Location = new System.Drawing.Point(23, 211);
-            this.btn_agregarProducto.Name = "btn_agregarProducto";
-            this.btn_agregarProducto.Size = new System.Drawing.Size(80, 106);
-            this.btn_agregarProducto.TabIndex = 4;
-            this.btn_agregarProducto.Text = "Agregar";
-            this.btn_agregarProducto.UseSelectable = true;
-            this.btn_agregarProducto.Click += new System.EventHandler(this.btn_agregarProducto_Click);
+            this.btn_Agregar.ActiveControl = null;
+            this.btn_Agregar.Location = new System.Drawing.Point(23, 211);
+            this.btn_Agregar.Name = "btn_Agregar";
+            this.btn_Agregar.Size = new System.Drawing.Size(80, 106);
+            this.btn_Agregar.TabIndex = 4;
+            this.btn_Agregar.Text = "AGREGAR";
+            this.btn_Agregar.UseSelectable = true;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // FRM_Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(468, 629);
-            this.Controls.Add(this.btn_agregarProducto);
+            this.Controls.Add(this.btn_Agregar);
             this.Controls.Add(this.producto_Buscar);
             this.Controls.Add(this.producto_Edita);
             this.Controls.Add(this.producto_Atras);
@@ -303,6 +304,6 @@
         private MetroFramework.Controls.MetroTile producto_Buscar;
         private MetroFramework.Controls.MetroTile producto_Atras;
         private MetroFramework.Components.MetroToolTip metroToolTip1;
-        private MetroFramework.Controls.MetroButton btn_agregarProducto;
+        private MetroFramework.Controls.MetroTile btn_Agregar;
     }
 }

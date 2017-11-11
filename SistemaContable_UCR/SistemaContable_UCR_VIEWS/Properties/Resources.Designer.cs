@@ -123,6 +123,16 @@ namespace SistemaContable_UCR_VIEWS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap appbar_layer_add {
+            get {
+                object obj = ResourceManager.GetObject("appbar.layer.add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap appbar_list_hidden {
             get {
                 object obj = ResourceManager.GetObject("appbar.list.hidden", resourceCulture);
