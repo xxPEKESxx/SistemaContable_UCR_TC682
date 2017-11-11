@@ -36,11 +36,34 @@ namespace SistemaContable_UCR_Busisness
             gestor.Update(laTransaccion);
         }
 
+        public void Find(int Id)
+        {
+            GestorDeTransacciones gestor = new GestorDeTransacciones();
+
+            gestor.Find(Id);
+        }
+
+        public void Delete(int Id)
+        {
+            GestorDeTransacciones gestor = new GestorDeTransacciones();
+
+            gestor.Delete(Id);
+        }
+
         public List<Transacciones> getAll() {
 
             GestorDeTransacciones gestor = new GestorDeTransacciones();
 
             return gestor.getAll();
+        }
+
+        public List<Transacciones> getByDate(DateTime Fecha)
+        {
+            GestorDeTransacciones gestor = new GestorDeTransacciones();
+
+            string fechaBuscar = DateTimeSQLite(DateTime.Now);
+
+            return gestor.getByDate(fechaBuscar);
         }
     }
 }

@@ -33,5 +33,30 @@ namespace SistemaContable_UCR_Pruebas
 
             coordinadorTransacciones.getAll();
         }
+
+        [TestMethod]
+        public void TestMethod3()
+        {
+            CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
+
+            coordinadorTransacciones.Find(25);
+        }
+
+        [TestMethod]
+        public void TestMethod4()
+        {
+            CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
+
+            coordinadorTransacciones.Delete(1);
+        }
+
+        [TestMethod]
+        public void TestMethod5()
+        {
+            
+            CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
+
+            coordinadorTransacciones.getByDate(DateTime.Now);
+        }
     }
 }
