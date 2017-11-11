@@ -43,5 +43,13 @@ namespace SistemaContable_UCR_VIEWS
 
 
         }
+
+        private void metroTile_Register_Click(object sender, EventArgs e)
+        {
+            Register re = new Register();
+
+            re.Visible = true;
+            Visible = false;
+        }
     }
 }

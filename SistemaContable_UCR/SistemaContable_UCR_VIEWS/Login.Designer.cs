@@ -29,51 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.metroTile_Register = new MetroFramework.Controls.MetroTile();
-            this.metroTile_Entrar = new MetroFramework.Controls.MetroTile();
             this.metroTextBox_Password = new MetroFramework.Controls.MetroTextBox();
             this.idUser = new MetroFramework.Controls.MetroTextBox();
-            this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroTile_Register = new MetroFramework.Controls.MetroTile();
+            this.metroTile_Entrar = new MetroFramework.Controls.MetroTile();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // metroTile_Register
-            // 
-            this.metroTile_Register.ActiveControl = null;
-            this.metroTile_Register.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.metroTile_Register.Location = new System.Drawing.Point(23, 455);
-            this.metroTile_Register.MaximumSize = new System.Drawing.Size(177, 104);
-            this.metroTile_Register.MinimumSize = new System.Drawing.Size(177, 104);
-            this.metroTile_Register.Name = "metroTile_Register";
-            this.metroTile_Register.Size = new System.Drawing.Size(177, 104);
-            this.metroTile_Register.Style = MetroFramework.MetroColorStyle.Custom;
-            this.metroTile_Register.TabIndex = 0;
-            this.metroTile_Register.Text = "Registrarse";
-            this.metroTile_Register.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile_Register.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.icons8_Add_User_Male_48;
-            this.metroTile_Register.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile_Register.UseCustomBackColor = true;
-            this.metroTile_Register.UseSelectable = true;
-            this.metroTile_Register.UseTileImage = true;
-            // 
-            // metroTile_Entrar
-            // 
-            this.metroTile_Entrar.ActiveControl = null;
-            this.metroTile_Entrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.metroTile_Entrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.metroTile_Entrar.Location = new System.Drawing.Point(259, 455);
-            this.metroTile_Entrar.Name = "metroTile_Entrar";
-            this.metroTile_Entrar.Size = new System.Drawing.Size(177, 103);
-            this.metroTile_Entrar.Style = MetroFramework.MetroColorStyle.Custom;
-            this.metroTile_Entrar.TabIndex = 0;
-            this.metroTile_Entrar.Text = "ENTRAR";
-            this.metroTile_Entrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile_Entrar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.icons8_Checked_48;
-            this.metroTile_Entrar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile_Entrar.UseCustomBackColor = true;
-            this.metroTile_Entrar.UseSelectable = true;
-            this.metroTile_Entrar.UseTileImage = true;
-            this.metroTile_Entrar.Click += new System.EventHandler(this.metroTile_Entrar_Click);
             // 
             // metroTextBox_Password
             // 
@@ -91,7 +52,7 @@
             this.metroTextBox_Password.CustomButton.Visible = false;
             this.metroTextBox_Password.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.metroTextBox_Password.Lines = new string[0];
-            this.metroTextBox_Password.Location = new System.Drawing.Point(23, 291);
+            this.metroTextBox_Password.Location = new System.Drawing.Point(23, 279);
             this.metroTextBox_Password.Margin = new System.Windows.Forms.Padding(60);
             this.metroTextBox_Password.MaxLength = 32767;
             this.metroTextBox_Password.Name = "metroTextBox_Password";
@@ -148,22 +109,60 @@
             this.idUser.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.idUser.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // metroCheckBox1
+            // metroTile_Register
             // 
-            this.metroCheckBox1.AutoSize = true;
-            this.metroCheckBox1.Location = new System.Drawing.Point(29, 375);
-            this.metroCheckBox1.Name = "metroCheckBox1";
-            this.metroCheckBox1.Size = new System.Drawing.Size(87, 15);
-            this.metroCheckBox1.TabIndex = 21;
-            this.metroCheckBox1.Text = "Recordarme";
-            this.metroCheckBox1.UseSelectable = true;
+            this.metroTile_Register.ActiveControl = null;
+            this.metroTile_Register.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.metroTile_Register.Location = new System.Drawing.Point(23, 455);
+            this.metroTile_Register.MaximumSize = new System.Drawing.Size(177, 104);
+            this.metroTile_Register.MinimumSize = new System.Drawing.Size(177, 104);
+            this.metroTile_Register.Name = "metroTile_Register";
+            this.metroTile_Register.Size = new System.Drawing.Size(177, 104);
+            this.metroTile_Register.Style = MetroFramework.MetroColorStyle.Custom;
+            this.metroTile_Register.TabIndex = 0;
+            this.metroTile_Register.Text = "Registrarse";
+            this.metroTile_Register.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTile_Register.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.icons8_Add_User_Male_48;
+            this.metroTile_Register.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile_Register.UseCustomBackColor = true;
+            this.metroTile_Register.UseSelectable = true;
+            this.metroTile_Register.UseTileImage = true;
+            this.metroTile_Register.Click += new System.EventHandler(this.metroTile_Register_Click);
+            // 
+            // metroTile_Entrar
+            // 
+            this.metroTile_Entrar.ActiveControl = null;
+            this.metroTile_Entrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.metroTile_Entrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.metroTile_Entrar.Location = new System.Drawing.Point(259, 455);
+            this.metroTile_Entrar.Name = "metroTile_Entrar";
+            this.metroTile_Entrar.Size = new System.Drawing.Size(177, 103);
+            this.metroTile_Entrar.Style = MetroFramework.MetroColorStyle.Custom;
+            this.metroTile_Entrar.TabIndex = 0;
+            this.metroTile_Entrar.Text = "ENTRAR";
+            this.metroTile_Entrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTile_Entrar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.icons8_Checked_48;
+            this.metroTile_Entrar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile_Entrar.UseCustomBackColor = true;
+            this.metroTile_Entrar.UseSelectable = true;
+            this.metroTile_Entrar.UseTileImage = true;
+            this.metroTile_Entrar.Click += new System.EventHandler(this.metroTile_Entrar_Click);
+            // 
+            // label1
+            // 
+            this.label1.Image = global::SistemaContable_UCR_VIEWS.Properties.Resources.ucr_favicon;
+            this.label1.Location = new System.Drawing.Point(-26, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 43);
+            this.label1.TabIndex = 22;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(459, 596);
-            this.Controls.Add(this.metroCheckBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.idUser);
             this.Controls.Add(this.metroTextBox_Password);
             this.Controls.Add(this.metroTile_Register);
@@ -178,7 +177,6 @@
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -188,7 +186,7 @@
         private MetroFramework.Controls.MetroTile metroTile_Register;
         private MetroFramework.Controls.MetroTextBox metroTextBox_Password;
         private MetroFramework.Controls.MetroTextBox idUser;
-        private MetroFramework.Controls.MetroCheckBox metroCheckBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
