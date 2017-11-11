@@ -32,6 +32,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\..\..\Desktop\SistemaContable_UCR_TC682-543ceed71d1465986e9a3c474a92f33fa6dba5e5\SistemaContable_UCR\driver\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +48,12 @@
     <Compile Include="GestorDeProductos.cs" />
     <Compile Include="GestorDeTransacciones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaContable_UCR_Model\SistemaContable_UCR_Model.csproj">
+      <Project>{e86ac33a-86f7-4846-9f03-cde622d18c7c}</Project>
+      <Name>SistemaContable_UCR_Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
