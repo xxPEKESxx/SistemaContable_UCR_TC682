@@ -51,7 +51,8 @@
             this.metroTextBox_Password.CustomButton.UseSelectable = true;
             this.metroTextBox_Password.CustomButton.Visible = false;
             this.metroTextBox_Password.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.metroTextBox_Password.Lines = new string[0];
+            this.metroTextBox_Password.Lines = new string[] {
+        "123"};
             this.metroTextBox_Password.Location = new System.Drawing.Point(23, 279);
             this.metroTextBox_Password.Margin = new System.Windows.Forms.Padding(60);
             this.metroTextBox_Password.MaxLength = 32767;
@@ -66,6 +67,7 @@
             this.metroTextBox_Password.Size = new System.Drawing.Size(413, 36);
             this.metroTextBox_Password.TabIndex = 20;
             this.metroTextBox_Password.Tag = "";
+            this.metroTextBox_Password.Text = "123";
             this.metroTextBox_Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.metroTextBox_Password.UseSelectable = true;
             this.metroTextBox_Password.UseSystemPasswordChar = true;
@@ -88,7 +90,8 @@
             this.idUser.CustomButton.UseSelectable = true;
             this.idUser.CustomButton.Visible = false;
             this.idUser.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.idUser.Lines = new string[0];
+            this.idUser.Lines = new string[] {
+        "123"};
             this.idUser.Location = new System.Drawing.Point(23, 181);
             this.idUser.MaxLength = 32767;
             this.idUser.Multiline = true;
@@ -103,6 +106,7 @@
             this.idUser.Size = new System.Drawing.Size(413, 35);
             this.idUser.TabIndex = 1;
             this.idUser.Tag = "";
+            this.idUser.Text = "123";
             this.idUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.idUser.UseSelectable = true;
             this.idUser.WaterMark = "CEDULA";

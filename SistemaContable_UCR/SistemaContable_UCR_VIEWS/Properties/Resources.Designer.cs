@@ -63,6 +63,16 @@ namespace SistemaContable_UCR_VIEWS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap appbar_arrow_left {
+            get {
+                object obj = ResourceManager.GetObject("appbar.arrow.left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap appbar_book_hardcover_open_writing {
             get {
                 object obj = ResourceManager.GetObject("appbar.book.hardcover.open.writing", resourceCulture);
@@ -93,6 +103,26 @@ namespace SistemaContable_UCR_VIEWS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap appbar_clipboard_variant_edit {
+            get {
+                object obj = ResourceManager.GetObject("appbar.clipboard.variant.edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap appbar_delete {
+            get {
+                object obj = ResourceManager.GetObject("appbar.delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap appbar_list_hidden {
             get {
                 object obj = ResourceManager.GetObject("appbar.list.hidden", resourceCulture);
@@ -103,9 +133,29 @@ namespace SistemaContable_UCR_VIEWS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap appbar_page_search {
+            get {
+                object obj = ResourceManager.GetObject("appbar.page.search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap appbar_people_multiple {
             get {
                 object obj = ResourceManager.GetObject("appbar.people.multiple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap appbar_thumb_up_add {
+            get {
+                object obj = ResourceManager.GetObject("appbar.thumb.up.add", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
