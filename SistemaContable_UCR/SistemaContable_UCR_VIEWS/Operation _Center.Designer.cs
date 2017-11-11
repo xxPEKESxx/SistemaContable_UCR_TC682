@@ -36,6 +36,7 @@
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.metroPanel_Administration.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             this.metroPanel_Administration.HorizontalScrollbarSize = 10;
             this.metroPanel_Administration.Location = new System.Drawing.Point(20, 60);
             this.metroPanel_Administration.Name = "metroPanel_Administration";
-            this.metroPanel_Administration.Size = new System.Drawing.Size(1035, 530);
+            this.metroPanel_Administration.Size = new System.Drawing.Size(968, 449);
             this.metroPanel_Administration.Style = MetroFramework.MetroColorStyle.Red;
             this.metroPanel_Administration.TabIndex = 2;
             this.metroPanel_Administration.UseStyleColors = true;
@@ -74,7 +75,7 @@
             // 
             this.metroTile5.ActiveControl = null;
             this.metroTile5.BackColor = System.Drawing.Color.Maroon;
-            this.metroTile5.Location = new System.Drawing.Point(735, 122);
+            this.metroTile5.Location = new System.Drawing.Point(729, 65);
             this.metroTile5.Name = "metroTile5";
             this.metroTile5.Size = new System.Drawing.Size(111, 274);
             this.metroTile5.Style = MetroFramework.MetroColorStyle.Red;
@@ -82,6 +83,8 @@
             this.metroTile5.Text = "Creditos";
             this.metroTile5.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_list_hidden;
             this.metroTile5.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroToolTip1.SetToolTip(this.metroTile5, "Este modulo es para saber un poco de los\r\n creadores de la aplicacion, \r\nademas d" +
+        "e imformacion importante del proyecto de TCU - 682");
             this.metroTile5.UseSelectable = true;
             this.metroTile5.UseStyleColors = true;
             this.metroTile5.UseTileImage = true;
@@ -90,7 +93,7 @@
             // 
             this.metroTile4.ActiveControl = null;
             this.metroTile4.BackColor = System.Drawing.Color.OliveDrab;
-            this.metroTile4.Location = new System.Drawing.Point(576, 122);
+            this.metroTile4.Location = new System.Drawing.Point(570, 65);
             this.metroTile4.Name = "metroTile4";
             this.metroTile4.Size = new System.Drawing.Size(142, 274);
             this.metroTile4.Style = MetroFramework.MetroColorStyle.Lime;
@@ -99,6 +102,7 @@
             this.metroTile4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroTile4.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_book_hardcover_open_writing;
             this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroToolTip1.SetToolTip(this.metroTile4, "Para registrar las ventas de tu negocio.");
             this.metroTile4.UseSelectable = true;
             this.metroTile4.UseStyleColors = true;
             this.metroTile4.UseTileImage = true;
@@ -106,7 +110,7 @@
             // metroTile3
             // 
             this.metroTile3.ActiveControl = null;
-            this.metroTile3.Location = new System.Drawing.Point(276, 262);
+            this.metroTile3.Location = new System.Drawing.Point(270, 205);
             this.metroTile3.Name = "metroTile3";
             this.metroTile3.Size = new System.Drawing.Size(294, 134);
             this.metroTile3.Style = MetroFramework.MetroColorStyle.Blue;
@@ -114,6 +118,8 @@
             this.metroTile3.Text = "Productos";
             this.metroTile3.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_clean;
             this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroToolTip1.SetToolTip(this.metroTile3, "Aqui se pueden agregar productos, los cuales se utilizaran \r\nen la venta y la com" +
+        "pra.");
             this.metroTile3.UseSelectable = true;
             this.metroTile3.UseStyleColors = true;
             this.metroTile3.UseTileImage = true;
@@ -122,7 +128,7 @@
             // metroTile2
             // 
             this.metroTile2.ActiveControl = null;
-            this.metroTile2.Location = new System.Drawing.Point(276, 122);
+            this.metroTile2.Location = new System.Drawing.Point(270, 65);
             this.metroTile2.Name = "metroTile2";
             this.metroTile2.Size = new System.Drawing.Size(294, 134);
             this.metroTile2.Style = MetroFramework.MetroColorStyle.Orange;
@@ -131,6 +137,7 @@
             this.metroTile2.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroTile2.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_people_multiple;
             this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroToolTip1.SetToolTip(this.metroTile2, "Para ver y agregar usuarios ademas \r\nde sus gestiones principales");
             this.metroTile2.UseSelectable = true;
             this.metroTile2.UseStyleColors = true;
             this.metroTile2.UseTileImage = true;
@@ -138,7 +145,7 @@
             // metroTile1
             // 
             this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(128, 122);
+            this.metroTile1.Location = new System.Drawing.Point(122, 65);
             this.metroTile1.Name = "metroTile1";
             this.metroTile1.Size = new System.Drawing.Size(142, 274);
             this.metroTile1.Style = MetroFramework.MetroColorStyle.Green;
@@ -147,15 +154,22 @@
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroTile1.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_book_list;
             this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroToolTip1.SetToolTip(this.metroTile1, "En este modulo puedes ver las compras \r\nrealizadas(Gastos Potenciales)");
             this.metroTile1.UseSelectable = true;
             this.metroTile1.UseStyleColors = true;
             this.metroTile1.UseTileImage = true;
+            // 
+            // metroToolTip1
+            // 
+            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroToolTip1.StyleManager = null;
+            this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // Operation__Center
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 610);
+            this.ClientSize = new System.Drawing.Size(1008, 529);
             this.Controls.Add(this.metroPanel_Administration);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -176,5 +190,6 @@
         private MetroFramework.Controls.MetroTile metroTile2;
         private MetroFramework.Controls.MetroTile metroTile1;
         private System.Windows.Forms.Label label1;
+        private MetroFramework.Components.MetroToolTip metroToolTip1;
     }
 }

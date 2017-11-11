@@ -173,5 +173,20 @@
   <ItemGroup>
     <None Include="Resources\appbar.list.hidden.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.thumb.up.add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.clipboard.variant.edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.page.search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.arrow.left.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
