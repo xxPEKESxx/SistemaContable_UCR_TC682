@@ -9,6 +9,7 @@ namespace SistemaContable_UCR_Pruebas
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }
