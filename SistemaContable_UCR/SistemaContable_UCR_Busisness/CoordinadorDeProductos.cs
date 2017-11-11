@@ -50,5 +50,18 @@ namespace SistemaContable_UCR_Busisness
                 return false;
             }
         }
+        public bool deleteProduct(int id)
+        {
+            GestorDeProductos gestordeProductos = new GestorDeProductos();
+            if (gestordeProductos.delete(id) > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
     }
 }
