@@ -23,11 +23,15 @@ namespace SistemaContable_UCR_DataAccess
             SQLiteDataReader datos = command.ExecuteReader();
             if (datos.Read())
             {
+                datos.Close();
+                command.Dispose();
                 stringConection.Close();
                 return true;
             }
             else
             {
+                datos.Close();
+                command.Dispose();
                 stringConection.Close();
                 return false;
             }

@@ -10,41 +10,48 @@ namespace SistemaContable_UCR_DataAccess
 {
     public class GestorDeProductos
     {
-        Conection conection;
-        SQLiteConnection stringConection;
         
         public int saveProduct(Productos producto)
         {
-            conection = new Conection();
-            stringConection = new SQLiteConnection();
-            stringConection = conection.getConection();
-            int result;
+            Conection conection = new Conection();
+            string query = "insert into Productos (Producto, Precio, Descripcion) values('"+
+                   producto.Producto + "','" + producto.Precio + "','" + producto.Descripcion + "')";
+            using (SQLiteConnection stringConection = new SQLiteConnection(conection.getConection()))
+            {
                 stringConection.Open();
-                string query = "insert into Productos (Producto, Precio, Descripcion) values('" +
-                     producto.Producto + "','" + producto.Precio + "','" + producto.Descripcion + "')";
-                SQLiteCommand cmd = new SQLiteCommand();
-                cmd.Connection = stringConection;
-                cmd.CommandText = query;
-                result = cmd.ExecuteNonQuery();
+                using (SQLiteCommand cmd = new SQLiteCommand(query, stringConection))
+                {
+                    cmd.ExecuteNonQuery();
+                    cmd.Dispose();
+                }
                 stringConection.Close();
-            return result;
-            
+            }
+            return 1;
         }
         public bool validateProducto(string producto)
         {
-            conection = new Conection();
-            stringConection = new SQLiteConnection();
-            stringConection = conection.getConection();
-            stringConection.Open();
+            Conection conection = new Conection();
             string query = "select * from Productos where Producto='" + producto + "'";
-            SQLiteCommand command = new SQLiteCommand(query, stringConection);
-            SQLiteDataReader datos = command.ExecuteReader();
-            if (datos.Read())
+            using (SQLiteConnection stringConection = new SQLiteConnection(conection.getConection()))
             {
+                stringConection.Open();
+                using (SQLiteCommand cmd = new SQLiteCommand(query, stringConection))
+                {
+                    using (SQLiteDataReader rdr = cmd.ExecuteReader())
+                    {
+                        cmd.Dispose();
+
+                        if (rdr.Read())
+                        {
+                            rdr.Close();
+
+                            return true;
+                        }
+                        rdr.Close();
+                    }
+                }
                 stringConection.Close();
-                return true;
             }
-            stringConection.Close();
             return false;
         }
         public Productos getById(int id)
@@ -71,21 +78,28 @@ namespace SistemaContable_UCR_DataAccess
         }
         public List<Productos> getAllProducts()
         {
+            Conection conection = new Conection();
+
             List<Productos> listaProductos = new List<Productos>();
-            SQLiteConnection stringConection;
-            Conection myconection = new Conection();
-
-            stringConection = myconection.getConection();
-
-            stringConection.Open();
             string query = "select * from Productos";
-            SQLiteCommand command = new SQLiteCommand(query, stringConection);
-            SQLiteDataReader datos = command.ExecuteReader();
-            while (datos.Read())
+            using (SQLiteConnection stringConection = new SQLiteConnection(conection.getConection()))
             {
-                listaProductos.Add(fillProduct(datos));
+                stringConection.Open();
+                using (SQLiteCommand cmd = new SQLiteCommand(query, stringConection))
+                {
+                    using (SQLiteDataReader rdr = cmd.ExecuteReader())
+                    {
+                        cmd.Dispose();
+
+                        while (rdr.Read())
+                        {
+                            listaProductos.Add(fillProduct(rdr));
+                        }
+                        rdr.Close();
+                    }
+                }
+                stringConection.Close();
             }
-            stringConection.Close();
             return listaProductos;
         }
         public List<Productos> getByProduct(string product)
