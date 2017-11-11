@@ -22,7 +22,7 @@ namespace SistemaContable_UCR_Pruebas
         public void getById()
         {
             CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
-            Console.Write(coordinadorDeProductos.getById("8").Producto);
+            Console.Write(coordinadorDeProductos.getById(8).Producto);
         }
         [TestMethod]
         public void listarProductos()
