@@ -30,29 +30,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-<<<<<<< HEAD
-=======
-    <Reference Include="System.Data.SQLite">
-      <HintPath>..\..\..\..\..\Desktop\SistemaContable_UCR_TC682-543ceed71d1465986e9a3c474a92f33fa6dba5e5\SistemaContable_UCR\driver\System.Data.SQLite.dll</HintPath>
-    </Reference>
->>>>>>> aa67e6e45fdae0b7e31e00c6ab4ec9c803d7dffa
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
+    <Reference Include="System"/>
+    
+    <Reference Include="System.Core"/>
+    <Reference Include="System.Xml.Linq"/>
+    <Reference Include="System.Data.DataSetExtensions"/>
+    
+    
+    <Reference Include="Microsoft.CSharp"/>
+    
+    <Reference Include="System.Data"/>
+    
+    <Reference Include="System.Net.Http"/>
+    
+    <Reference Include="System.Xml"/>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="GestorDeTransacciones.cs" />
-=======
     <Compile Include="Class1.cs" />
-    <Compile Include="Conection.cs" />
-    <Compile Include="GestorDeProductos.cs" />
->>>>>>> aa67e6e45fdae0b7e31e00c6ab4ec9c803d7dffa
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
