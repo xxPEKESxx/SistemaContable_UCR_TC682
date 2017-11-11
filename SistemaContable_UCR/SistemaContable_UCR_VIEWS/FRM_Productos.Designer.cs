@@ -210,6 +210,7 @@
         "k izquierdo\r\ncon tu mouse.");
             this.producto_Buscar.UseSelectable = true;
             this.producto_Buscar.UseTileImage = true;
+            this.producto_Buscar.Click += new System.EventHandler(this.producto_Buscar_Click);
             // 
             // producto_Edita
             // 

@@ -224,5 +224,46 @@ namespace SistemaContable_UCR_VIEWS
                 MetroMessageBox.Show(this, "FAVOR NO DEJAR CAMPOS EN BLANCO", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void producto_Buscar_Click(object sender, EventArgs e)
+        {
+            CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
+            List<Productos> productoABuscar = new List<Productos>();
+                //
+
+            if (txtproducto_name.Text != "")
+            {
+                productoABuscar = coordinadorDeProductos.getByProducto(txtproducto_name.Text);
+
+
+                /// producto.ID = productoAEditar.ID;
+                DataTable _table = ConvertirListaToDataTable(productoABuscar);
+
+                dataGrip_listaProductos.DataSource = _table;
+
+                dataGrip_listaProductos.ReadOnly = true;
+
+
+
+                if (productoABuscar.Count>0)
+                {
+
+                    MetroMessageBox.Show(this, "Producto encontrado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+
+                    
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "Producto no encontrado", "," + "\n O Por favor verifique que el nombre del producto este correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargarLista();
+                }
+            }
+            else
+            {
+                MetroMessageBox.Show(this, "EL CAMPO DE TEXTO NOMBRE PRODUCTO NO DEBE DE IR EN BLANCO", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+    }
     }
 }
