@@ -10,33 +10,19 @@ namespace SistemaContable_UCR_Busisness
     public class CoordinadorDeTransacciones
     {
 
-        public void Agregar(SistemaContable_UCR_Model.Transacciones elNuevoEmpleado)
+        public void Agregar(SistemaContable_UCR_Model.Transacciones laNuevaTransaccion)
         {
-            AccesoAdatos.GestorDeEmpleados gestor = new AccesoAdatos.GestorDeEmpleados();
-
-            gestor.Agregar(elNuevoEmpleado);
         }
 
-        public void Editar(Model.Empleados elEmpleado)
+        public void Editar(SistemaContable_UCR_Model.Transacciones laTransaccion)
         {
-            AccesoAdatos.GestorDeEmpleados gestor = new AccesoAdatos.GestorDeEmpleados();
-
-            gestor.Actualizar(elEmpleado);
 
         }
 
-        public Model.Empleados ObtenerEmpleadoPorId(int id)
+        public SistemaContable_UCR_Model.Transacciones ObtenerTransaccionPorId(int id)
         {
-            AccesoAdatos.GestorDeEmpleados gestor = new AccesoAdatos.GestorDeEmpleados();
-
-            return gestor.ObtenerEmpleadoPorId(id);
-        }
-
-        public List<Model.Empleados> ObtenerTodosLosEmpleados()
-        {
-            AccesoAdatos.GestorDeEmpleados gestor = new AccesoAdatos.GestorDeEmpleados();
-
-            return gestor.ObtenerTodosLosEmpleados();
+            SistemaContable_UCR_Model.Transacciones tran = new SistemaContable_UCR_Model.Transacciones();
+            return tran;
         }
     }
 }
