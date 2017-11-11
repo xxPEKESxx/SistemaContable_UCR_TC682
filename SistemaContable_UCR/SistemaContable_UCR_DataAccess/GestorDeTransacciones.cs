@@ -79,5 +79,38 @@ namespace SistemaContable_UCR_DataAccess
                 Console.WriteLine(ex.Message);
             }
         }
+
+        public List<Transacciones> getAll() {
+
+            List<Transacciones> laListaDeTransaccciones = new List<Transacciones>();
+
+            SQLiteConnection stringConection;
+            Conection Conection = new Conection();
+
+            stringConection = Conection.getConection();
+            stringConection.Open();
+
+            string query = "select * from Transacciones";
+
+            SQLiteCommand command = new SQLiteCommand(query, stringConection);
+            SQLiteDataReader datos = command.ExecuteReader();
+
+            while (datos.Read()) {
+
+                Transacciones transaccion = new Transacciones
+                {
+                    ID = datos.GetInt32(0),
+                    IdProducto = datos.GetInt32(1),
+                    Cantidad = datos.GetInt32(2),
+                    Total = datos.GetFloat(3),
+                    Fecha = datos.GetDateTime(4),
+                    IdTipo = datos.GetInt32(5),
+                };
+
+                Console.WriteLine("si trae");
+            }
+
+            return laListaDeTransaccciones;
+        }
     }
 }

@@ -26,10 +26,11 @@ namespace SistemaContable_UCR_Busisness
             gestor.Update(laTransaccion);
         }
 
-        public SistemaContable_UCR_Model.Transacciones ObtenerTransaccionPorId(int id)
-        {
-            SistemaContable_UCR_Model.Transacciones tran = new SistemaContable_UCR_Model.Transacciones();
-            return tran;
+        public List<Transacciones> getAll() {
+
+            GestorDeTransacciones gestor = new GestorDeTransacciones();
+
+            return gestor.getAll();
         }
     }
 }

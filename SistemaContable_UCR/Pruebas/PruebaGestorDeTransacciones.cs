@@ -23,5 +23,13 @@ namespace SistemaContable_UCR_Pruebas
 
             coordinadorTransacciones.Save(transaccion);
         }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+            CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
+
+            coordinadorTransacciones.getAll();
+        }
     }
 }
