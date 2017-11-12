@@ -176,5 +176,10 @@ namespace SistemaContable_UCR_VIEWS
             Operation__Center oc = new Operation__Center();
             oc.Visible = true;
         }
+
+        private void producto_Edita_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
