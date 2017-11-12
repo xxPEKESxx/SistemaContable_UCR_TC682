@@ -26,7 +26,7 @@ namespace SistemaContable_UCR_VIEWS
             CoordinadorDeTransacciones coordinadorDeTrasacciones = new CoordinadorDeTransacciones();
 
             float[] utilidad = coordinadorDeTrasacciones.getUtilityByMonth(metroDateTime1.Value);
-            if (utilidad.Length!=0)
+            if (utilidad[0]!= 0 && utilidad[1] != 0)
             {
                 metroLabelVentas.Text = utilidad[1].ToString();
                 metroLabelCompras.Text = utilidad[0].ToString();
@@ -35,6 +35,9 @@ namespace SistemaContable_UCR_VIEWS
             else
             {
                 MetroMessageBox.Show(this, "ERROR DE REGISTROS ", "NO SE HA ENCONTRADO REGISTROS PARA LA FECHA SELECCIONADA!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                metroLabelVentas.Text = "VALOR";
+                metroLabelCompras.Text = "VALOR";
+                metroLabelUtilidad.Text = "VALOR";
             }
             
 
