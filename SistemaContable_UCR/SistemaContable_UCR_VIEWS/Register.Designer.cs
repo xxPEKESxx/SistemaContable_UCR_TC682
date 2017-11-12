@@ -58,7 +58,7 @@
             this.registro_dni.Multiline = true;
             this.registro_dni.Name = "registro_dni";
             this.registro_dni.PasswordChar = '\0';
-            this.registro_dni.PromptText = "CEDULA";
+            this.registro_dni.PromptText = "CÉDULA";
             this.registro_dni.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.registro_dni.SelectedText = "";
             this.registro_dni.SelectionLength = 0;
@@ -68,7 +68,7 @@
             this.registro_dni.TabIndex = 0;
             this.registro_dni.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.registro_dni.UseSelectable = true;
-            this.registro_dni.WaterMark = "CEDULA";
+            this.registro_dni.WaterMark = "CÉDULA";
             this.registro_dni.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.registro_dni.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 

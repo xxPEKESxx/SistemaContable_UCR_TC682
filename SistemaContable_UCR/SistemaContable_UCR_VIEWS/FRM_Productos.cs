@@ -26,6 +26,7 @@ namespace SistemaContable_UCR_VIEWS
 
             cargarLista();
             cargarCbx_productos();
+            cargar_txteditables();
             
             
         }
@@ -63,6 +64,17 @@ namespace SistemaContable_UCR_VIEWS
             metroGrid1_muestra_.ReadOnly = true;
 
         }
+        public void cargar_txteditables() {
+            
+                if (cbx_editar_seleccionproducto.Items!=null) {
+
+                txt_editar_nombre.Enabled = true;
+                txt_editar_precio.Enabled = true;
+                txt_editar_descripcion.Enabled = true;
+            }
+        }
+
+
         private void FRM_Productos_Load(object sender, EventArgs e)
         {
 
@@ -126,39 +138,6 @@ namespace SistemaContable_UCR_VIEWS
 
         //private void producto_Edita_Click(object sender, EventArgs e)
         ////{
-        ////    Productos producto = new Productos();
-
-        ////    CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
-        ////    Productos productoAEditar = coordinadorDeProductos.getById(IdProducto);
-
-        ////    if (txtproducto_descriocion.Text != "" && txtproducto_precio.Text != ""
-        ////        && txtproducto_name.Text != "")
-        ////    {
-
-        ////        float precio = float.Parse(txtproducto_precio.Text.ToString());
-        ////    producto.Precio = precio;
-        ////    producto.Descripcion = txtproducto_descriocion.Text;
-        ////    producto.Producto = txtproducto_name.Text;
-        ////    producto.ID = productoAEditar.ID;
-
-            
-
-        ////        if (coordinadorDeProductos.updateProduct(producto))
-        ////        {
-
-        ////            MetroMessageBox.Show(this, "Producto editado con exito", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        ////            cargarLista();
-        ////        }
-        ////        else
-        ////        {
-        ////            MetroMessageBox.Show(this, "Producto no editado", "Por favor verificar los capos en blanco," + "\n O verifique que el nombre del producto no esta repetido", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        ////            cargarLista();
-        ////        }
-        ////    }
-        ////    else
-        ////    {
-        ////        MetroMessageBox.Show(this, "FAVOR NO DEJAR CAMPOS EN BLANCO", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        ////    }
 
         //}
 
@@ -263,13 +242,16 @@ namespace SistemaContable_UCR_VIEWS
         {
 
         }
-
-        private void btn_Atras_Agregar_Click(object sender, EventArgs e)
-        {
+        public void mostrarVentanaOperaciones() {
             this.Visible = false;
             Operation__Center oc = new Operation__Center();
 
             oc.Visible = true;
+        }
+
+        private void btn_Atras_Agregar_Click(object sender, EventArgs e)
+        {
+            mostrarVentanaOperaciones();
         }
 
         private void btn_Agregar_Agregar_Click(object sender, EventArgs e)
@@ -311,6 +293,61 @@ namespace SistemaContable_UCR_VIEWS
             {
                 MetroMessageBox.Show(this, "FAVOR NO DEJAR CAMPOS EN BLANCO", "peligro!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btn_editar_Atras_Click(object sender, EventArgs e)
+        {
+            mostrarVentanaOperaciones();
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            mostrarVentanaOperaciones();
+        }
+
+        private void btn_muestra_Atras_Click(object sender, EventArgs e)
+        {
+            mostrarVentanaOperaciones();
+        }
+
+        private void btn_editar_Agregar_Click(object sender, EventArgs e)
+        {
+
+
+            Productos producto = new Productos();
+
+            CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
+          
+
+            if (txt_editar_descripcion.Text != "" && txt_editar_precio.Text != ""
+                && txt_editar_nombre.Text != "")
+            {
+
+                float precio = float.Parse(txt_editar_precio.Text.ToString());
+                producto.Precio = precio;
+                producto.Descripcion = txt_editar_descripcion.Text;
+                producto.Producto = txt_editar_nombre.Text;
+                producto.ID =  Convert.ToInt32(cbx_editar_seleccionproducto.SelectedValue);
+
+
+
+                if (coordinadorDeProductos.updateProduct(producto))
+                {
+
+                    MetroMessageBox.Show(this, "Producto editado con exito", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargarLista();
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "Producto no editado", "Por favor verificar los capos en blanco," + "\n O verifique que el nombre del producto no esta repetido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargarLista();
+                }
+            }
+            else
+            {
+                MetroMessageBox.Show(this, "FAVOR NO DEJAR CAMPOS EN BLANCO", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
     }
     }
