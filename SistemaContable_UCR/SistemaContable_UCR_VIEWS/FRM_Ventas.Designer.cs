@@ -28,35 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.producto_Edita = new MetroFramework.Controls.MetroTile();
             this.producto_Atras = new MetroFramework.Controls.MetroTile();
             this.btn_agreagar_user = new MetroFramework.Controls.MetroTile();
             this.dataGrip_listaProductos = new MetroFramework.Controls.MetroGrid();
             this.txtVentas_Name = new MetroFramework.Controls.MetroTextBox();
             this.txtVentas_Cantidad = new MetroFramework.Controls.MetroTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtventa_Total = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrip_listaProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // producto_Edita
             // 
             this.producto_Edita.ActiveControl = null;
-            this.producto_Edita.Location = new System.Drawing.Point(221, 170);
+            this.producto_Edita.Location = new System.Drawing.Point(189, 170);
             this.producto_Edita.Name = "producto_Edita";
-            this.producto_Edita.Size = new System.Drawing.Size(80, 106);
+            this.producto_Edita.Size = new System.Drawing.Size(148, 106);
             this.producto_Edita.Style = MetroFramework.MetroColorStyle.Lime;
             this.producto_Edita.TabIndex = 10;
-            this.producto_Edita.Text = "EDITAR";
+            this.producto_Edita.Text = "Ver historial de venta";
             this.producto_Edita.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.producto_Edita.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_clipboard_variant_edit;
             this.producto_Edita.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.producto_Edita.UseSelectable = true;
             this.producto_Edita.UseStyleColors = true;
             this.producto_Edita.UseTileImage = true;
+            this.producto_Edita.Click += new System.EventHandler(this.producto_Edita_Click);
             // 
             // producto_Atras
             // 
@@ -98,37 +97,37 @@
             this.dataGrip_listaProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGrip_listaProductos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGrip_listaProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(219)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrip_listaProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(219)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrip_listaProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGrip_listaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(219)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGrip_listaProductos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(219)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGrip_listaProductos.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGrip_listaProductos.EnableHeadersVisualStyles = false;
             this.dataGrip_listaProductos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dataGrip_listaProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dataGrip_listaProductos.Location = new System.Drawing.Point(23, 282);
             this.dataGrip_listaProductos.Name = "dataGrip_listaProductos";
             this.dataGrip_listaProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(219)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrip_listaProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(219)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrip_listaProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGrip_listaProductos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGrip_listaProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGrip_listaProductos.Size = new System.Drawing.Size(474, 227);
@@ -202,58 +201,12 @@
             this.txtVentas_Cantidad.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtVentas_Cantidad.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(88, 521);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(271, 31);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "TOTAL DE VENTAS:";
-            // 
-            // txtventa_Total
-            // 
-            // 
-            // 
-            // 
-            this.txtventa_Total.CustomButton.Image = null;
-            this.txtventa_Total.CustomButton.Location = new System.Drawing.Point(71, 2);
-            this.txtventa_Total.CustomButton.Name = "";
-            this.txtventa_Total.CustomButton.Size = new System.Drawing.Size(37, 37);
-            this.txtventa_Total.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtventa_Total.CustomButton.TabIndex = 1;
-            this.txtventa_Total.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtventa_Total.CustomButton.UseSelectable = true;
-            this.txtventa_Total.CustomButton.Visible = false;
-            this.txtventa_Total.Enabled = false;
-            this.txtventa_Total.Lines = new string[0];
-            this.txtventa_Total.Location = new System.Drawing.Point(374, 515);
-            this.txtventa_Total.MaxLength = 32767;
-            this.txtventa_Total.Multiline = true;
-            this.txtventa_Total.Name = "txtventa_Total";
-            this.txtventa_Total.PasswordChar = '\0';
-            this.txtventa_Total.PromptText = "TOTAL";
-            this.txtventa_Total.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtventa_Total.SelectedText = "";
-            this.txtventa_Total.SelectionLength = 0;
-            this.txtventa_Total.SelectionStart = 0;
-            this.txtventa_Total.ShortcutsEnabled = true;
-            this.txtventa_Total.Size = new System.Drawing.Size(111, 42);
-            this.txtventa_Total.TabIndex = 14;
-            this.txtventa_Total.UseSelectable = true;
-            this.txtventa_Total.WaterMark = "TOTAL";
-            this.txtventa_Total.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtventa_Total.WaterMarkFont = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
             // FRM_Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(519, 572);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtVentas_Cantidad);
-            this.Controls.Add(this.txtventa_Total);
             this.Controls.Add(this.txtVentas_Name);
             this.Controls.Add(this.producto_Edita);
             this.Controls.Add(this.producto_Atras);
@@ -266,7 +219,6 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FRM_Ventas_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrip_listaProductos)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -277,7 +229,5 @@
         private MetroFramework.Controls.MetroGrid dataGrip_listaProductos;
         private MetroFramework.Controls.MetroTextBox txtVentas_Name;
         private MetroFramework.Controls.MetroTextBox txtVentas_Cantidad;
-        private System.Windows.Forms.Label label1;
-        private MetroFramework.Controls.MetroTextBox txtventa_Total;
     }
 }
