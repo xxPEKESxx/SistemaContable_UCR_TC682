@@ -155,7 +155,7 @@
             this.btn_usuarios.Size = new System.Drawing.Size(294, 134);
             this.btn_usuarios.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_usuarios.TabIndex = 2;
-            this.btn_usuarios.Text = "Usuarios";
+            this.btn_usuarios.Text = "Balance";
             this.btn_usuarios.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btn_usuarios.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_people_multiple;
             this.btn_usuarios.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -163,6 +163,7 @@
             this.btn_usuarios.UseSelectable = true;
             this.btn_usuarios.UseStyleColors = true;
             this.btn_usuarios.UseTileImage = true;
+            this.btn_usuarios.Click += new System.EventHandler(this.btn_usuarios_Click);
             // 
             // btn_compras
             // 
@@ -198,7 +199,7 @@
             this.MaximizeBox = false;
             this.Name = "Operation__Center";
             this.Resizable = false;
-            this.Text = "Sistema Contable UCR (tc682)";
+            this.Text = "Sistema Contable UCR (TCU-682)";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Operation__Center_FormClosed);
             this.Load += new System.EventHandler(this.Operation__Center_Load);
             this.metroPanel_Administration.ResumeLayout(false);

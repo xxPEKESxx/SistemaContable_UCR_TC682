@@ -107,43 +107,14 @@ namespace SistemaContable_UCR_VIEWS
 
         private void metroTileEditar_Click(object sender, EventArgs e)
         {
-            Transacciones transaccionABuscar = new Transacciones();
-
-            CoordinadorDeTransacciones coordinadorDeTransacciones = new CoordinadorDeTransacciones();
-
-            transaccionABuscar = coordinadorDeTransacciones.getById(IDCompra);
-
-            if (metroTextBoxEditarTab.Text != "")
-            {
-                transaccionABuscar.Cantidad = int.Parse(metroTextBoxEditarTab.Text);
-                if (coordinadorDeTransacciones.Update(transaccionABuscar) != 0)
-                {
-                    MetroMessageBox.Show(this, "EDICION REGISTRADA CON EXITO.", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    limpiarCampos();
-                }
-
-                else
-                {
-
-                    MetroMessageBox.Show(this, "ERROR DE REGISTROS ", "NO SE EDITO LA COMPRA!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    limpiarCampos();
-                }
-            }
-            else
-            {
-
-                MetroMessageBox.Show(this, "LLENE EL CAMPO DE CANTIDAD.", "ES NECESARIO LLENAR EL CAMPO DE CANTIDADES!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-            }
-
-
+            this.metroTabCompras.SelectedTab = metroTabPageEditar;
 
         }
 
         private void metroGridCompras_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Transacciones pr = new Transacciones();
+            Productos productos = new Productos();
             DataGridView dgv = sender as DataGridView;
 
             if (dgv == null)
@@ -161,8 +132,12 @@ namespace SistemaContable_UCR_VIEWS
 
                 pr = coordinacionDeTransacciones.getById(pro.ID);
                 this.IDCompra = pr.ID;
+                CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
+                productos = coordinadorDeProductos.getById(pr.IdProducto);
             }
 
+
+            metroLabelNombreProducto.Text = productos.Producto;
             metroTextBoxEditarTab.Text = (pr.Cantidad.ToString());
         }
 
@@ -273,10 +248,66 @@ namespace SistemaContable_UCR_VIEWS
 
         private void metroTileAgregarProducto_Click(object sender, EventArgs e)
         {
-            FRM_Productos producto = new FRM_Productos();
-            producto.Visible = true;
+            Operation__Center center = new Operation__Center();
+            center.Visible = true;
 
             this.Visible = false;
+        }
+
+        private void metroTileEditarTap_Click(object sender, EventArgs e)
+        {
+            Transacciones transaccionABuscar = new Transacciones();
+
+            CoordinadorDeTransacciones coordinadorDeTransacciones = new CoordinadorDeTransacciones();
+
+            transaccionABuscar = coordinadorDeTransacciones.getById(IDCompra);
+
+            if (metroTextBoxEditarTab.Text != "")
+            {
+                transaccionABuscar.Cantidad = int.Parse(metroTextBoxEditarTab.Text);
+                if (coordinadorDeTransacciones.Update(transaccionABuscar) != 0)
+                {
+                    MetroMessageBox.Show(this, "EDICION REGISTRADA CON EXITO.", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limpiarCampos();
+                }
+
+                else
+                {
+
+                    MetroMessageBox.Show(this, "ERROR DE REGISTROS ", "NO SE EDITO LA COMPRA!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limpiarCampos();
+                }
+            }
+            else
+            {
+
+                MetroMessageBox.Show(this, "LLENE EL CAMPO DE CANTIDAD.", "ES NECESARIO LLENAR EL CAMPO DE CANTIDADES!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            }
+
+        }
+
+        private void txtVentas_Cantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MetroMessageBox.Show(this, "CAMPOS NUMERICOS", "," + "\n NO SE PERMITEN LETRAS..", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void metroTextBoxEditarTab_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MetroMessageBox.Show(this, "CAMPOS NUMERICOS", "," + "\n NO SE PERMITEN LETRAS..", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                e.Handled = true;
+                return;
+            }
         }
     }
 }
