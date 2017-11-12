@@ -82,7 +82,7 @@ namespace SistemaContable_UCR_Pruebas
         {
             CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
 
-            Console.WriteLine(coordinadorTransacciones.getByName("Yu").Count);
+            Console.WriteLine(coordinadorTransacciones.getVentasByProductName("Yu").Count);
         }
     }
 }
