@@ -93,5 +93,14 @@ namespace SistemaContable_UCR_Pruebas
             Console.WriteLine(coordinadorTransacciones.getUtilityByMonth(DateTime.Now)[2].ToString());
             
         }
+
+        [TestMethod]
+        public void TestMethod10()
+        {
+            CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
+
+            Console.WriteLine(coordinadorTransacciones.getTotalUtility()[2].ToString());
+
+        }
     }
 }

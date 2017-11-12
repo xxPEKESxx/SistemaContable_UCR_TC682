@@ -11,67 +11,75 @@ namespace SistemaContable_UCR_DataAccess
     public class GestorDeTransacciones
     {
 
+        public int ExecuteNonQuery(string query) {
+
+            int filasAfectadas = 0;
+
+            try
+            {
+
+                Conection Conection = new Conection();
+
+            using (SQLiteConnection stringConection = new SQLiteConnection(Conection.getConection()))
+            {
+                stringConection.Open();
+                using (SQLiteCommand cmd = new SQLiteCommand(query, stringConection))
+                {
+                    filasAfectadas = cmd.ExecuteNonQuery();
+                    cmd.Dispose();
+                }
+                stringConection.Close();
+            }
+            }
+            catch (SQLiteException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
+
+            return filasAfectadas;
+        }
 
         public int Save(Transacciones laNuevaTransaccion)
         {
-            int filasInsertadas = 0;
-
-            Conection Conection = new Conection();
             string query = "insert into Transacciones (IdProducto, Cantidad, Total, Fecha, IdTipo) values ('" + 
                     laNuevaTransaccion.IdProducto + "', '" + laNuevaTransaccion.Cantidad + "', '" + 
                     laNuevaTransaccion.Total + "', '" + laNuevaTransaccion.Fecha + "', '" + laNuevaTransaccion.IdTipo + "')";
-                
-                using (SQLiteConnection stringConection = new SQLiteConnection(Conection.getConection()))
-                {
-                    stringConection.Open();
-                    using (SQLiteCommand cmd = new SQLiteCommand(query, stringConection))
-                    {
-                       filasInsertadas = cmd.ExecuteNonQuery();
-                        cmd.Dispose();
-                    }
-                    stringConection.Close();
-                }
+
+            int filasInsertadas = ExecuteNonQuery(query);  
 
             return filasInsertadas;
         }
 
         public int Update(Transacciones laTransaccion)
         {
-            int filasActualizadas = 0;
-            Conection Conection = new Conection();
-            try
-            {
                 string query = "update Transacciones set IdProducto='" + laTransaccion.IdProducto +
                     "', Cantidad='" + laTransaccion.Cantidad + "', Total='" + laTransaccion.Total +
                     "', Fecha='" + laTransaccion.Fecha + "', IdTipo='" + laTransaccion.IdTipo +
                     "' where ID='" + laTransaccion.ID + "'";
 
-                using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
-                {
-                    c.Open();
-                    using (SQLiteCommand cmd = new SQLiteCommand(query, c))
-                    {
-                        filasActualizadas = cmd.ExecuteNonQuery();
-                        cmd.Dispose();
-                    }
-                    c.Close();
-                }
-            }
-            catch (SQLiteException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+                int filasActualizadas = ExecuteNonQuery(query);
 
-            return filasActualizadas;
+                return filasActualizadas;
+        }
+
+        public int Delete(int Id)
+        {
+            string query = "delete from Transacciones where ID=" + Id;
+
+            int filasEliminadas = ExecuteNonQuery(query);
+
+            return filasEliminadas;
         }
 
         public Transacciones getById(int Id)
         {
             Conection Conection = new Conection();
-        Transacciones transaccion = null;
+            Transacciones transaccion = null;
             try
             {
-                string query = "select * from Transacciones where ID="+ Id;
+                string query = "select tr.*, pr.Producto from Transacciones tr JOIN Productos pr ON " +
+                "tr.IdProducto = pr.ID where tr.ID=" + Id;
 
                 using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
                 {
@@ -100,43 +108,12 @@ namespace SistemaContable_UCR_DataAccess
             return transaccion;
         }
 
-        public int Delete(int Id)
-        {
-            int filasEliminadas = 0;
-        Conection Conection = new Conection();
-            try
-            {
-                string query = "delete from Transacciones where ID=" + Id;
+        public List<Transacciones> ExecuteReader(string query) {
 
-                using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
-                {
-                    c.Open();
-                    using (SQLiteCommand cmd = new SQLiteCommand(query, c))
-                    {
-                        filasEliminadas = cmd.ExecuteNonQuery();
-                        cmd.Dispose();
-                    }
-                    c.Close();
-                }
-            }
-            catch (SQLiteException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-            return filasEliminadas;
-        }
-
-        public List<Transacciones> getAll() {
-        Conection Conection = new Conection();
-        List<Transacciones> laListaDeTransaccciones = new List<Transacciones>();
-
+            List<Transacciones> laListaDeTransaccciones = new List<Transacciones>();
 
             try {
-
-                string query = "select * from Transacciones";
-
-                laListaDeTransaccciones = new List<Transacciones>();
+                Conection Conection = new Conection();
 
                 using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
                 {
@@ -147,12 +124,13 @@ namespace SistemaContable_UCR_DataAccess
                         {
                             cmd.Dispose();
 
-                            while (datos.Read()){
+                            while (datos.Read())
+                            {
 
-                    laListaDeTransaccciones.Add(fillTransaction(datos));
-                }
+                                laListaDeTransaccciones.Add(fillTransaction(datos));
+                            }
                             datos.Close();
-        }
+                        }
                     }
                     c.Close();
                 }
@@ -161,151 +139,59 @@ namespace SistemaContable_UCR_DataAccess
             {
                 Console.WriteLine(ex.Message);
             }
+
+            return laListaDeTransaccciones;
+        }
+
+        public List<Transacciones> getAll() {
+
+            string query = "select tr.*, pr.Producto from Transacciones tr JOIN Productos pr ON " +
+                "tr.IdProducto = pr.ID";
+
+            List<Transacciones> laListaDeTransaccciones = ExecuteReader(query);
 
             return laListaDeTransaccciones;
         }
 
         public List<Transacciones> getByDateInterval(String Desde, String Hasta, int Tipo)
         {
-        Conection Conection = new Conection();
-        List<Transacciones> laListaDeTransaccciones = new List<Transacciones>();
+            string query = "select tr.*, pr.Producto from Transacciones tr JOIN Productos pr ON " +
+                "tr.IdProducto = pr.ID where Fecha BETWEEN '" + Desde + "' AND '" + Hasta + "'"+
+                " AND IdTipo="+Tipo;
 
-            try {
-
-                string query = "select * from Transacciones where Fecha BETWEEN '" + Desde + "' AND '" + Hasta + "'"+
-                    " AND IdTipo="+Tipo;
-
-                using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
-                {
-                    c.Open();
-                    using (SQLiteCommand cmd = new SQLiteCommand(query, c))
-                    {
-                        using (SQLiteDataReader datos = cmd.ExecuteReader())
-                        {
-                            cmd.Dispose();
-
-                            while (datos.Read())
-                            {
-
-                                laListaDeTransaccciones.Add(fillTransaction(datos));
-                            }
-                            datos.Close();
-                        }
-                    }
-                    c.Close();
-                }
-            }
-            catch (SQLiteException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
+            List<Transacciones> laListaDeTransaccciones = ExecuteReader(query);
 
             return laListaDeTransaccciones;
         }
 
-        public float[] getUtilityByMonth(string desde, string hasta)
-        {
-            Conection Conection = new Conection();
-            float[] utilidad = new float[3];
-            
-            try
-            {
-                string queryCompra = "select SUM(Total) from Transacciones where Fecha BETWEEN '" + desde + "' AND '" + hasta + "' AND IdTipo="+2;
-
-                string queryVenta = "select SUM(Total) from Transacciones where Fecha BETWEEN '" + desde + "' AND '" + hasta + "' AND IdTipo="+1;
-
-                using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
-                {
-                    c.Open();
-                    using (SQLiteCommand cmd = new SQLiteCommand(queryCompra, c))
-                    {
-                        using (SQLiteDataReader datos = cmd.ExecuteReader())
-                        {
-                            cmd.Dispose();
-
-                            if (datos.GetValue(0).ToString()!="")
-                                {
-                                    float totalCompra = float.Parse(datos.GetValue(0).ToString());
-                                    utilidad.SetValue(totalCompra, 0);
-                                }
-
-                            datos.Close();
-                        }
-                    }
-                    using (SQLiteCommand cmd = new SQLiteCommand(queryVenta, c))
-                    {
-                        using (SQLiteDataReader datos = cmd.ExecuteReader())
-                        {
-                            cmd.Dispose();
-
-                            if (datos.GetValue(0).ToString() != "")
-                                {
-                                    float totalVenta = float.Parse(datos.GetValue(0).ToString());
-                                    utilidad.SetValue(totalVenta, 1);
-                                }
-                            datos.Close();
-                        }
-                    }
-                    c.Close();
-                }
-            }
-            catch (SQLiteException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            
-            return utilidad;
-        }
-
         public List<Transacciones> getByType(int Tipo)
         {
-        Conection Conection = new Conection();
-        List<Transacciones> laListaDeTransaccciones = new List<Transacciones>();
 
-            try
-            {
+            string query = "select tr.*, pr.Producto from Transacciones tr JOIN Productos pr ON "+
+                "tr.IdProducto = pr.ID WHERE tr.IdTipo='" + Tipo + "'";
 
-                string query = "select * from Transacciones where IdTipo='" + Tipo + "'";
-
-                using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
-                {
-                    c.Open();
-                    using (SQLiteCommand cmd = new SQLiteCommand(query, c))
-                    {
-                        using (SQLiteDataReader datos = cmd.ExecuteReader())
-                        {
-                            cmd.Dispose();
-
-                            while (datos.Read())
-                            {
-
-                                laListaDeTransaccciones.Add(fillTransaction(datos));
-                            }
-                            datos.Close();
-                        }
-                    }
-                    c.Close();
-                }
-            }
-            catch (SQLiteException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            List<Transacciones> laListaDeTransaccciones = ExecuteReader(query);
 
             return laListaDeTransaccciones;
         }
 
         public List<Transacciones> getByProductName(string Nombre, int Tipo)
         {
-            Conection Conection = new Conection();
-            List<Transacciones> laListaDeTransaccciones = new List<Transacciones>();
+            string query = "select tr.*, pr.Producto from Transacciones tr JOIN Productos pr "+
+                    "ON tr.IdProducto = pr.ID WHERE pr.Producto LIKE '%"+Nombre+"%' AND tr.Idtipo="+Tipo;
+
+            List<Transacciones> laListaDeTransaccciones = ExecuteReader(query);
+
+            return laListaDeTransaccciones;
+        }
+
+        public float[] getUtility(string query) {
+
+            float[] utilidad = new float[3];
 
             try
             {
-
-                string query = "select tr.*, pr.Producto from Transacciones tr JOIN Productos pr "+
-                    "ON tr.IdProducto = pr.ID WHERE pr.Producto LIKE '%"+Nombre+"%' AND tr.Idtipo="+Tipo;
+                Conection Conection = new Conection();
 
                 using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
                 {
@@ -316,11 +202,17 @@ namespace SistemaContable_UCR_DataAccess
                         {
                             cmd.Dispose();
 
-                            while (datos.Read())
+                            if (datos.GetValue(0).ToString() != "")
                             {
-
-                                laListaDeTransaccciones.Add(fillTransaction(datos));
+                                float totalCompra = float.Parse(datos.GetValue(0).ToString());
+                                utilidad.SetValue(totalCompra, 0);
                             }
+                            if (datos.GetValue(1).ToString() != "")
+                            {
+                                float totalVenta = float.Parse(datos.GetValue(1).ToString());
+                                utilidad.SetValue(totalVenta, 1);
+                            }
+
                             datos.Close();
                         }
                     }
@@ -332,7 +224,30 @@ namespace SistemaContable_UCR_DataAccess
                 Console.WriteLine(ex.Message);
             }
 
-            return laListaDeTransaccciones;
+            return utilidad;
+        }
+
+        public float[] getUtilityByDateInterval(string desde, string hasta)
+        {
+
+           string query = "select SUM(CASE WHEN IdTipo = 2 THEN Total END) totalCompras, "+
+                    "SUM(CASE WHEN IdTipo = 1 THEN Total END) totalVentas from Transacciones where Fecha BETWEEN '" + 
+                    desde + "' AND '" + hasta + "'";
+
+            float[] utilidad = getUtility(query);
+
+            return utilidad;
+        }
+
+        public float[] getTotalUtility()
+        {
+
+            string query = "select SUM(CASE WHEN IdTipo = 2 THEN Total END) totalCompras, " +
+                     "SUM(CASE WHEN IdTipo = 1 THEN Total END) totalVentas from Transacciones";
+
+            float[] utilidad = getUtility(query);
+
+            return utilidad;
         }
 
         public Transacciones fillTransaction(SQLiteDataReader datos) {
@@ -345,6 +260,7 @@ namespace SistemaContable_UCR_DataAccess
                 Total = datos.GetFloat(3),
                 Fecha = datos[4].ToString(),
                 IdTipo = datos.GetInt32(5),
+                Producto = datos.GetString(6),
             };
 
             return transaccion;

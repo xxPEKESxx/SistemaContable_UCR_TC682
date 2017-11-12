@@ -11,6 +11,8 @@ namespace SistemaContable_UCR_Model
 
         public int ID { get; set; }
 
+        public String Producto { get; set; }
+
         public int IdProducto { get; set; }
 
         public int Cantidad { get; set; }

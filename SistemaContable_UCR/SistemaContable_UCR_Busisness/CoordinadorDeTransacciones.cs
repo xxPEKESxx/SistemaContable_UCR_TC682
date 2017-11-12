@@ -105,14 +105,42 @@ namespace SistemaContable_UCR_Busisness
         public float[] getUtilityByMonth(DateTime Fecha)
         {
             GestorDeTransacciones gestor = new GestorDeTransacciones();
-            float[] utilidad;
 
             string dateTimeFormat = "{0}-{1}-{2}";
 
             string desde = string.Format(dateTimeFormat, Fecha.Year, Fecha.Month, 1);
             string hasta = string.Format(dateTimeFormat, Fecha.Year, Fecha.Month, 31);
 
-            utilidad = gestor.getUtilityByMonth(desde, hasta);
+            float[] utilidad = gestor.getUtilityByDateInterval(desde, hasta);
+
+            float utilidadTotal = float.Parse(utilidad[1].ToString()) - float.Parse(utilidad[0].ToString());
+
+            utilidad.SetValue(utilidadTotal, 2);
+
+            return utilidad;
+        }
+
+        public float[] getUtilityByDateInterval(DateTime desde, DateTime hasta)
+        {
+            GestorDeTransacciones gestor = new GestorDeTransacciones();
+
+            string inicio = DateTimeSQLite(desde);
+            string fin = DateTimeSQLite(hasta);
+
+            float[] utilidad = gestor.getUtilityByDateInterval(inicio, fin);
+
+            float utilidadTotal = float.Parse(utilidad[1].ToString()) - float.Parse(utilidad[0].ToString());
+
+            utilidad.SetValue(utilidadTotal, 2);
+
+            return utilidad;
+        }
+
+        public float[] getTotalUtility()
+        {
+            GestorDeTransacciones gestor = new GestorDeTransacciones();
+
+            float[] utilidad = gestor.getTotalUtility();
 
             float utilidadTotal = float.Parse(utilidad[1].ToString()) - float.Parse(utilidad[0].ToString());
             utilidad.SetValue(utilidadTotal, 2);
