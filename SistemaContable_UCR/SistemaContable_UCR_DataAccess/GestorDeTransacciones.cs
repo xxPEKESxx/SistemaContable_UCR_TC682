@@ -241,7 +241,7 @@ namespace SistemaContable_UCR_DataAccess
             return laListaDeTransaccciones;
         }
 
-        public List<Transacciones> getByName(string Nombre)
+        public List<Transacciones> getByName(string Nombre, int Tipo)
         {
             Conection Conection = new Conection();
             List<Transacciones> laListaDeTransaccciones = new List<Transacciones>();
@@ -250,7 +250,7 @@ namespace SistemaContable_UCR_DataAccess
             {
 
                 string query = "select tr.ID, tr.IdProducto, tr.Cantidad, tr.Total, tr.Fecha, tr.IdTipo, pr.Producto "+
-                    "from Transacciones tr JOIN Productos pr ON tr.IdProducto = pr.ID WHERE pr.Producto LIKE '%"+Nombre+"%'";
+                    "from Transacciones tr JOIN Productos pr ON tr.IdProducto = pr.ID WHERE pr.Producto LIKE '%"+Nombre+"%' AND tr.Idtipo="+Tipo;
 
                 using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
                 {
