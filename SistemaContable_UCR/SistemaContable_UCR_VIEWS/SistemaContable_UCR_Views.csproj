@@ -72,6 +72,12 @@
     <Compile Include="FRM_GestionCompras.Designer.cs">
       <DependentUpon>FRM_GestionCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM_GestionVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_GestionVentas.Designer.cs">
+      <DependentUpon>FRM_GestionVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM_HistorialVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_GestionCompras.resx">
       <DependentUpon>FRM_GestionCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_GestionVentas.resx">
+      <DependentUpon>FRM_GestionVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_HistorialVentas.resx">
       <DependentUpon>FRM_HistorialVentas.cs</DependentUpon>

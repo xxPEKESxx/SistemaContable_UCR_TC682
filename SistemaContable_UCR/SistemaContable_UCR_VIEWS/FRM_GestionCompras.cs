@@ -270,5 +270,13 @@ namespace SistemaContable_UCR_VIEWS
 
             oc.Visible = true;
         }
+
+        private void metroTileAgregarProducto_Click(object sender, EventArgs e)
+        {
+            FRM_Productos producto = new FRM_Productos();
+            producto.Visible = true;
+
+            this.Visible = false;
+        }
     }
 }
