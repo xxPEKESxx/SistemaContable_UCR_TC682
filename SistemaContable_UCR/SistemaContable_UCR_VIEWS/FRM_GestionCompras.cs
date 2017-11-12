@@ -165,7 +165,7 @@ namespace SistemaContable_UCR_VIEWS
             CoordinadorDeTransacciones coordinadorDeTransacciones = new CoordinadorDeTransacciones();
             List<Transacciones> transaccionABuscar = new List<Transacciones>();
 
-            transaccionABuscar = coordinadorDeTransacciones.getByName(txtBuscar.Text);
+            transaccionABuscar = coordinadorDeTransacciones.getComprasByProductName(txtBuscar.Text);
 
             DataTable _table = ConvertirListaToDataTable(transaccionABuscar);
 
@@ -198,6 +198,38 @@ namespace SistemaContable_UCR_VIEWS
             this.Visible = false;
 
 
+        }
+
+        private void metroTileAtrasHistorial_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Operation__Center oc = new Operation__Center();
+
+            oc.Visible = true;
+        }
+
+        private void btn_Atras_Agregar_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Operation__Center oc = new Operation__Center();
+
+            oc.Visible = true;
+        }
+
+        private void metroTileAtrasEditar_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Operation__Center oc = new Operation__Center();
+
+            oc.Visible = true;
+        }
+
+        private void metroTile3_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Operation__Center oc = new Operation__Center();
+
+            oc.Visible = true;
         }
     }
 }
