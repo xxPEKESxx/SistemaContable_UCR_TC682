@@ -189,5 +189,15 @@ namespace SistemaContable_UCR_VIEWS
 
 
         }
+
+        private void FRM_GestionCompras_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Operation__Center oc = new Operation__Center();
+            oc.Visible = true;
+
+            this.Visible = false;
+
+
+        }
     }
 }
