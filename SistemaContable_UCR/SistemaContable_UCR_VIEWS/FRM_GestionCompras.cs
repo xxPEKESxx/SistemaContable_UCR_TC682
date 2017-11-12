@@ -67,10 +67,7 @@ namespace SistemaContable_UCR_VIEWS
 
         private void metroTileAgregarCompra_Click(object sender, EventArgs e)
         {
-            Transacciones transacciones = new Transacciones();
-
-            
-
+            Transacciones transacciones = new Transacciones();            
            
             CoordinadorDeTransacciones coordinadorDeTransacciones = new CoordinadorDeTransacciones();
 
@@ -87,11 +84,13 @@ namespace SistemaContable_UCR_VIEWS
                 {
 
                     MetroMessageBox.Show(this, "COMPRA REGISTRADA CON EXITO.", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limpiarCampos();
                 }
                 else
                 {
 
                     MetroMessageBox.Show(this, "ERROR DE REGISTROS ", "NO SE REGISTRO LA COMPRA!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limpiarCampos();
                 }
 
 
@@ -108,6 +107,37 @@ namespace SistemaContable_UCR_VIEWS
 
         private void metroTileEditar_Click(object sender, EventArgs e)
         {
+            Transacciones transaccionABuscar = new Transacciones();
+
+            CoordinadorDeTransacciones coordinadorDeTransacciones = new CoordinadorDeTransacciones();
+
+            transaccionABuscar = coordinadorDeTransacciones.getById(IDCompra);
+
+            if (metroTextBoxEditarTab.Text != "")
+            {
+                transaccionABuscar.Cantidad = int.Parse(metroTextBoxEditarTab.Text);
+                if (coordinadorDeTransacciones.Update(transaccionABuscar) != 0)
+                {
+                    MetroMessageBox.Show(this, "EDICION REGISTRADA CON EXITO.", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limpiarCampos();
+                }
+
+                else
+                {
+
+                    MetroMessageBox.Show(this, "ERROR DE REGISTROS ", "NO SE EDITO LA COMPRA!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limpiarCampos();
+                }
+            }
+            else
+            {
+
+                MetroMessageBox.Show(this, "LLENE EL CAMPO DE CANTIDAD.", "ES NECESARIO LLENAR EL CAMPO DE CANTIDADES!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            }
+
+
 
         }
 
@@ -149,12 +179,12 @@ namespace SistemaContable_UCR_VIEWS
                 if (coordinadorDeTransacciones.Delete(transaccionAEliminar.ID) > 0)
                 {
 
-                    MetroMessageBox.Show(this, "Producto eliminado con exito", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MetroMessageBox.Show(this, "Compra eliminada con exito", "Exito!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cargarGridCompras();
                 }
                 else
                 {
-                    MetroMessageBox.Show(this, "Producto no eliminado", "Por favor verificar los capos en blanco," + "\n O verifique que el nombre del producto no esta repetido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MetroMessageBox.Show(this, "Compra no eliminada", "Por favor verificar los capos en blanco," + "\n ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cargarGridCompras();
                 }
             
@@ -197,6 +227,15 @@ namespace SistemaContable_UCR_VIEWS
 
             this.Visible = false;
 
+
+        }
+
+        public void limpiarCampos()
+        {
+            txtBuscar.Text = "";
+            txtVentas_Cantidad.Text = "";
+            metroTextBoxEditarTab.Text = "";
+            
 
         }
 
