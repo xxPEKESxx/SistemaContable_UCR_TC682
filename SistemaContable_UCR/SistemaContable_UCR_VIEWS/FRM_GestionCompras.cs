@@ -107,37 +107,7 @@ namespace SistemaContable_UCR_VIEWS
 
         private void metroTileEditar_Click(object sender, EventArgs e)
         {
-            Transacciones transaccionABuscar = new Transacciones();
-
-            CoordinadorDeTransacciones coordinadorDeTransacciones = new CoordinadorDeTransacciones();
-
-            transaccionABuscar = coordinadorDeTransacciones.getById(IDCompra);
-
-            if (metroTextBoxEditarTab.Text != "")
-            {
-                transaccionABuscar.Cantidad = int.Parse(metroTextBoxEditarTab.Text);
-                if (coordinadorDeTransacciones.Update(transaccionABuscar) != 0)
-                {
-                    MetroMessageBox.Show(this, "EDICION REGISTRADA CON EXITO.", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    limpiarCampos();
-                }
-
-                else
-                {
-
-                    MetroMessageBox.Show(this, "ERROR DE REGISTROS ", "NO SE EDITO LA COMPRA!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    limpiarCampos();
-                }
-            }
-            else
-            {
-
-                MetroMessageBox.Show(this, "LLENE EL CAMPO DE CANTIDAD.", "ES NECESARIO LLENAR EL CAMPO DE CANTIDADES!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-            }
-
-
+            this.metroTabCompras.SelectedTab = metroTabPageEditar;
 
         }
 
@@ -282,6 +252,40 @@ namespace SistemaContable_UCR_VIEWS
             center.Visible = true;
 
             this.Visible = false;
+        }
+
+        private void metroTileEditarTap_Click(object sender, EventArgs e)
+        {
+            Transacciones transaccionABuscar = new Transacciones();
+
+            CoordinadorDeTransacciones coordinadorDeTransacciones = new CoordinadorDeTransacciones();
+
+            transaccionABuscar = coordinadorDeTransacciones.getById(IDCompra);
+
+            if (metroTextBoxEditarTab.Text != "")
+            {
+                transaccionABuscar.Cantidad = int.Parse(metroTextBoxEditarTab.Text);
+                if (coordinadorDeTransacciones.Update(transaccionABuscar) != 0)
+                {
+                    MetroMessageBox.Show(this, "EDICION REGISTRADA CON EXITO.", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limpiarCampos();
+                }
+
+                else
+                {
+
+                    MetroMessageBox.Show(this, "ERROR DE REGISTROS ", "NO SE EDITO LA COMPRA!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limpiarCampos();
+                }
+            }
+            else
+            {
+
+                MetroMessageBox.Show(this, "LLENE EL CAMPO DE CANTIDAD.", "ES NECESARIO LLENAR EL CAMPO DE CANTIDADES!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            }
+
         }
     }
 }

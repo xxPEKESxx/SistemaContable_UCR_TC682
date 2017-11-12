@@ -36,25 +36,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTabVentas = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPageAgregar = new MetroFramework.Controls.MetroTabPage();
-            this.btn_Atras_Agregar = new MetroFramework.Controls.MetroTile();
             this.metroTileAgregarProducto = new MetroFramework.Controls.MetroTile();
             this.metroTileAgregarCompra = new MetroFramework.Controls.MetroTile();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.cmbProductos = new MetroFramework.Controls.MetroComboBox();
             this.txtVentas_Cantidad = new MetroFramework.Controls.MetroTextBox();
             this.metroTabPageHistorial = new MetroFramework.Controls.MetroTabPage();
-            this.metroTileAtrasHistorial = new MetroFramework.Controls.MetroTile();
             this.metroTileBuscar = new MetroFramework.Controls.MetroTile();
             this.txtBuscar = new MetroFramework.Controls.MetroTextBox();
             this.metroTileEliminar = new MetroFramework.Controls.MetroTile();
             this.metroTileEditar = new MetroFramework.Controls.MetroTile();
             this.metroGridCompras = new MetroFramework.Controls.MetroGrid();
             this.metroTabPageEditar = new MetroFramework.Controls.MetroTabPage();
-            this.metroTileAtrasEditar = new MetroFramework.Controls.MetroTile();
             this.metroTextBoxEditarTab = new MetroFramework.Controls.MetroTextBox();
             this.metroTileEditarTap = new MetroFramework.Controls.MetroTile();
             this.metroTabPageFiltrar = new MetroFramework.Controls.MetroTabPage();
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroGridFiltrar = new MetroFramework.Controls.MetroGrid();
             this.metroDateTimeHasta = new MetroFramework.Controls.MetroDateTime();
             this.metroDateTimeDesde = new MetroFramework.Controls.MetroDateTime();
@@ -64,6 +60,10 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabelNombreProducto = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.btn_Atras_Agregar = new MetroFramework.Controls.MetroTile();
+            this.metroTileAtrasHistorial = new MetroFramework.Controls.MetroTile();
+            this.metroTileAtrasEditar = new MetroFramework.Controls.MetroTile();
+            this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTabVentas.SuspendLayout();
             this.metroTabPageAgregar.SuspendLayout();
             this.metroTabPageHistorial.SuspendLayout();
@@ -82,7 +82,7 @@
             this.metroTabVentas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabVentas.Location = new System.Drawing.Point(20, 60);
             this.metroTabVentas.Name = "metroTabVentas";
-            this.metroTabVentas.SelectedIndex = 2;
+            this.metroTabVentas.SelectedIndex = 0;
             this.metroTabVentas.Size = new System.Drawing.Size(695, 442);
             this.metroTabVentas.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTabVentas.TabIndex = 1;
@@ -109,28 +109,12 @@
             this.metroTabPageAgregar.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPageAgregar.VerticalScrollbarSize = 10;
             // 
-            // btn_Atras_Agregar
-            // 
-            this.btn_Atras_Agregar.ActiveControl = null;
-            this.btn_Atras_Agregar.Location = new System.Drawing.Point(553, 236);
-            this.btn_Atras_Agregar.Name = "btn_Atras_Agregar";
-            this.btn_Atras_Agregar.Size = new System.Drawing.Size(94, 93);
-            this.btn_Atras_Agregar.Style = MetroFramework.MetroColorStyle.Lime;
-            this.btn_Atras_Agregar.TabIndex = 20;
-            this.btn_Atras_Agregar.Text = "ATRAS";
-            this.btn_Atras_Agregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Atras_Agregar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
-            this.btn_Atras_Agregar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Atras_Agregar.UseSelectable = true;
-            this.btn_Atras_Agregar.UseTileImage = true;
-            this.btn_Atras_Agregar.Click += new System.EventHandler(this.btn_Atras_Agregar_Click);
-            // 
             // metroTileAgregarProducto
             // 
             this.metroTileAgregarProducto.ActiveControl = null;
-            this.metroTileAgregarProducto.Location = new System.Drawing.Point(104, 176);
+            this.metroTileAgregarProducto.Location = new System.Drawing.Point(202, 236);
             this.metroTileAgregarProducto.Name = "metroTileAgregarProducto";
-            this.metroTileAgregarProducto.Size = new System.Drawing.Size(214, 44);
+            this.metroTileAgregarProducto.Size = new System.Drawing.Size(214, 93);
             this.metroTileAgregarProducto.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTileAgregarProducto.TabIndex = 19;
             this.metroTileAgregarProducto.Text = "Agregar nuevo producto";
@@ -140,9 +124,9 @@
             // metroTileAgregarCompra
             // 
             this.metroTileAgregarCompra.ActiveControl = null;
-            this.metroTileAgregarCompra.Location = new System.Drawing.Point(553, 38);
+            this.metroTileAgregarCompra.Location = new System.Drawing.Point(452, 236);
             this.metroTileAgregarCompra.Name = "metroTileAgregarCompra";
-            this.metroTileAgregarCompra.Size = new System.Drawing.Size(78, 69);
+            this.metroTileAgregarCompra.Size = new System.Drawing.Size(95, 93);
             this.metroTileAgregarCompra.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTileAgregarCompra.TabIndex = 18;
             this.metroTileAgregarCompra.Text = "Agregar";
@@ -205,12 +189,12 @@
             // 
             // metroTabPageHistorial
             // 
-            this.metroTabPageHistorial.Controls.Add(this.metroTileAtrasHistorial);
             this.metroTabPageHistorial.Controls.Add(this.metroTileBuscar);
             this.metroTabPageHistorial.Controls.Add(this.txtBuscar);
             this.metroTabPageHistorial.Controls.Add(this.metroTileEliminar);
             this.metroTabPageHistorial.Controls.Add(this.metroTileEditar);
             this.metroTabPageHistorial.Controls.Add(this.metroGridCompras);
+            this.metroTabPageHistorial.Controls.Add(this.metroTileAtrasHistorial);
             this.metroTabPageHistorial.HorizontalScrollbarBarColor = true;
             this.metroTabPageHistorial.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPageHistorial.HorizontalScrollbarSize = 10;
@@ -222,22 +206,6 @@
             this.metroTabPageHistorial.VerticalScrollbarBarColor = true;
             this.metroTabPageHistorial.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPageHistorial.VerticalScrollbarSize = 10;
-            // 
-            // metroTileAtrasHistorial
-            // 
-            this.metroTileAtrasHistorial.ActiveControl = null;
-            this.metroTileAtrasHistorial.Location = new System.Drawing.Point(517, 275);
-            this.metroTileAtrasHistorial.Name = "metroTileAtrasHistorial";
-            this.metroTileAtrasHistorial.Size = new System.Drawing.Size(94, 93);
-            this.metroTileAtrasHistorial.Style = MetroFramework.MetroColorStyle.Lime;
-            this.metroTileAtrasHistorial.TabIndex = 18;
-            this.metroTileAtrasHistorial.Text = "ATRAS";
-            this.metroTileAtrasHistorial.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTileAtrasHistorial.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
-            this.metroTileAtrasHistorial.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTileAtrasHistorial.UseSelectable = true;
-            this.metroTileAtrasHistorial.UseTileImage = true;
-            this.metroTileAtrasHistorial.Click += new System.EventHandler(this.metroTileAtrasHistorial_Click);
             // 
             // metroTileBuscar
             // 
@@ -306,6 +274,7 @@
             this.metroTileEditar.TabIndex = 3;
             this.metroTileEditar.Text = "Editar";
             this.metroTileEditar.UseSelectable = true;
+            this.metroTileEditar.Click += new System.EventHandler(this.metroTileEditar_Click);
             // 
             // metroGridCompras
             // 
@@ -375,22 +344,6 @@
             this.metroTabPageEditar.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPageEditar.VerticalScrollbarSize = 10;
             // 
-            // metroTileAtrasEditar
-            // 
-            this.metroTileAtrasEditar.ActiveControl = null;
-            this.metroTileAtrasEditar.Location = new System.Drawing.Point(552, 246);
-            this.metroTileAtrasEditar.Name = "metroTileAtrasEditar";
-            this.metroTileAtrasEditar.Size = new System.Drawing.Size(94, 93);
-            this.metroTileAtrasEditar.Style = MetroFramework.MetroColorStyle.Lime;
-            this.metroTileAtrasEditar.TabIndex = 21;
-            this.metroTileAtrasEditar.Text = "ATRAS";
-            this.metroTileAtrasEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTileAtrasEditar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
-            this.metroTileAtrasEditar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTileAtrasEditar.UseSelectable = true;
-            this.metroTileAtrasEditar.UseTileImage = true;
-            this.metroTileAtrasEditar.Click += new System.EventHandler(this.metroTileAtrasEditar_Click);
-            // 
             // metroTextBoxEditarTab
             // 
             // 
@@ -427,9 +380,9 @@
             // metroTileEditarTap
             // 
             this.metroTileEditarTap.ActiveControl = null;
-            this.metroTileEditarTap.Location = new System.Drawing.Point(344, 116);
+            this.metroTileEditarTap.Location = new System.Drawing.Point(434, 246);
             this.metroTileEditarTap.Name = "metroTileEditarTap";
-            this.metroTileEditarTap.Size = new System.Drawing.Size(118, 69);
+            this.metroTileEditarTap.Size = new System.Drawing.Size(102, 93);
             this.metroTileEditarTap.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTileEditarTap.TabIndex = 19;
             this.metroTileEditarTap.Text = "Editar";
@@ -438,13 +391,13 @@
             // 
             // metroTabPageFiltrar
             // 
-            this.metroTabPageFiltrar.Controls.Add(this.metroTile3);
             this.metroTabPageFiltrar.Controls.Add(this.metroGridFiltrar);
             this.metroTabPageFiltrar.Controls.Add(this.metroDateTimeHasta);
             this.metroTabPageFiltrar.Controls.Add(this.metroDateTimeDesde);
             this.metroTabPageFiltrar.Controls.Add(this.metroTileFiltrar);
             this.metroTabPageFiltrar.Controls.Add(this.metroLabel3);
             this.metroTabPageFiltrar.Controls.Add(this.metroLabel2);
+            this.metroTabPageFiltrar.Controls.Add(this.metroTile3);
             this.metroTabPageFiltrar.HorizontalScrollbarBarColor = true;
             this.metroTabPageFiltrar.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPageFiltrar.HorizontalScrollbarSize = 10;
@@ -457,22 +410,6 @@
             this.metroTabPageFiltrar.VerticalScrollbarBarColor = true;
             this.metroTabPageFiltrar.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPageFiltrar.VerticalScrollbarSize = 10;
-            // 
-            // metroTile3
-            // 
-            this.metroTile3.ActiveControl = null;
-            this.metroTile3.Location = new System.Drawing.Point(552, 301);
-            this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(94, 93);
-            this.metroTile3.Style = MetroFramework.MetroColorStyle.Lime;
-            this.metroTile3.TabIndex = 24;
-            this.metroTile3.Text = "ATRAS";
-            this.metroTile3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile3.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
-            this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile3.UseSelectable = true;
-            this.metroTile3.UseTileImage = true;
-            this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click);
             // 
             // metroGridFiltrar
             // 
@@ -523,7 +460,7 @@
             // metroDateTimeHasta
             // 
             this.metroDateTimeHasta.Location = new System.Drawing.Point(323, 50);
-            this.metroDateTimeHasta.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroDateTimeHasta.MinimumSize = new System.Drawing.Size(4, 29);
             this.metroDateTimeHasta.Name = "metroDateTimeHasta";
             this.metroDateTimeHasta.Size = new System.Drawing.Size(200, 29);
             this.metroDateTimeHasta.Style = MetroFramework.MetroColorStyle.Lime;
@@ -532,7 +469,7 @@
             // metroDateTimeDesde
             // 
             this.metroDateTimeDesde.Location = new System.Drawing.Point(57, 50);
-            this.metroDateTimeDesde.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroDateTimeDesde.MinimumSize = new System.Drawing.Size(4, 29);
             this.metroDateTimeDesde.Name = "metroDateTimeDesde";
             this.metroDateTimeDesde.Size = new System.Drawing.Size(200, 29);
             this.metroDateTimeDesde.Style = MetroFramework.MetroColorStyle.Lime;
@@ -594,6 +531,70 @@
             this.metroLabel5.Size = new System.Drawing.Size(65, 19);
             this.metroLabel5.TabIndex = 24;
             this.metroLabel5.Text = "Cantidad:";
+            // 
+            // btn_Atras_Agregar
+            // 
+            this.btn_Atras_Agregar.ActiveControl = null;
+            this.btn_Atras_Agregar.Location = new System.Drawing.Point(553, 236);
+            this.btn_Atras_Agregar.Name = "btn_Atras_Agregar";
+            this.btn_Atras_Agregar.Size = new System.Drawing.Size(94, 93);
+            this.btn_Atras_Agregar.Style = MetroFramework.MetroColorStyle.Lime;
+            this.btn_Atras_Agregar.TabIndex = 20;
+            this.btn_Atras_Agregar.Text = "ATRAS";
+            this.btn_Atras_Agregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Atras_Agregar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
+            this.btn_Atras_Agregar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Atras_Agregar.UseSelectable = true;
+            this.btn_Atras_Agregar.UseTileImage = true;
+            this.btn_Atras_Agregar.Click += new System.EventHandler(this.btn_Atras_Agregar_Click);
+            // 
+            // metroTileAtrasHistorial
+            // 
+            this.metroTileAtrasHistorial.ActiveControl = null;
+            this.metroTileAtrasHistorial.Location = new System.Drawing.Point(517, 275);
+            this.metroTileAtrasHistorial.Name = "metroTileAtrasHistorial";
+            this.metroTileAtrasHistorial.Size = new System.Drawing.Size(94, 93);
+            this.metroTileAtrasHistorial.Style = MetroFramework.MetroColorStyle.Lime;
+            this.metroTileAtrasHistorial.TabIndex = 18;
+            this.metroTileAtrasHistorial.Text = "ATRAS";
+            this.metroTileAtrasHistorial.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTileAtrasHistorial.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
+            this.metroTileAtrasHistorial.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileAtrasHistorial.UseSelectable = true;
+            this.metroTileAtrasHistorial.UseTileImage = true;
+            this.metroTileAtrasHistorial.Click += new System.EventHandler(this.metroTileAtrasHistorial_Click);
+            // 
+            // metroTileAtrasEditar
+            // 
+            this.metroTileAtrasEditar.ActiveControl = null;
+            this.metroTileAtrasEditar.Location = new System.Drawing.Point(552, 246);
+            this.metroTileAtrasEditar.Name = "metroTileAtrasEditar";
+            this.metroTileAtrasEditar.Size = new System.Drawing.Size(94, 93);
+            this.metroTileAtrasEditar.Style = MetroFramework.MetroColorStyle.Lime;
+            this.metroTileAtrasEditar.TabIndex = 21;
+            this.metroTileAtrasEditar.Text = "ATRAS";
+            this.metroTileAtrasEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTileAtrasEditar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
+            this.metroTileAtrasEditar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileAtrasEditar.UseSelectable = true;
+            this.metroTileAtrasEditar.UseTileImage = true;
+            this.metroTileAtrasEditar.Click += new System.EventHandler(this.metroTileAtrasEditar_Click);
+            // 
+            // metroTile3
+            // 
+            this.metroTile3.ActiveControl = null;
+            this.metroTile3.Location = new System.Drawing.Point(552, 301);
+            this.metroTile3.Name = "metroTile3";
+            this.metroTile3.Size = new System.Drawing.Size(94, 93);
+            this.metroTile3.Style = MetroFramework.MetroColorStyle.Lime;
+            this.metroTile3.TabIndex = 24;
+            this.metroTile3.Text = "ATRAS";
+            this.metroTile3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTile3.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
+            this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile3.UseSelectable = true;
+            this.metroTile3.UseTileImage = true;
+            this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click);
             // 
             // FRM_GestionVentas
             // 

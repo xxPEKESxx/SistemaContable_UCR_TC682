@@ -267,5 +267,10 @@ namespace SistemaContable_UCR_VIEWS
 
             this.Visible = false;
         }
+
+        private void metroTileEditar_Click(object sender, EventArgs e)
+        {
+            this.metroTabVentas.SelectedTab = metroTabPageEditar;
+        }
     }
 }
