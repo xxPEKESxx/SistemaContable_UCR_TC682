@@ -352,6 +352,17 @@ namespace SistemaContable_UCR_VIEWS
             
 
         }
+
+        private void TxtPrecio_Agregar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MetroMessageBox.Show(this, "CAMPOS NUMERICOS", "," + "\n NO SE PERMITEN LETRAS..", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                e.Handled = true;
+                return;
+            }
+        }
     }
     }
 

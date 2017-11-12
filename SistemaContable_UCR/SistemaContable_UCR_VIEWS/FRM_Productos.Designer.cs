@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Productos));
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
+            this.cbx_eliminar_seleccion = new MetroFramework.Controls.MetroComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tab_Principal = new MetroFramework.Controls.MetroTabControl();
             this.tabProductos_agregar = new MetroFramework.Controls.MetroTabPage();
@@ -60,7 +61,6 @@
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.btn_eliminar_elimnar = new MetroFramework.Controls.MetroTile();
-            this.cbx_eliminar_seleccion = new MetroFramework.Controls.MetroComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tab_mostrar_Productos = new MetroFramework.Controls.MetroTabPage();
             this.btn_muestra_Atras = new MetroFramework.Controls.MetroTile();
@@ -69,6 +69,7 @@
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.cbx_muestraProductos = new MetroFramework.Controls.MetroComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.htmlToolTip1 = new MetroFramework.Drawing.Html.HtmlToolTip();
             this.tab_Principal.SuspendLayout();
             this.tabProductos_agregar.SuspendLayout();
             this.tabEditarProducto.SuspendLayout();
@@ -85,6 +86,20 @@
             this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroToolTip1.StyleManager = null;
             this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
+            // cbx_eliminar_seleccion
+            // 
+            this.cbx_eliminar_seleccion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cbx_eliminar_seleccion.FormattingEnabled = true;
+            this.cbx_eliminar_seleccion.IntegralHeight = false;
+            this.cbx_eliminar_seleccion.ItemHeight = 23;
+            this.cbx_eliminar_seleccion.Location = new System.Drawing.Point(0, 102);
+            this.cbx_eliminar_seleccion.Name = "cbx_eliminar_seleccion";
+            this.cbx_eliminar_seleccion.Size = new System.Drawing.Size(299, 29);
+            this.cbx_eliminar_seleccion.TabIndex = 18;
+            this.metroToolTip1.SetToolTip(this.cbx_eliminar_seleccion, "Seleccione un PRODUCTO, despues precione \r\nel boton eliminar con el click derecho" +
+        " del raton.");
+            this.cbx_eliminar_seleccion.UseSelectable = true;
             // 
             // label1
             // 
@@ -103,7 +118,7 @@
             this.tab_Principal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_Principal.Location = new System.Drawing.Point(20, 60);
             this.tab_Principal.Name = "tab_Principal";
-            this.tab_Principal.SelectedIndex = 3;
+            this.tab_Principal.SelectedIndex = 0;
             this.tab_Principal.Size = new System.Drawing.Size(757, 493);
             this.tab_Principal.TabIndex = 6;
             this.tab_Principal.UseSelectable = true;
@@ -215,9 +230,11 @@
             this.TxtPrecio_Agregar.ShortcutsEnabled = true;
             this.TxtPrecio_Agregar.Size = new System.Drawing.Size(226, 38);
             this.TxtPrecio_Agregar.TabIndex = 6;
+            this.htmlToolTip1.SetToolTip(this.TxtPrecio_Agregar, "JMPJMKMÑLMÑL");
             this.TxtPrecio_Agregar.UseSelectable = true;
             this.TxtPrecio_Agregar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtPrecio_Agregar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.TxtPrecio_Agregar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPrecio_Agregar_KeyPress);
             // 
             // txtDescripcion_Agregar
             // 
@@ -548,20 +565,6 @@
             this.btn_eliminar_elimnar.UseTileImage = true;
             this.btn_eliminar_elimnar.Click += new System.EventHandler(this.btn_eliminar_elimnar_Click);
             // 
-            // cbx_eliminar_seleccion
-            // 
-            this.cbx_eliminar_seleccion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.cbx_eliminar_seleccion.FormattingEnabled = true;
-            this.cbx_eliminar_seleccion.IntegralHeight = false;
-            this.cbx_eliminar_seleccion.ItemHeight = 23;
-            this.cbx_eliminar_seleccion.Location = new System.Drawing.Point(0, 102);
-            this.cbx_eliminar_seleccion.Name = "cbx_eliminar_seleccion";
-            this.cbx_eliminar_seleccion.Size = new System.Drawing.Size(299, 29);
-            this.cbx_eliminar_seleccion.TabIndex = 18;
-            this.metroToolTip1.SetToolTip(this.cbx_eliminar_seleccion, "Seleccione un PRODUCTO, despues precione \r\nel boton eliminar con el click derecho" +
-        " del raton.");
-            this.cbx_eliminar_seleccion.UseSelectable = true;
-            // 
             // label3
             // 
             this.label3.Image = global::SistemaContable_UCR_VIEWS.Properties.Resources.ucr_favicon;
@@ -692,6 +695,10 @@
             this.label5.Size = new System.Drawing.Size(100, 37);
             this.label5.TabIndex = 7;
             // 
+            // htmlToolTip1
+            // 
+            this.htmlToolTip1.OwnerDraw = true;
+            // 
             // FRM_Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -757,5 +764,6 @@
         private MetroFramework.Controls.MetroGrid metroGrid1_muestra_;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroComboBox cbx_muestraProductos;
+        private MetroFramework.Drawing.Html.HtmlToolTip htmlToolTip1;
     }
 }
