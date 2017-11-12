@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Balance));
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -37,6 +37,7 @@
             this.metroLabelVentas = new MetroFramework.Controls.MetroLabel();
             this.metroLabelUtilidad = new MetroFramework.Controls.MetroLabel();
             this.metroTileAtrasEditar = new MetroFramework.Controls.MetroTile();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
             // metroDateTime1
@@ -47,18 +48,6 @@
             this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
             this.metroDateTime1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroDateTime1.TabIndex = 0;
-            // 
-            // metroTile1
-            // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(433, 367);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(92, 93);
-            this.metroTile1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroTile1.TabIndex = 1;
-            this.metroTile1.Text = "Generar";
-            this.metroTile1.UseSelectable = true;
-            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // metroLabel1
             // 
@@ -123,7 +112,7 @@
             // metroTileAtrasEditar
             // 
             this.metroTileAtrasEditar.ActiveControl = null;
-            this.metroTileAtrasEditar.Location = new System.Drawing.Point(550, 367);
+            this.metroTileAtrasEditar.Location = new System.Drawing.Point(605, 367);
             this.metroTileAtrasEditar.Name = "metroTileAtrasEditar";
             this.metroTileAtrasEditar.Size = new System.Drawing.Size(94, 93);
             this.metroTileAtrasEditar.Style = MetroFramework.MetroColorStyle.Orange;
@@ -135,6 +124,23 @@
             this.metroTileAtrasEditar.UseSelectable = true;
             this.metroTileAtrasEditar.UseTileImage = true;
             this.metroTileAtrasEditar.Click += new System.EventHandler(this.metroTileAtrasEditar_Click);
+            // 
+            // metroTile1
+            // 
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.Location = new System.Drawing.Point(496, 367);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(92, 93);
+            this.metroTile1.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroTile1.TabIndex = 1;
+            this.metroTile1.Text = "GENERAR";
+            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTile1.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_add;
+            this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroTile1.UseSelectable = true;
+            this.metroTile1.UseTileImage = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // FRM_Balance
             // 
@@ -150,6 +156,7 @@
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.metroDateTime1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FRM_Balance";
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Balance";

@@ -63,6 +63,26 @@ namespace SistemaContable_UCR_VIEWS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap appbar_add {
+            get {
+                object obj = ResourceManager.GetObject("appbar.add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap appbar_add_multiple {
+            get {
+                object obj = ResourceManager.GetObject("appbar.add.multiple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap appbar_arrow_left {
             get {
                 object obj = ResourceManager.GetObject("appbar.arrow.left", resourceCulture);
@@ -123,6 +143,16 @@ namespace SistemaContable_UCR_VIEWS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap appbar_door_lock_open {
+            get {
+                object obj = ResourceManager.GetObject("appbar.door.lock.open", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap appbar_layer_add {
             get {
                 object obj = ResourceManager.GetObject("appbar.layer.add", resourceCulture);
@@ -163,6 +193,16 @@ namespace SistemaContable_UCR_VIEWS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap appbar_star_add {
+            get {
+                object obj = ResourceManager.GetObject("appbar.star.add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap appbar_thumb_up_add {
             get {
                 object obj = ResourceManager.GetObject("appbar.thumb.up.add", resourceCulture);
@@ -176,6 +216,26 @@ namespace SistemaContable_UCR_VIEWS.Properties {
         internal static System.Drawing.Bitmap belladurmiente {
             get {
                 object obj = ResourceManager.GetObject("belladurmiente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download {
+            get {
+                object obj = ResourceManager.GetObject("download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icnos_47 {
+            get {
+                object obj = ResourceManager.GetObject("icnos-47", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +286,16 @@ namespace SistemaContable_UCR_VIEWS.Properties {
         internal static System.Drawing.Bitmap icons8_Shutdown_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Shutdown_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iniciar_sesion_badoo {
+            get {
+                object obj = ResourceManager.GetObject("iniciar sesion badoo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -31,12 +31,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Compras));
             this.dataGrip_listaProductos = new MetroFramework.Controls.MetroGrid();
-            this.producto_Atras = new MetroFramework.Controls.MetroTile();
-            this.producto_Edita = new MetroFramework.Controls.MetroTile();
-            this.btn_agreagar_compra = new MetroFramework.Controls.MetroTile();
             this.TXTCantidadP_Compras = new MetroFramework.Controls.MetroTextBox();
             this.txtproducto = new MetroFramework.Controls.MetroTextBox();
+            this.producto_Edita = new MetroFramework.Controls.MetroTile();
+            this.producto_Atras = new MetroFramework.Controls.MetroTile();
+            this.btn_agreagar_compra = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrip_listaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,55 +86,6 @@
             this.dataGrip_listaProductos.TabIndex = 14;
             this.dataGrip_listaProductos.UseStyleColors = true;
             this.dataGrip_listaProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrip_listaProductos_CellContentClick);
-            // 
-            // producto_Atras
-            // 
-            this.producto_Atras.ActiveControl = null;
-            this.producto_Atras.Location = new System.Drawing.Point(324, 156);
-            this.producto_Atras.Name = "producto_Atras";
-            this.producto_Atras.Size = new System.Drawing.Size(110, 106);
-            this.producto_Atras.Style = MetroFramework.MetroColorStyle.Green;
-            this.producto_Atras.TabIndex = 16;
-            this.producto_Atras.Text = "ATRAS..";
-            this.producto_Atras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.producto_Atras.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
-            this.producto_Atras.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.producto_Atras.UseSelectable = true;
-            this.producto_Atras.UseStyleColors = true;
-            this.producto_Atras.UseTileImage = true;
-            this.producto_Atras.Click += new System.EventHandler(this.producto_Atras_Click);
-            // 
-            // producto_Edita
-            // 
-            this.producto_Edita.ActiveControl = null;
-            this.producto_Edita.Location = new System.Drawing.Point(169, 156);
-            this.producto_Edita.Name = "producto_Edita";
-            this.producto_Edita.Size = new System.Drawing.Size(101, 106);
-            this.producto_Edita.Style = MetroFramework.MetroColorStyle.Green;
-            this.producto_Edita.TabIndex = 15;
-            this.producto_Edita.Text = "EDITAR";
-            this.producto_Edita.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.producto_Edita.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_clipboard_variant_edit;
-            this.producto_Edita.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.producto_Edita.UseSelectable = true;
-            this.producto_Edita.UseStyleColors = true;
-            this.producto_Edita.UseTileImage = true;
-            // 
-            // btn_agreagar_compra
-            // 
-            this.btn_agreagar_compra.ActiveControl = null;
-            this.btn_agreagar_compra.Location = new System.Drawing.Point(23, 156);
-            this.btn_agreagar_compra.Name = "btn_agreagar_compra";
-            this.btn_agreagar_compra.Size = new System.Drawing.Size(90, 106);
-            this.btn_agreagar_compra.Style = MetroFramework.MetroColorStyle.Green;
-            this.btn_agreagar_compra.TabIndex = 17;
-            this.btn_agreagar_compra.Text = "AGREGAR.";
-            this.btn_agreagar_compra.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_agreagar_compra.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_thumb_up_add;
-            this.btn_agreagar_compra.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_agreagar_compra.UseSelectable = true;
-            this.btn_agreagar_compra.UseTileImage = true;
-            this.btn_agreagar_compra.Click += new System.EventHandler(this.btn_agreagar_compra_Click);
             // 
             // TXTCantidadP_Compras
             // 
@@ -199,6 +151,55 @@
             this.txtproducto.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtproducto.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // producto_Edita
+            // 
+            this.producto_Edita.ActiveControl = null;
+            this.producto_Edita.Location = new System.Drawing.Point(169, 156);
+            this.producto_Edita.Name = "producto_Edita";
+            this.producto_Edita.Size = new System.Drawing.Size(101, 106);
+            this.producto_Edita.Style = MetroFramework.MetroColorStyle.Green;
+            this.producto_Edita.TabIndex = 15;
+            this.producto_Edita.Text = "EDITAR";
+            this.producto_Edita.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.producto_Edita.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_clipboard_variant_edit;
+            this.producto_Edita.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.producto_Edita.UseSelectable = true;
+            this.producto_Edita.UseStyleColors = true;
+            this.producto_Edita.UseTileImage = true;
+            // 
+            // producto_Atras
+            // 
+            this.producto_Atras.ActiveControl = null;
+            this.producto_Atras.Location = new System.Drawing.Point(324, 156);
+            this.producto_Atras.Name = "producto_Atras";
+            this.producto_Atras.Size = new System.Drawing.Size(110, 106);
+            this.producto_Atras.Style = MetroFramework.MetroColorStyle.Green;
+            this.producto_Atras.TabIndex = 16;
+            this.producto_Atras.Text = "ATRAS..";
+            this.producto_Atras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.producto_Atras.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
+            this.producto_Atras.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.producto_Atras.UseSelectable = true;
+            this.producto_Atras.UseStyleColors = true;
+            this.producto_Atras.UseTileImage = true;
+            this.producto_Atras.Click += new System.EventHandler(this.producto_Atras_Click);
+            // 
+            // btn_agreagar_compra
+            // 
+            this.btn_agreagar_compra.ActiveControl = null;
+            this.btn_agreagar_compra.Location = new System.Drawing.Point(23, 156);
+            this.btn_agreagar_compra.Name = "btn_agreagar_compra";
+            this.btn_agreagar_compra.Size = new System.Drawing.Size(90, 106);
+            this.btn_agreagar_compra.Style = MetroFramework.MetroColorStyle.Green;
+            this.btn_agreagar_compra.TabIndex = 17;
+            this.btn_agreagar_compra.Text = "AGREGAR.";
+            this.btn_agreagar_compra.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_agreagar_compra.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_thumb_up_add;
+            this.btn_agreagar_compra.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_agreagar_compra.UseSelectable = true;
+            this.btn_agreagar_compra.UseTileImage = true;
+            this.btn_agreagar_compra.Click += new System.EventHandler(this.btn_agreagar_compra_Click);
+            // 
             // FRM_Compras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,6 +211,7 @@
             this.Controls.Add(this.producto_Atras);
             this.Controls.Add(this.btn_agreagar_compra);
             this.Controls.Add(this.dataGrip_listaProductos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FRM_Compras";
             this.Text = "Compras";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FRM_Compras_FormClosed);

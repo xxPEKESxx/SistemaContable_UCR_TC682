@@ -242,5 +242,26 @@
   <ItemGroup>
     <None Include="Resources\belladurmiente.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.door.lock.open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnos-47.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iniciar sesion badoo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.star.add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.add.multiple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.add.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

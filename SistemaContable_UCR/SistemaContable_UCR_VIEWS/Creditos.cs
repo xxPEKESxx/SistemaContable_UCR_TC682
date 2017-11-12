@@ -23,5 +23,13 @@ namespace SistemaContable_UCR_VIEWS
         {
 
         }
+
+        private void Creditos_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Visible = false;
+            Operation__Center oc = new Operation__Center();
+            oc.Visible = true;
+
+        }
     }
 }

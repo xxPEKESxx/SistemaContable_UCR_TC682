@@ -107,8 +107,20 @@ namespace SistemaContable_UCR_VIEWS
 
         private void metroTileEditar_Click(object sender, EventArgs e)
         {
-            metroTabCompras.TabPages.Add(metroTabPageEditar);
-            this.metroTabCompras.SelectedTab = metroTabPageEditar;
+            if (IDCompra!=0)
+            {
+                metroTabCompras.TabPages.Add(metroTabPageEditar);
+                metroTabCompras.TabPages.Remove(metroTabPageAgregar);
+                metroTabCompras.TabPages.Remove(metroTabPageFiltrar);
+                metroTabCompras.TabPages.Remove(metroTabPageHistorial);
+                this.metroTabCompras.SelectedTab = metroTabPageEditar;
+            }
+            else
+            {
+                MetroMessageBox.Show(this, "DEBE DE SELECCIONAR UN PRODUCTO.","!AVISO¡", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+
 
         }
 
@@ -233,6 +245,11 @@ namespace SistemaContable_UCR_VIEWS
 
         private void metroTileAtrasEditar_Click(object sender, EventArgs e)
         {
+            metroTabCompras.TabPages.Remove(metroTabPageEditar);
+            metroTabCompras.TabPages.Add(metroTabPageAgregar);
+            metroTabCompras.TabPages.Add(metroTabPageFiltrar);
+            metroTabCompras.TabPages.Add(metroTabPageHistorial);
+
             this.Visible = false;
             Operation__Center oc = new Operation__Center();
 
@@ -268,7 +285,11 @@ namespace SistemaContable_UCR_VIEWS
                 transaccionABuscar.Cantidad = int.Parse(metroTextBoxEditarTab.Text);
                 if (coordinadorDeTransacciones.Update(transaccionABuscar))
                 {
-                    metroTabCompras.TabPages.Remove(metroTabPageEditar); 
+                    metroTabCompras.TabPages.Remove(metroTabPageEditar);
+                    metroTabCompras.TabPages.Add(metroTabPageHistorial);
+                    metroTabCompras.TabPages.Add(metroTabPageAgregar);
+                    metroTabCompras.TabPages.Add(metroTabPageFiltrar);
+                    cargarGridCompras();
                     MetroMessageBox.Show(this, "EDICION REGISTRADA CON EXITO.", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     limpiarCampos();
                     this.metroTabCompras.SelectedTab = metroTabPageHistorial;
