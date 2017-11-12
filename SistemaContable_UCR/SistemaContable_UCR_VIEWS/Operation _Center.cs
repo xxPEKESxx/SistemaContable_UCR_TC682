@@ -70,5 +70,13 @@ namespace SistemaContable_UCR_VIEWS
             this.Visible = false;
 
         }
+
+        private void btn_usuarios_Click(object sender, EventArgs e)
+        {
+            FRM_Balance balance = new FRM_Balance();
+
+            balance.Visible = true;
+            this.Visible = false;
+        }
     }
 }
