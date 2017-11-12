@@ -36,21 +36,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tab_Principal = new MetroFramework.Controls.MetroTabControl();
             this.tabProductos_agregar = new MetroFramework.Controls.MetroTabPage();
-            this.tabEditarProducto = new MetroFramework.Controls.MetroTabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tabEliminarProductos = new MetroFramework.Controls.MetroTabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Txt_nombre_Agrega = new MetroFramework.Controls.MetroTextBox();
-            this.txtDescripcion_Agregar = new MetroFramework.Controls.MetroTextBox();
-            this.TxtPrecio_Agregar = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.btn_Agregar_Agregar = new MetroFramework.Controls.MetroTile();
             this.btn_Atras_Agregar = new MetroFramework.Controls.MetroTile();
-            this.tab_mostrar_Productos = new MetroFramework.Controls.MetroTabPage();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbx_editar_seleccionproducto = new MetroFramework.Controls.MetroComboBox();
+            this.btn_Agregar_Agregar = new MetroFramework.Controls.MetroTile();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.TxtPrecio_Agregar = new MetroFramework.Controls.MetroTextBox();
+            this.txtDescripcion_Agregar = new MetroFramework.Controls.MetroTextBox();
+            this.Txt_nombre_Agrega = new MetroFramework.Controls.MetroTextBox();
+            this.tabEditarProducto = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.btn_editar_Atras = new MetroFramework.Controls.MetroTile();
             this.btn_editar_Agregar = new MetroFramework.Controls.MetroTile();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
@@ -59,16 +54,21 @@
             this.txt_editar_precio = new MetroFramework.Controls.MetroTextBox();
             this.txt_editar_descripcion = new MetroFramework.Controls.MetroTextBox();
             this.txt_editar_nombre = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.cbx_editar_seleccionproducto = new MetroFramework.Controls.MetroComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabEliminarProductos = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.btn_eliminar_elimnar = new MetroFramework.Controls.MetroTile();
             this.cbx_eliminar_seleccion = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.cbx_muestraProductos = new MetroFramework.Controls.MetroComboBox();
-            this.metroGrid1_muestra_ = new MetroFramework.Controls.MetroGrid();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tab_mostrar_Productos = new MetroFramework.Controls.MetroTabPage();
             this.btn_muestra_Atras = new MetroFramework.Controls.MetroTile();
             this.btn_muestra_Buscar = new MetroFramework.Controls.MetroTile();
+            this.metroGrid1_muestra_ = new MetroFramework.Controls.MetroGrid();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.cbx_muestraProductos = new MetroFramework.Controls.MetroComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tab_Principal.SuspendLayout();
             this.tabProductos_agregar.SuspendLayout();
             this.tabEditarProducto.SuspendLayout();
@@ -100,7 +100,7 @@
             this.tab_Principal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_Principal.Location = new System.Drawing.Point(20, 60);
             this.tab_Principal.Name = "tab_Principal";
-            this.tab_Principal.SelectedIndex = 0;
+            this.tab_Principal.SelectedIndex = 1;
             this.tab_Principal.Size = new System.Drawing.Size(757, 493);
             this.tab_Principal.TabIndex = 6;
             this.tab_Principal.UseSelectable = true;
@@ -128,125 +128,62 @@
             this.tabProductos_agregar.VerticalScrollbarHighlightOnWheel = false;
             this.tabProductos_agregar.VerticalScrollbarSize = 10;
             // 
-            // tabEditarProducto
+            // btn_Atras_Agregar
             // 
-            this.tabEditarProducto.Controls.Add(this.metroLabel7);
-            this.tabEditarProducto.Controls.Add(this.btn_editar_Atras);
-            this.tabEditarProducto.Controls.Add(this.btn_editar_Agregar);
-            this.tabEditarProducto.Controls.Add(this.metroLabel4);
-            this.tabEditarProducto.Controls.Add(this.metroLabel5);
-            this.tabEditarProducto.Controls.Add(this.metroLabel6);
-            this.tabEditarProducto.Controls.Add(this.txt_editar_precio);
-            this.tabEditarProducto.Controls.Add(this.txt_editar_descripcion);
-            this.tabEditarProducto.Controls.Add(this.txt_editar_nombre);
-            this.tabEditarProducto.Controls.Add(this.cbx_editar_seleccionproducto);
-            this.tabEditarProducto.Controls.Add(this.label2);
-            this.tabEditarProducto.HorizontalScrollbarBarColor = true;
-            this.tabEditarProducto.HorizontalScrollbarHighlightOnWheel = false;
-            this.tabEditarProducto.HorizontalScrollbarSize = 10;
-            this.tabEditarProducto.Location = new System.Drawing.Point(4, 38);
-            this.tabEditarProducto.Name = "tabEditarProducto";
-            this.tabEditarProducto.Size = new System.Drawing.Size(749, 451);
-            this.tabEditarProducto.TabIndex = 1;
-            this.tabEditarProducto.Text = "Editar Productos";
-            this.tabEditarProducto.VerticalScrollbarBarColor = true;
-            this.tabEditarProducto.VerticalScrollbarHighlightOnWheel = false;
-            this.tabEditarProducto.VerticalScrollbarSize = 10;
+            this.btn_Atras_Agregar.ActiveControl = null;
+            this.btn_Atras_Agregar.Location = new System.Drawing.Point(652, 355);
+            this.btn_Atras_Agregar.Name = "btn_Atras_Agregar";
+            this.btn_Atras_Agregar.Size = new System.Drawing.Size(94, 93);
+            this.btn_Atras_Agregar.TabIndex = 8;
+            this.btn_Atras_Agregar.Text = "ATRAS";
+            this.btn_Atras_Agregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Atras_Agregar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
+            this.btn_Atras_Agregar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Atras_Agregar.UseSelectable = true;
+            this.btn_Atras_Agregar.UseTileImage = true;
+            this.btn_Atras_Agregar.Click += new System.EventHandler(this.btn_Atras_Agregar_Click);
             // 
-            // label2
+            // btn_Agregar_Agregar
             // 
-            this.label2.Image = global::SistemaContable_UCR_VIEWS.Properties.Resources.ucr_favicon;
-            this.label2.Location = new System.Drawing.Point(-7, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 37);
-            this.label2.TabIndex = 6;
+            this.btn_Agregar_Agregar.ActiveControl = null;
+            this.btn_Agregar_Agregar.Location = new System.Drawing.Point(546, 355);
+            this.btn_Agregar_Agregar.Name = "btn_Agregar_Agregar";
+            this.btn_Agregar_Agregar.Size = new System.Drawing.Size(86, 93);
+            this.btn_Agregar_Agregar.TabIndex = 8;
+            this.btn_Agregar_Agregar.Text = "AGREGAR";
+            this.btn_Agregar_Agregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Agregar_Agregar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_layer_add;
+            this.btn_Agregar_Agregar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Agregar_Agregar.UseSelectable = true;
+            this.btn_Agregar_Agregar.UseTileImage = true;
+            this.btn_Agregar_Agregar.Click += new System.EventHandler(this.btn_Agregar_Agregar_Click);
             // 
-            // tabEliminarProductos
+            // metroLabel3
             // 
-            this.tabEliminarProductos.Controls.Add(this.metroLabel8);
-            this.tabEliminarProductos.Controls.Add(this.metroTile1);
-            this.tabEliminarProductos.Controls.Add(this.btn_eliminar_elimnar);
-            this.tabEliminarProductos.Controls.Add(this.cbx_eliminar_seleccion);
-            this.tabEliminarProductos.Controls.Add(this.label3);
-            this.tabEliminarProductos.HorizontalScrollbarBarColor = true;
-            this.tabEliminarProductos.HorizontalScrollbarHighlightOnWheel = false;
-            this.tabEliminarProductos.HorizontalScrollbarSize = 10;
-            this.tabEliminarProductos.Location = new System.Drawing.Point(4, 38);
-            this.tabEliminarProductos.Name = "tabEliminarProductos";
-            this.tabEliminarProductos.Size = new System.Drawing.Size(749, 451);
-            this.tabEliminarProductos.TabIndex = 2;
-            this.tabEliminarProductos.Text = "Eliminar Productos";
-            this.tabEliminarProductos.VerticalScrollbarBarColor = true;
-            this.tabEliminarProductos.VerticalScrollbarHighlightOnWheel = false;
-            this.tabEliminarProductos.VerticalScrollbarSize = 10;
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(22, 241);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(194, 19);
+            this.metroLabel3.TabIndex = 7;
+            this.metroLabel3.Text = "DESCRIPCION DEL PRODUCTO";
             // 
-            // label3
+            // metroLabel2
             // 
-            this.label3.Image = global::SistemaContable_UCR_VIEWS.Properties.Resources.ucr_favicon;
-            this.label3.Location = new System.Drawing.Point(-7, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 37);
-            this.label3.TabIndex = 6;
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(22, 140);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(150, 19);
+            this.metroLabel2.TabIndex = 7;
+            this.metroLabel2.Text = "PRECIO DE PRODUCTO";
             // 
-            // Txt_nombre_Agrega
+            // metroLabel1
             // 
-            // 
-            // 
-            // 
-            this.Txt_nombre_Agrega.CustomButton.Image = null;
-            this.Txt_nombre_Agrega.CustomButton.Location = new System.Drawing.Point(190, 2);
-            this.Txt_nombre_Agrega.CustomButton.Name = "";
-            this.Txt_nombre_Agrega.CustomButton.Size = new System.Drawing.Size(33, 33);
-            this.Txt_nombre_Agrega.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Txt_nombre_Agrega.CustomButton.TabIndex = 1;
-            this.Txt_nombre_Agrega.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.Txt_nombre_Agrega.CustomButton.UseSelectable = true;
-            this.Txt_nombre_Agrega.CustomButton.Visible = false;
-            this.Txt_nombre_Agrega.Lines = new string[0];
-            this.Txt_nombre_Agrega.Location = new System.Drawing.Point(22, 77);
-            this.Txt_nombre_Agrega.MaxLength = 32767;
-            this.Txt_nombre_Agrega.Name = "Txt_nombre_Agrega";
-            this.Txt_nombre_Agrega.PasswordChar = '\0';
-            this.Txt_nombre_Agrega.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Txt_nombre_Agrega.SelectedText = "";
-            this.Txt_nombre_Agrega.SelectionLength = 0;
-            this.Txt_nombre_Agrega.SelectionStart = 0;
-            this.Txt_nombre_Agrega.ShortcutsEnabled = true;
-            this.Txt_nombre_Agrega.Size = new System.Drawing.Size(226, 38);
-            this.Txt_nombre_Agrega.TabIndex = 6;
-            this.Txt_nombre_Agrega.UseSelectable = true;
-            this.Txt_nombre_Agrega.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_nombre_Agrega.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txtDescripcion_Agregar
-            // 
-            // 
-            // 
-            // 
-            this.txtDescripcion_Agregar.CustomButton.Image = null;
-            this.txtDescripcion_Agregar.CustomButton.Location = new System.Drawing.Point(190, 2);
-            this.txtDescripcion_Agregar.CustomButton.Name = "";
-            this.txtDescripcion_Agregar.CustomButton.Size = new System.Drawing.Size(33, 33);
-            this.txtDescripcion_Agregar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtDescripcion_Agregar.CustomButton.TabIndex = 1;
-            this.txtDescripcion_Agregar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtDescripcion_Agregar.CustomButton.UseSelectable = true;
-            this.txtDescripcion_Agregar.CustomButton.Visible = false;
-            this.txtDescripcion_Agregar.Lines = new string[0];
-            this.txtDescripcion_Agregar.Location = new System.Drawing.Point(22, 263);
-            this.txtDescripcion_Agregar.MaxLength = 32767;
-            this.txtDescripcion_Agregar.Name = "txtDescripcion_Agregar";
-            this.txtDescripcion_Agregar.PasswordChar = '\0';
-            this.txtDescripcion_Agregar.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtDescripcion_Agregar.SelectedText = "";
-            this.txtDescripcion_Agregar.SelectionLength = 0;
-            this.txtDescripcion_Agregar.SelectionStart = 0;
-            this.txtDescripcion_Agregar.ShortcutsEnabled = true;
-            this.txtDescripcion_Agregar.Size = new System.Drawing.Size(226, 38);
-            this.txtDescripcion_Agregar.TabIndex = 6;
-            this.txtDescripcion_Agregar.UseSelectable = true;
-            this.txtDescripcion_Agregar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtDescripcion_Agregar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(22, 55);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(166, 19);
+            this.metroLabel1.TabIndex = 7;
+            this.metroLabel1.Text = "NOMBRE DEL PRODUCTO";
             // 
             // TxtPrecio_Agregar
             // 
@@ -278,101 +215,99 @@
             this.TxtPrecio_Agregar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtPrecio_Agregar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel1
+            // txtDescripcion_Agregar
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(22, 55);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(166, 19);
-            this.metroLabel1.TabIndex = 7;
-            this.metroLabel1.Text = "NOMBRE DEL PRODUCTO";
             // 
-            // metroLabel2
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(22, 140);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(150, 19);
-            this.metroLabel2.TabIndex = 7;
-            this.metroLabel2.Text = "PRECIO DE PRODUCTO";
             // 
-            // metroLabel3
+            this.txtDescripcion_Agregar.CustomButton.Image = null;
+            this.txtDescripcion_Agregar.CustomButton.Location = new System.Drawing.Point(190, 2);
+            this.txtDescripcion_Agregar.CustomButton.Name = "";
+            this.txtDescripcion_Agregar.CustomButton.Size = new System.Drawing.Size(33, 33);
+            this.txtDescripcion_Agregar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtDescripcion_Agregar.CustomButton.TabIndex = 1;
+            this.txtDescripcion_Agregar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtDescripcion_Agregar.CustomButton.UseSelectable = true;
+            this.txtDescripcion_Agregar.CustomButton.Visible = false;
+            this.txtDescripcion_Agregar.Lines = new string[0];
+            this.txtDescripcion_Agregar.Location = new System.Drawing.Point(22, 263);
+            this.txtDescripcion_Agregar.MaxLength = 32767;
+            this.txtDescripcion_Agregar.Name = "txtDescripcion_Agregar";
+            this.txtDescripcion_Agregar.PasswordChar = '\0';
+            this.txtDescripcion_Agregar.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtDescripcion_Agregar.SelectedText = "";
+            this.txtDescripcion_Agregar.SelectionLength = 0;
+            this.txtDescripcion_Agregar.SelectionStart = 0;
+            this.txtDescripcion_Agregar.ShortcutsEnabled = true;
+            this.txtDescripcion_Agregar.Size = new System.Drawing.Size(226, 38);
+            this.txtDescripcion_Agregar.TabIndex = 6;
+            this.txtDescripcion_Agregar.UseSelectable = true;
+            this.txtDescripcion_Agregar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtDescripcion_Agregar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(22, 241);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(194, 19);
-            this.metroLabel3.TabIndex = 7;
-            this.metroLabel3.Text = "DESCRIPCION DEL PRODUCTO";
+            // Txt_nombre_Agrega
             // 
-            // btn_Agregar_Agregar
             // 
-            this.btn_Agregar_Agregar.ActiveControl = null;
-            this.btn_Agregar_Agregar.Location = new System.Drawing.Point(546, 355);
-            this.btn_Agregar_Agregar.Name = "btn_Agregar_Agregar";
-            this.btn_Agregar_Agregar.Size = new System.Drawing.Size(86, 93);
-            this.btn_Agregar_Agregar.TabIndex = 8;
-            this.btn_Agregar_Agregar.Text = "AGREGAR";
-            this.btn_Agregar_Agregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Agregar_Agregar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_layer_add;
-            this.btn_Agregar_Agregar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Agregar_Agregar.UseSelectable = true;
-            this.btn_Agregar_Agregar.UseTileImage = true;
-            this.btn_Agregar_Agregar.Click += new System.EventHandler(this.btn_Agregar_Agregar_Click);
             // 
-            // btn_Atras_Agregar
             // 
-            this.btn_Atras_Agregar.ActiveControl = null;
-            this.btn_Atras_Agregar.Location = new System.Drawing.Point(652, 355);
-            this.btn_Atras_Agregar.Name = "btn_Atras_Agregar";
-            this.btn_Atras_Agregar.Size = new System.Drawing.Size(94, 93);
-            this.btn_Atras_Agregar.TabIndex = 8;
-            this.btn_Atras_Agregar.Text = "ATRAS";
-            this.btn_Atras_Agregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Atras_Agregar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
-            this.btn_Atras_Agregar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Atras_Agregar.UseSelectable = true;
-            this.btn_Atras_Agregar.UseTileImage = true;
-            this.btn_Atras_Agregar.Click += new System.EventHandler(this.btn_Atras_Agregar_Click);
+            this.Txt_nombre_Agrega.CustomButton.Image = null;
+            this.Txt_nombre_Agrega.CustomButton.Location = new System.Drawing.Point(190, 2);
+            this.Txt_nombre_Agrega.CustomButton.Name = "";
+            this.Txt_nombre_Agrega.CustomButton.Size = new System.Drawing.Size(33, 33);
+            this.Txt_nombre_Agrega.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Txt_nombre_Agrega.CustomButton.TabIndex = 1;
+            this.Txt_nombre_Agrega.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Txt_nombre_Agrega.CustomButton.UseSelectable = true;
+            this.Txt_nombre_Agrega.CustomButton.Visible = false;
+            this.Txt_nombre_Agrega.Lines = new string[0];
+            this.Txt_nombre_Agrega.Location = new System.Drawing.Point(22, 77);
+            this.Txt_nombre_Agrega.MaxLength = 32767;
+            this.Txt_nombre_Agrega.Name = "Txt_nombre_Agrega";
+            this.Txt_nombre_Agrega.PasswordChar = '\0';
+            this.Txt_nombre_Agrega.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Txt_nombre_Agrega.SelectedText = "";
+            this.Txt_nombre_Agrega.SelectionLength = 0;
+            this.Txt_nombre_Agrega.SelectionStart = 0;
+            this.Txt_nombre_Agrega.ShortcutsEnabled = true;
+            this.Txt_nombre_Agrega.Size = new System.Drawing.Size(226, 38);
+            this.Txt_nombre_Agrega.TabIndex = 6;
+            this.Txt_nombre_Agrega.UseSelectable = true;
+            this.Txt_nombre_Agrega.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_nombre_Agrega.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // tab_mostrar_Productos
+            // tabEditarProducto
             // 
-            this.tab_mostrar_Productos.Controls.Add(this.btn_muestra_Atras);
-            this.tab_mostrar_Productos.Controls.Add(this.btn_muestra_Buscar);
-            this.tab_mostrar_Productos.Controls.Add(this.metroGrid1_muestra_);
-            this.tab_mostrar_Productos.Controls.Add(this.metroLabel9);
-            this.tab_mostrar_Productos.Controls.Add(this.cbx_muestraProductos);
-            this.tab_mostrar_Productos.Controls.Add(this.label5);
-            this.tab_mostrar_Productos.HorizontalScrollbarBarColor = true;
-            this.tab_mostrar_Productos.HorizontalScrollbarHighlightOnWheel = false;
-            this.tab_mostrar_Productos.HorizontalScrollbarSize = 10;
-            this.tab_mostrar_Productos.Location = new System.Drawing.Point(4, 38);
-            this.tab_mostrar_Productos.Name = "tab_mostrar_Productos";
-            this.tab_mostrar_Productos.Size = new System.Drawing.Size(749, 451);
-            this.tab_mostrar_Productos.TabIndex = 4;
-            this.tab_mostrar_Productos.Text = "Mostrar Productos";
-            this.tab_mostrar_Productos.VerticalScrollbarBarColor = true;
-            this.tab_mostrar_Productos.VerticalScrollbarHighlightOnWheel = false;
-            this.tab_mostrar_Productos.VerticalScrollbarSize = 10;
-            this.tab_mostrar_Productos.Click += new System.EventHandler(this.tab_mostrar_Productos_Click);
+            this.tabEditarProducto.Controls.Add(this.metroLabel7);
+            this.tabEditarProducto.Controls.Add(this.btn_editar_Atras);
+            this.tabEditarProducto.Controls.Add(this.btn_editar_Agregar);
+            this.tabEditarProducto.Controls.Add(this.metroLabel4);
+            this.tabEditarProducto.Controls.Add(this.metroLabel5);
+            this.tabEditarProducto.Controls.Add(this.metroLabel6);
+            this.tabEditarProducto.Controls.Add(this.txt_editar_precio);
+            this.tabEditarProducto.Controls.Add(this.txt_editar_descripcion);
+            this.tabEditarProducto.Controls.Add(this.txt_editar_nombre);
+            this.tabEditarProducto.Controls.Add(this.cbx_editar_seleccionproducto);
+            this.tabEditarProducto.Controls.Add(this.label2);
+            this.tabEditarProducto.HorizontalScrollbarBarColor = true;
+            this.tabEditarProducto.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabEditarProducto.HorizontalScrollbarSize = 10;
+            this.tabEditarProducto.Location = new System.Drawing.Point(4, 38);
+            this.tabEditarProducto.Name = "tabEditarProducto";
+            this.tabEditarProducto.Size = new System.Drawing.Size(749, 451);
+            this.tabEditarProducto.TabIndex = 1;
+            this.tabEditarProducto.Text = "Editar Productos";
+            this.tabEditarProducto.VerticalScrollbarBarColor = true;
+            this.tabEditarProducto.VerticalScrollbarHighlightOnWheel = false;
+            this.tabEditarProducto.VerticalScrollbarSize = 10;
             // 
-            // label5
+            // metroLabel7
             // 
-            this.label5.Image = global::SistemaContable_UCR_VIEWS.Properties.Resources.ucr_favicon;
-            this.label5.Location = new System.Drawing.Point(-7, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 37);
-            this.label5.TabIndex = 7;
-            // 
-            // cbx_editar_seleccionproducto
-            // 
-            this.cbx_editar_seleccionproducto.FormattingEnabled = true;
-            this.cbx_editar_seleccionproducto.ItemHeight = 23;
-            this.cbx_editar_seleccionproducto.Location = new System.Drawing.Point(3, 98);
-            this.cbx_editar_seleccionproducto.Name = "cbx_editar_seleccionproducto";
-            this.cbx_editar_seleccionproducto.Size = new System.Drawing.Size(230, 29);
-            this.cbx_editar_seleccionproducto.TabIndex = 7;
-            this.cbx_editar_seleccionproducto.UseSelectable = true;
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(3, 57);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(180, 38);
+            this.metroLabel7.TabIndex = 17;
+            this.metroLabel7.Text = "SELECCIONE EL PRODUCTO \r\nA EDITAR";
             // 
             // btn_editar_Atras
             // 
@@ -387,6 +322,7 @@
             this.btn_editar_Atras.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_editar_Atras.UseSelectable = true;
             this.btn_editar_Atras.UseTileImage = true;
+            this.btn_editar_Atras.Click += new System.EventHandler(this.btn_editar_Atras_Click);
             // 
             // btn_editar_Agregar
             // 
@@ -401,6 +337,7 @@
             this.btn_editar_Agregar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_editar_Agregar.UseSelectable = true;
             this.btn_editar_Agregar.UseTileImage = true;
+            this.btn_editar_Agregar.Click += new System.EventHandler(this.btn_editar_Agregar_Click);
             // 
             // metroLabel4
             // 
@@ -443,6 +380,7 @@
             this.txt_editar_precio.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_editar_precio.CustomButton.UseSelectable = true;
             this.txt_editar_precio.CustomButton.Visible = false;
+            this.txt_editar_precio.Enabled = false;
             this.txt_editar_precio.Lines = new string[0];
             this.txt_editar_precio.Location = new System.Drawing.Point(3, 318);
             this.txt_editar_precio.MaxLength = 32767;
@@ -473,6 +411,7 @@
             this.txt_editar_descripcion.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_editar_descripcion.CustomButton.UseSelectable = true;
             this.txt_editar_descripcion.CustomButton.Visible = false;
+            this.txt_editar_descripcion.Enabled = false;
             this.txt_editar_descripcion.Lines = new string[0];
             this.txt_editar_descripcion.Location = new System.Drawing.Point(3, 251);
             this.txt_editar_descripcion.MaxLength = 32767;
@@ -503,6 +442,7 @@
             this.txt_editar_nombre.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_editar_nombre.CustomButton.UseSelectable = true;
             this.txt_editar_nombre.CustomButton.Visible = false;
+            this.txt_editar_nombre.Enabled = false;
             this.txt_editar_nombre.Lines = new string[0];
             this.txt_editar_nombre.Location = new System.Drawing.Point(3, 173);
             this.txt_editar_nombre.MaxLength = 32767;
@@ -519,14 +459,42 @@
             this.txt_editar_nombre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_editar_nombre.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel7
+            // cbx_editar_seleccionproducto
             // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(3, 57);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(180, 38);
-            this.metroLabel7.TabIndex = 17;
-            this.metroLabel7.Text = "SELECCIONE EL PRODUCTO \r\nA EDITAR";
+            this.cbx_editar_seleccionproducto.FormattingEnabled = true;
+            this.cbx_editar_seleccionproducto.ItemHeight = 23;
+            this.cbx_editar_seleccionproducto.Location = new System.Drawing.Point(3, 98);
+            this.cbx_editar_seleccionproducto.Name = "cbx_editar_seleccionproducto";
+            this.cbx_editar_seleccionproducto.Size = new System.Drawing.Size(230, 29);
+            this.cbx_editar_seleccionproducto.TabIndex = 7;
+            this.cbx_editar_seleccionproducto.UseSelectable = true;
+            // 
+            // label2
+            // 
+            this.label2.Image = global::SistemaContable_UCR_VIEWS.Properties.Resources.ucr_favicon;
+            this.label2.Location = new System.Drawing.Point(-7, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 37);
+            this.label2.TabIndex = 6;
+            // 
+            // tabEliminarProductos
+            // 
+            this.tabEliminarProductos.Controls.Add(this.metroLabel8);
+            this.tabEliminarProductos.Controls.Add(this.metroTile1);
+            this.tabEliminarProductos.Controls.Add(this.btn_eliminar_elimnar);
+            this.tabEliminarProductos.Controls.Add(this.cbx_eliminar_seleccion);
+            this.tabEliminarProductos.Controls.Add(this.label3);
+            this.tabEliminarProductos.HorizontalScrollbarBarColor = true;
+            this.tabEliminarProductos.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabEliminarProductos.HorizontalScrollbarSize = 10;
+            this.tabEliminarProductos.Location = new System.Drawing.Point(4, 38);
+            this.tabEliminarProductos.Name = "tabEliminarProductos";
+            this.tabEliminarProductos.Size = new System.Drawing.Size(749, 451);
+            this.tabEliminarProductos.TabIndex = 2;
+            this.tabEliminarProductos.Text = "Eliminar Productos";
+            this.tabEliminarProductos.VerticalScrollbarBarColor = true;
+            this.tabEliminarProductos.VerticalScrollbarHighlightOnWheel = false;
+            this.tabEliminarProductos.VerticalScrollbarSize = 10;
             // 
             // metroLabel8
             // 
@@ -550,6 +518,7 @@
             this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile1.UseSelectable = true;
             this.metroTile1.UseTileImage = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // btn_eliminar_elimnar
             // 
@@ -575,24 +544,63 @@
             this.cbx_eliminar_seleccion.TabIndex = 18;
             this.cbx_eliminar_seleccion.UseSelectable = true;
             // 
-            // metroLabel9
+            // label3
             // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(3, 53);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(180, 38);
-            this.metroLabel9.TabIndex = 23;
-            this.metroLabel9.Text = "SELECCIONE EL PRODUCTO \r\nA BUSCAR";
+            this.label3.Image = global::SistemaContable_UCR_VIEWS.Properties.Resources.ucr_favicon;
+            this.label3.Location = new System.Drawing.Point(-7, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 37);
+            this.label3.TabIndex = 6;
             // 
-            // cbx_muestraProductos
+            // tab_mostrar_Productos
             // 
-            this.cbx_muestraProductos.FormattingEnabled = true;
-            this.cbx_muestraProductos.ItemHeight = 23;
-            this.cbx_muestraProductos.Location = new System.Drawing.Point(0, 108);
-            this.cbx_muestraProductos.Name = "cbx_muestraProductos";
-            this.cbx_muestraProductos.Size = new System.Drawing.Size(299, 29);
-            this.cbx_muestraProductos.TabIndex = 22;
-            this.cbx_muestraProductos.UseSelectable = true;
+            this.tab_mostrar_Productos.Controls.Add(this.btn_muestra_Atras);
+            this.tab_mostrar_Productos.Controls.Add(this.btn_muestra_Buscar);
+            this.tab_mostrar_Productos.Controls.Add(this.metroGrid1_muestra_);
+            this.tab_mostrar_Productos.Controls.Add(this.metroLabel9);
+            this.tab_mostrar_Productos.Controls.Add(this.cbx_muestraProductos);
+            this.tab_mostrar_Productos.Controls.Add(this.label5);
+            this.tab_mostrar_Productos.HorizontalScrollbarBarColor = true;
+            this.tab_mostrar_Productos.HorizontalScrollbarHighlightOnWheel = false;
+            this.tab_mostrar_Productos.HorizontalScrollbarSize = 10;
+            this.tab_mostrar_Productos.Location = new System.Drawing.Point(4, 38);
+            this.tab_mostrar_Productos.Name = "tab_mostrar_Productos";
+            this.tab_mostrar_Productos.Size = new System.Drawing.Size(749, 451);
+            this.tab_mostrar_Productos.TabIndex = 4;
+            this.tab_mostrar_Productos.Text = "Mostrar Productos";
+            this.tab_mostrar_Productos.VerticalScrollbarBarColor = true;
+            this.tab_mostrar_Productos.VerticalScrollbarHighlightOnWheel = false;
+            this.tab_mostrar_Productos.VerticalScrollbarSize = 10;
+            this.tab_mostrar_Productos.Click += new System.EventHandler(this.tab_mostrar_Productos_Click);
+            // 
+            // btn_muestra_Atras
+            // 
+            this.btn_muestra_Atras.ActiveControl = null;
+            this.btn_muestra_Atras.Location = new System.Drawing.Point(646, 338);
+            this.btn_muestra_Atras.Name = "btn_muestra_Atras";
+            this.btn_muestra_Atras.Size = new System.Drawing.Size(92, 110);
+            this.btn_muestra_Atras.TabIndex = 25;
+            this.btn_muestra_Atras.Text = "ATRAS";
+            this.btn_muestra_Atras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_muestra_Atras.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
+            this.btn_muestra_Atras.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_muestra_Atras.UseSelectable = true;
+            this.btn_muestra_Atras.UseTileImage = true;
+            this.btn_muestra_Atras.Click += new System.EventHandler(this.btn_muestra_Atras_Click);
+            // 
+            // btn_muestra_Buscar
+            // 
+            this.btn_muestra_Buscar.ActiveControl = null;
+            this.btn_muestra_Buscar.Location = new System.Drawing.Point(548, 338);
+            this.btn_muestra_Buscar.Name = "btn_muestra_Buscar";
+            this.btn_muestra_Buscar.Size = new System.Drawing.Size(92, 110);
+            this.btn_muestra_Buscar.TabIndex = 26;
+            this.btn_muestra_Buscar.Text = "BUSCAR";
+            this.btn_muestra_Buscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_muestra_Buscar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_page_search;
+            this.btn_muestra_Buscar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_muestra_Buscar.UseSelectable = true;
+            this.btn_muestra_Buscar.UseTileImage = true;
             // 
             // metroGrid1_muestra_
             // 
@@ -637,33 +645,32 @@
             this.metroGrid1_muestra_.Size = new System.Drawing.Size(660, 183);
             this.metroGrid1_muestra_.TabIndex = 24;
             // 
-            // btn_muestra_Atras
+            // metroLabel9
             // 
-            this.btn_muestra_Atras.ActiveControl = null;
-            this.btn_muestra_Atras.Location = new System.Drawing.Point(646, 338);
-            this.btn_muestra_Atras.Name = "btn_muestra_Atras";
-            this.btn_muestra_Atras.Size = new System.Drawing.Size(92, 110);
-            this.btn_muestra_Atras.TabIndex = 25;
-            this.btn_muestra_Atras.Text = "ATRAS";
-            this.btn_muestra_Atras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_muestra_Atras.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
-            this.btn_muestra_Atras.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_muestra_Atras.UseSelectable = true;
-            this.btn_muestra_Atras.UseTileImage = true;
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(3, 53);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(180, 38);
+            this.metroLabel9.TabIndex = 23;
+            this.metroLabel9.Text = "SELECCIONE EL PRODUCTO \r\nA BUSCAR";
             // 
-            // btn_muestra_Buscar
+            // cbx_muestraProductos
             // 
-            this.btn_muestra_Buscar.ActiveControl = null;
-            this.btn_muestra_Buscar.Location = new System.Drawing.Point(548, 338);
-            this.btn_muestra_Buscar.Name = "btn_muestra_Buscar";
-            this.btn_muestra_Buscar.Size = new System.Drawing.Size(92, 110);
-            this.btn_muestra_Buscar.TabIndex = 26;
-            this.btn_muestra_Buscar.Text = "BUSCAR";
-            this.btn_muestra_Buscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_muestra_Buscar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_page_search;
-            this.btn_muestra_Buscar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_muestra_Buscar.UseSelectable = true;
-            this.btn_muestra_Buscar.UseTileImage = true;
+            this.cbx_muestraProductos.FormattingEnabled = true;
+            this.cbx_muestraProductos.ItemHeight = 23;
+            this.cbx_muestraProductos.Location = new System.Drawing.Point(0, 108);
+            this.cbx_muestraProductos.Name = "cbx_muestraProductos";
+            this.cbx_muestraProductos.Size = new System.Drawing.Size(299, 29);
+            this.cbx_muestraProductos.TabIndex = 22;
+            this.cbx_muestraProductos.UseSelectable = true;
+            // 
+            // label5
+            // 
+            this.label5.Image = global::SistemaContable_UCR_VIEWS.Properties.Resources.ucr_favicon;
+            this.label5.Location = new System.Drawing.Point(-7, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 37);
+            this.label5.TabIndex = 7;
             // 
             // FRM_Productos
             // 
