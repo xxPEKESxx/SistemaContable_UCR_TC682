@@ -34,6 +34,8 @@
             this.metroTile_Register = new MetroFramework.Controls.MetroTile();
             this.metroTile_Entrar = new MetroFramework.Controls.MetroTile();
             this.label1 = new System.Windows.Forms.Label();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // metroTextBox_Password
@@ -161,11 +163,31 @@
             this.label1.Size = new System.Drawing.Size(100, 43);
             this.label1.TabIndex = 22;
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(154, 148);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(140, 19);
+            this.metroLabel1.TabIndex = 23;
+            this.metroLabel1.Text = "NÚMERO DE CÉDULA";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(176, 256);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(96, 19);
+            this.metroLabel2.TabIndex = 23;
+            this.metroLabel2.Text = "CONTRASEÑA";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(459, 596);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.idUser);
             this.Controls.Add(this.metroTextBox_Password);
@@ -181,6 +203,7 @@
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -191,6 +214,8 @@
         private MetroFramework.Controls.MetroTextBox metroTextBox_Password;
         private MetroFramework.Controls.MetroTextBox idUser;
         private System.Windows.Forms.Label label1;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
     }
 }
 
