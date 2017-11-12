@@ -54,7 +54,8 @@ namespace SistemaContable_UCR_Pruebas
         {
             CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
 
-            Console.WriteLine(coordinadorTransacciones.getByDate(DateTime.Now.AddDays(1), DateTime.Now.AddDays(2)).Count);
+            Console.WriteLine(coordinadorTransacciones.getComprasByDate(DateTime.Now, DateTime.Now.AddDays(1)).Count);
+            Console.WriteLine(coordinadorTransacciones.getVentasByDate(DateTime.Now, DateTime.Now.AddDays(1)).Count);
         }
 
         [TestMethod]

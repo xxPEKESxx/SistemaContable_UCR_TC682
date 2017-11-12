@@ -68,16 +68,26 @@ namespace SistemaContable_UCR_Busisness
             return gestor.getAll();
         }
 
-        public List<Transacciones> getByDate(DateTime Desde, DateTime Hasta)
+        public List<Transacciones> getComprasByDate(DateTime Desde, DateTime Hasta)
         {
             GestorDeTransacciones gestor = new GestorDeTransacciones();
 
             string buscarDesde = DateTimeSQLite(Desde);
             string buscarHasta = DateTimeSQLite(Hasta.AddDays(1));
+            int tipo = (int)Tipos.Compra;
 
-            Console.WriteLine(buscarHasta);
+            return gestor.getByDate(buscarDesde, buscarHasta, tipo);
+        }
 
-            return gestor.getByDate(buscarDesde, buscarHasta);
+        public List<Transacciones> getVentasByDate(DateTime Desde, DateTime Hasta)
+        {
+            GestorDeTransacciones gestor = new GestorDeTransacciones();
+
+            string buscarDesde = DateTimeSQLite(Desde);
+            string buscarHasta = DateTimeSQLite(Hasta.AddDays(1));
+            int tipo = (int)Tipos.Venta;
+
+            return gestor.getByDate(buscarDesde, buscarHasta, tipo);
         }
 
         public List<Transacciones> getByType(int Tipo)
@@ -91,14 +101,14 @@ namespace SistemaContable_UCR_Busisness
         {
             GestorDeTransacciones gestor = new GestorDeTransacciones();
 
-            return gestor.getByName(Nombre, 2);
+            return gestor.getByProductName(Nombre, 2);
         }
 
         public List<Transacciones> getVentasByProductName(string Nombre)
         {
             GestorDeTransacciones gestor = new GestorDeTransacciones();
 
-            return gestor.getByName(Nombre, 1);
+            return gestor.getByProductName(Nombre, 1);
         }
     }
 }

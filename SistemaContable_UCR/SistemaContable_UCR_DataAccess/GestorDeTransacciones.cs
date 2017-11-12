@@ -165,14 +165,15 @@ namespace SistemaContable_UCR_DataAccess
             return laListaDeTransaccciones;
         }
 
-        public List<Transacciones> getByDate(String Desde, String Hasta)
+        public List<Transacciones> getByDate(String Desde, String Hasta, int Tipo)
         {
         Conection Conection = new Conection();
         List<Transacciones> laListaDeTransaccciones = new List<Transacciones>();
 
             try {
 
-                string query = "select * from Transacciones where Fecha BETWEEN '" + Desde + "' AND '" + Hasta + "'";
+                string query = "select * from Transacciones where Fecha BETWEEN '" + Desde + "' AND '" + Hasta + "'"+
+                    " AND IdTipo="+Tipo;
 
                 using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
                 {
@@ -241,7 +242,7 @@ namespace SistemaContable_UCR_DataAccess
             return laListaDeTransaccciones;
         }
 
-        public List<Transacciones> getByName(string Nombre, int Tipo)
+        public List<Transacciones> getByProductName(string Nombre, int Tipo)
         {
             Conection Conection = new Conection();
             List<Transacciones> laListaDeTransaccciones = new List<Transacciones>();
