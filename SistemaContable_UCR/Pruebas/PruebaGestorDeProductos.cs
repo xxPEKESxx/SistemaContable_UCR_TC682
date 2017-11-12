@@ -13,7 +13,7 @@ namespace SistemaContable_UCR_Pruebas
         {
             CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
             Productos producto = new Productos();
-            producto.Producto = "Yuca3";
+            producto.Producto = "yulo1";
             producto.Precio = 2000;
             producto.Descripcion = "Sabroson";
             Console.Write(coordinadorDeProductos.saveProduct(producto));

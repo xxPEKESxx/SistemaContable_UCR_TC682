@@ -241,6 +241,45 @@ namespace SistemaContable_UCR_DataAccess
             return laListaDeTransaccciones;
         }
 
+        public List<Transacciones> getByName(string Nombre)
+        {
+            Conection Conection = new Conection();
+            List<Transacciones> laListaDeTransaccciones = new List<Transacciones>();
+
+            try
+            {
+
+                string query = "select tr.ID, tr.IdProducto, tr.Cantidad, tr.Total, tr.Fecha, tr.IdTipo, pr.Producto "+
+                    "from Transacciones tr JOIN Productos pr ON tr.IdProducto = pr.ID WHERE pr.Producto LIKE '%"+Nombre+"%'";
+
+                using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
+                {
+                    c.Open();
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, c))
+                    {
+                        using (SQLiteDataReader datos = cmd.ExecuteReader())
+                        {
+                            cmd.Dispose();
+
+                            while (datos.Read())
+                            {
+
+                                laListaDeTransaccciones.Add(fillTransaction(datos));
+                            }
+                            datos.Close();
+                        }
+                    }
+                    c.Close();
+                }
+            }
+            catch (SQLiteException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return laListaDeTransaccciones;
+        }
+
         public Transacciones fillTransaction(SQLiteDataReader datos) {
 
             Transacciones transaccion = new Transacciones

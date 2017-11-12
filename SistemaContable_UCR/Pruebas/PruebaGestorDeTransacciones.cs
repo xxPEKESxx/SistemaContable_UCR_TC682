@@ -16,7 +16,7 @@ namespace SistemaContable_UCR_Pruebas
 
             Transacciones transaccion = new Transacciones
             {
-            IdProducto = 1,
+            IdProducto = 5,
             Cantidad = 1,
             Total = 1,
             IdTipo = 2,
@@ -75,6 +75,14 @@ namespace SistemaContable_UCR_Pruebas
             CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
 
             Console.WriteLine(coordinadorTransacciones.getByType(1).Count);
+        }
+
+        [TestMethod]
+        public void TestMethod8()
+        {
+            CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
+
+            Console.WriteLine(coordinadorTransacciones.getByName("Yuc").Count);
         }
     }
 }
