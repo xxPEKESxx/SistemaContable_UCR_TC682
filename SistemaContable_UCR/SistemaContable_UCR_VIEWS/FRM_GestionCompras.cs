@@ -107,6 +107,7 @@ namespace SistemaContable_UCR_VIEWS
 
         private void metroTileEditar_Click(object sender, EventArgs e)
         {
+            metroTabCompras.TabPages.Add(metroTabPageEditar);
             this.metroTabCompras.SelectedTab = metroTabPageEditar;
 
         }
@@ -267,8 +268,11 @@ namespace SistemaContable_UCR_VIEWS
                 transaccionABuscar.Cantidad = int.Parse(metroTextBoxEditarTab.Text);
                 if (coordinadorDeTransacciones.Update(transaccionABuscar) != 0)
                 {
+                    metroTabCompras.TabPages.Remove(metroTabPageEditar); 
                     MetroMessageBox.Show(this, "EDICION REGISTRADA CON EXITO.", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     limpiarCampos();
+                    this.metroTabCompras.SelectedTab = metroTabPageHistorial;
+
                 }
 
                 else
@@ -308,6 +312,16 @@ namespace SistemaContable_UCR_VIEWS
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void metroTabPageEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FRM_GestionCompras_Load(object sender, EventArgs e)
+        {
+            metroTabCompras.TabPages.Remove(metroTabPageEditar);
         }
     }
 }
