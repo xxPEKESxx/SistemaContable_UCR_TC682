@@ -165,7 +165,7 @@ namespace SistemaContable_UCR_DataAccess
             return laListaDeTransaccciones;
         }
 
-        public List<Transacciones> getByDate(String Desde, String Hasta, int Tipo)
+        public List<Transacciones> getByDateInterval(String Desde, String Hasta, int Tipo)
         {
         Conection Conection = new Conection();
         List<Transacciones> laListaDeTransaccciones = new List<Transacciones>();
@@ -202,6 +202,60 @@ namespace SistemaContable_UCR_DataAccess
 
 
             return laListaDeTransaccciones;
+        }
+
+        public float[] getUtilityByMonth(string desde, string hasta)
+        {
+            Conection Conection = new Conection();
+            float[] utilidad = new float[3];
+            
+            try
+            {
+                string queryCompra = "select SUM(Total) from Transacciones where Fecha BETWEEN '" + desde + "' AND '" + hasta + "' AND IdTipo="+2;
+
+                string queryVenta = "select SUM(Total) from Transacciones where Fecha BETWEEN '" + desde + "' AND '" + hasta + "' AND IdTipo="+1;
+
+                using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
+                {
+                    c.Open();
+                    using (SQLiteCommand cmd = new SQLiteCommand(queryCompra, c))
+                    {
+                        using (SQLiteDataReader datos = cmd.ExecuteReader())
+                        {
+                            cmd.Dispose();
+
+                            if (datos.GetValue(0).ToString()!="")
+                                {
+                                    float totalCompra = float.Parse(datos.GetValue(0).ToString());
+                                    utilidad.SetValue(totalCompra, 0);
+                                }
+
+                            datos.Close();
+                        }
+                    }
+                    using (SQLiteCommand cmd = new SQLiteCommand(queryVenta, c))
+                    {
+                        using (SQLiteDataReader datos = cmd.ExecuteReader())
+                        {
+                            cmd.Dispose();
+
+                            if (datos.GetValue(0).ToString() != "")
+                                {
+                                    float totalVenta = float.Parse(datos.GetValue(0).ToString());
+                                    utilidad.SetValue(totalVenta, 1);
+                                }
+                            datos.Close();
+                        }
+                    }
+                    c.Close();
+                }
+            }
+            catch (SQLiteException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
+            return utilidad;
         }
 
         public List<Transacciones> getByType(int Tipo)

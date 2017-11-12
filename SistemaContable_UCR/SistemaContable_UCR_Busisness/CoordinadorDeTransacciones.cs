@@ -76,7 +76,7 @@ namespace SistemaContable_UCR_Busisness
             string buscarHasta = DateTimeSQLite(Hasta.AddDays(1));
             int tipo = (int)Tipos.Compra;
 
-            return gestor.getByDate(buscarDesde, buscarHasta, tipo);
+            return gestor.getByDateInterval(buscarDesde, buscarHasta, tipo);
         }
 
         public List<Transacciones> getVentasByDate(DateTime Desde, DateTime Hasta)
@@ -87,7 +87,25 @@ namespace SistemaContable_UCR_Busisness
             string buscarHasta = DateTimeSQLite(Hasta.AddDays(1));
             int tipo = (int)Tipos.Venta;
 
-            return gestor.getByDate(buscarDesde, buscarHasta, tipo);
+            return gestor.getByDateInterval(buscarDesde, buscarHasta, tipo);
+        }
+
+        public float[] getUtilityByMonth(DateTime Fecha)
+        {
+            GestorDeTransacciones gestor = new GestorDeTransacciones();
+            float[] utilidad;
+
+            string dateTimeFormat = "{0}-{1}-{2}";
+
+            string desde = string.Format(dateTimeFormat, Fecha.Year, Fecha.Month, 1);
+            string hasta = string.Format(dateTimeFormat, Fecha.Year, Fecha.Month, 31);
+
+            utilidad = gestor.getUtilityByMonth(desde, hasta);
+
+            float utilidadTotal = float.Parse(utilidad[1].ToString()) - float.Parse(utilidad[0].ToString());
+            utilidad.SetValue(utilidadTotal, 2);
+
+            return utilidad;
         }
 
         public List<Transacciones> getByType(int Tipo)

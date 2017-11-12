@@ -12,11 +12,10 @@ namespace SistemaContable_UCR_Pruebas
         public void TestMethod1()
         {
             CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
-            
 
             Transacciones transaccion = new Transacciones
             {
-            IdProducto = 5,
+            IdProducto = 4,
             Cantidad = 1,
             Total = 1,
             IdTipo = 2,
@@ -84,6 +83,15 @@ namespace SistemaContable_UCR_Pruebas
             CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
 
             Console.WriteLine(coordinadorTransacciones.getVentasByProductName("Yu").Count);
+        }
+
+        [TestMethod]
+        public void TestMethod9()
+        {
+            CoordinadorDeTransacciones coordinadorTransacciones = new CoordinadorDeTransacciones();
+
+            Console.WriteLine(coordinadorTransacciones.getUtilityByMonth(DateTime.Now)[2].ToString());
+            
         }
     }
 }
