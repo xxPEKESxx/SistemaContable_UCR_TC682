@@ -124,20 +124,20 @@
   <data name="icons8_Long_Arrow_Left_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_Long_Arrow_Left_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iniciar sesion badoo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iniciar sesion badoo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="appbar.list.hidden" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.list.hidden.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="appbar.layer.add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.layer.add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_Add_User_Male_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_Add_User_Male_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iniciar sesion badoo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iniciar sesion badoo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="appbar.clean" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.clean.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="appbar.add.multiple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.add.multiple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="appbar.clipboard.variant.edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.clipboard.variant.edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,13 +175,22 @@
   <data name="appbar.page.search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.page.search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ucr-favicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ucr-favicon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icnos-47" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icnos-47.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="appbar.star.add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.star.add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_Add_User_Male_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_Add_User_Male_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ucr-favicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ucr-favicon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="appbar.add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

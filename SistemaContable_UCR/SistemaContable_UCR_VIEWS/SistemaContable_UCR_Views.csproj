@@ -254,5 +254,14 @@
   <ItemGroup>
     <None Include="Resources\download.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.star.add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.add.multiple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.add.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
