@@ -129,7 +129,7 @@ namespace SistemaContable_UCR_DataAccess
 
         public List<Transacciones> getAll() {
         Conection Conection = new Conection();
-        List<Transacciones> laListaDeTransaccciones = null;
+        List<Transacciones> laListaDeTransaccciones = new List<Transacciones>();
 
 
             try {
@@ -168,7 +168,7 @@ namespace SistemaContable_UCR_DataAccess
         public List<Transacciones> getByDate(String Desde, String Hasta)
         {
         Conection Conection = new Conection();
-        List<Transacciones> laListaDeTransaccciones = null;
+        List<Transacciones> laListaDeTransaccciones = new List<Transacciones>();
 
             try {
 
@@ -206,7 +206,7 @@ namespace SistemaContable_UCR_DataAccess
         public List<Transacciones> getByType(int Tipo)
         {
         Conection Conection = new Conection();
-        List<Transacciones> laListaDeTransaccciones = null;
+        List<Transacciones> laListaDeTransaccciones = new List<Transacciones>();
 
             try
             {
