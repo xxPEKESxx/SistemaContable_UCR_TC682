@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTabCompras = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPageAgregar = new MetroFramework.Controls.MetroTabPage();
+            this.btn_Atras_Agregar = new MetroFramework.Controls.MetroTile();
             this.metroTileAgregarProducto = new MetroFramework.Controls.MetroTile();
             this.metroTileAgregarCompra = new MetroFramework.Controls.MetroTile();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
@@ -43,27 +44,26 @@
             this.txtVentas_Cantidad = new MetroFramework.Controls.MetroTextBox();
             this.metroTabPageHistorial = new MetroFramework.Controls.MetroTabPage();
             this.metroTileBuscar = new MetroFramework.Controls.MetroTile();
+            this.metroTileAtrasHistorial = new MetroFramework.Controls.MetroTile();
             this.txtBuscar = new MetroFramework.Controls.MetroTextBox();
             this.metroTileEliminar = new MetroFramework.Controls.MetroTile();
             this.metroTileEditar = new MetroFramework.Controls.MetroTile();
             this.metroGridCompras = new MetroFramework.Controls.MetroGrid();
             this.metroTabPageEditar = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelNombreProducto = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroTileAtrasEditar = new MetroFramework.Controls.MetroTile();
             this.metroTextBoxEditarTab = new MetroFramework.Controls.MetroTextBox();
             this.metroTileEditarTap = new MetroFramework.Controls.MetroTile();
             this.metroTabPageFiltrar = new MetroFramework.Controls.MetroTabPage();
+            this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroGridFiltrar = new MetroFramework.Controls.MetroGrid();
             this.metroDateTimeHasta = new MetroFramework.Controls.MetroDateTime();
             this.metroDateTimeDesde = new MetroFramework.Controls.MetroDateTime();
             this.metroTileFiltrar = new MetroFramework.Controls.MetroTile();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabelNombreProducto = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.btn_Atras_Agregar = new MetroFramework.Controls.MetroTile();
-            this.metroTileAtrasHistorial = new MetroFramework.Controls.MetroTile();
-            this.metroTileAtrasEditar = new MetroFramework.Controls.MetroTile();
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTabCompras.SuspendLayout();
             this.metroTabPageAgregar.SuspendLayout();
             this.metroTabPageHistorial.SuspendLayout();
@@ -107,6 +107,22 @@
             this.metroTabPageAgregar.VerticalScrollbarBarColor = true;
             this.metroTabPageAgregar.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPageAgregar.VerticalScrollbarSize = 10;
+            // 
+            // btn_Atras_Agregar
+            // 
+            this.btn_Atras_Agregar.ActiveControl = null;
+            this.btn_Atras_Agregar.Location = new System.Drawing.Point(553, 236);
+            this.btn_Atras_Agregar.Name = "btn_Atras_Agregar";
+            this.btn_Atras_Agregar.Size = new System.Drawing.Size(94, 93);
+            this.btn_Atras_Agregar.Style = MetroFramework.MetroColorStyle.Green;
+            this.btn_Atras_Agregar.TabIndex = 20;
+            this.btn_Atras_Agregar.Text = "ATRAS";
+            this.btn_Atras_Agregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Atras_Agregar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
+            this.btn_Atras_Agregar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Atras_Agregar.UseSelectable = true;
+            this.btn_Atras_Agregar.UseTileImage = true;
+            this.btn_Atras_Agregar.Click += new System.EventHandler(this.btn_Atras_Agregar_Click);
             // 
             // metroTileAgregarProducto
             // 
@@ -218,6 +234,22 @@
             this.metroTileBuscar.UseSelectable = true;
             this.metroTileBuscar.Click += new System.EventHandler(this.metroTileBuscar_Click);
             // 
+            // metroTileAtrasHistorial
+            // 
+            this.metroTileAtrasHistorial.ActiveControl = null;
+            this.metroTileAtrasHistorial.Location = new System.Drawing.Point(517, 275);
+            this.metroTileAtrasHistorial.Name = "metroTileAtrasHistorial";
+            this.metroTileAtrasHistorial.Size = new System.Drawing.Size(94, 93);
+            this.metroTileAtrasHistorial.Style = MetroFramework.MetroColorStyle.Green;
+            this.metroTileAtrasHistorial.TabIndex = 18;
+            this.metroTileAtrasHistorial.Text = "ATRAS";
+            this.metroTileAtrasHistorial.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTileAtrasHistorial.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
+            this.metroTileAtrasHistorial.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileAtrasHistorial.UseSelectable = true;
+            this.metroTileAtrasHistorial.UseTileImage = true;
+            this.metroTileAtrasHistorial.Click += new System.EventHandler(this.metroTileAtrasHistorial_Click);
+            // 
             // txtBuscar
             // 
             // 
@@ -283,23 +315,23 @@
             this.metroGridCompras.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGridCompras.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGridCompras.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGridCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGridCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
             this.metroGridCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGridCompras.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGridCompras.DefaultCellStyle = dataGridViewCellStyle32;
             this.metroGridCompras.EnableHeadersVisualStyles = false;
             this.metroGridCompras.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGridCompras.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -307,14 +339,14 @@
             this.metroGridCompras.Name = "metroGridCompras";
             this.metroGridCompras.ReadOnly = true;
             this.metroGridCompras.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGridCompras.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGridCompras.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.metroGridCompras.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGridCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGridCompras.Size = new System.Drawing.Size(583, 191);
@@ -341,6 +373,50 @@
             this.metroTabPageEditar.VerticalScrollbarBarColor = true;
             this.metroTabPageEditar.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPageEditar.VerticalScrollbarSize = 10;
+            this.metroTabPageEditar.Click += new System.EventHandler(this.metroTabPageEditar_Click);
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(220, 53);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(65, 19);
+            this.metroLabel5.TabIndex = 27;
+            this.metroLabel5.Text = "Cantidad:";
+            // 
+            // metroLabelNombreProducto
+            // 
+            this.metroLabelNombreProducto.AutoSize = true;
+            this.metroLabelNombreProducto.Location = new System.Drawing.Point(75, 53);
+            this.metroLabelNombreProducto.Name = "metroLabelNombreProducto";
+            this.metroLabelNombreProducto.Size = new System.Drawing.Size(117, 19);
+            this.metroLabelNombreProducto.TabIndex = 26;
+            this.metroLabelNombreProducto.Text = "Nombre Producto";
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(3, 53);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(66, 19);
+            this.metroLabel4.TabIndex = 25;
+            this.metroLabel4.Text = "Producto:";
+            // 
+            // metroTileAtrasEditar
+            // 
+            this.metroTileAtrasEditar.ActiveControl = null;
+            this.metroTileAtrasEditar.Location = new System.Drawing.Point(552, 246);
+            this.metroTileAtrasEditar.Name = "metroTileAtrasEditar";
+            this.metroTileAtrasEditar.Size = new System.Drawing.Size(94, 93);
+            this.metroTileAtrasEditar.Style = MetroFramework.MetroColorStyle.Green;
+            this.metroTileAtrasEditar.TabIndex = 21;
+            this.metroTileAtrasEditar.Text = "ATRAS";
+            this.metroTileAtrasEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTileAtrasEditar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
+            this.metroTileAtrasEditar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileAtrasEditar.UseSelectable = true;
+            this.metroTileAtrasEditar.UseTileImage = true;
+            this.metroTileAtrasEditar.Click += new System.EventHandler(this.metroTileAtrasEditar_Click);
             // 
             // metroTextBoxEditarTab
             // 
@@ -409,6 +485,22 @@
             this.metroTabPageFiltrar.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPageFiltrar.VerticalScrollbarSize = 10;
             // 
+            // metroTile3
+            // 
+            this.metroTile3.ActiveControl = null;
+            this.metroTile3.Location = new System.Drawing.Point(552, 301);
+            this.metroTile3.Name = "metroTile3";
+            this.metroTile3.Size = new System.Drawing.Size(94, 93);
+            this.metroTile3.Style = MetroFramework.MetroColorStyle.Green;
+            this.metroTile3.TabIndex = 24;
+            this.metroTile3.Text = "ATRAS";
+            this.metroTile3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTile3.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
+            this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile3.UseSelectable = true;
+            this.metroTile3.UseTileImage = true;
+            this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click);
+            // 
             // metroGridFiltrar
             // 
             this.metroGridFiltrar.AllowUserToDeleteRows = false;
@@ -417,23 +509,23 @@
             this.metroGridFiltrar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGridFiltrar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGridFiltrar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGridFiltrar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGridFiltrar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.metroGridFiltrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGridFiltrar.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGridFiltrar.DefaultCellStyle = dataGridViewCellStyle35;
             this.metroGridFiltrar.EnableHeadersVisualStyles = false;
             this.metroGridFiltrar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGridFiltrar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -441,14 +533,14 @@
             this.metroGridFiltrar.Name = "metroGridFiltrar";
             this.metroGridFiltrar.ReadOnly = true;
             this.metroGridFiltrar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGridFiltrar.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGridFiltrar.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
             this.metroGridFiltrar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGridFiltrar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGridFiltrar.Size = new System.Drawing.Size(597, 174);
@@ -501,97 +593,6 @@
             this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "Desde:";
             // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(220, 53);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(65, 19);
-            this.metroLabel5.TabIndex = 27;
-            this.metroLabel5.Text = "Cantidad:";
-            // 
-            // metroLabelNombreProducto
-            // 
-            this.metroLabelNombreProducto.AutoSize = true;
-            this.metroLabelNombreProducto.Location = new System.Drawing.Point(75, 53);
-            this.metroLabelNombreProducto.Name = "metroLabelNombreProducto";
-            this.metroLabelNombreProducto.Size = new System.Drawing.Size(117, 19);
-            this.metroLabelNombreProducto.TabIndex = 26;
-            this.metroLabelNombreProducto.Text = "Nombre Producto";
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(3, 53);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(66, 19);
-            this.metroLabel4.TabIndex = 25;
-            this.metroLabel4.Text = "Producto:";
-            // 
-            // btn_Atras_Agregar
-            // 
-            this.btn_Atras_Agregar.ActiveControl = null;
-            this.btn_Atras_Agregar.Location = new System.Drawing.Point(553, 236);
-            this.btn_Atras_Agregar.Name = "btn_Atras_Agregar";
-            this.btn_Atras_Agregar.Size = new System.Drawing.Size(94, 93);
-            this.btn_Atras_Agregar.Style = MetroFramework.MetroColorStyle.Green;
-            this.btn_Atras_Agregar.TabIndex = 20;
-            this.btn_Atras_Agregar.Text = "ATRAS";
-            this.btn_Atras_Agregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Atras_Agregar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
-            this.btn_Atras_Agregar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Atras_Agregar.UseSelectable = true;
-            this.btn_Atras_Agregar.UseTileImage = true;
-            this.btn_Atras_Agregar.Click += new System.EventHandler(this.btn_Atras_Agregar_Click);
-            // 
-            // metroTileAtrasHistorial
-            // 
-            this.metroTileAtrasHistorial.ActiveControl = null;
-            this.metroTileAtrasHistorial.Location = new System.Drawing.Point(517, 275);
-            this.metroTileAtrasHistorial.Name = "metroTileAtrasHistorial";
-            this.metroTileAtrasHistorial.Size = new System.Drawing.Size(94, 93);
-            this.metroTileAtrasHistorial.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTileAtrasHistorial.TabIndex = 18;
-            this.metroTileAtrasHistorial.Text = "ATRAS";
-            this.metroTileAtrasHistorial.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTileAtrasHistorial.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
-            this.metroTileAtrasHistorial.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTileAtrasHistorial.UseSelectable = true;
-            this.metroTileAtrasHistorial.UseTileImage = true;
-            this.metroTileAtrasHistorial.Click += new System.EventHandler(this.metroTileAtrasHistorial_Click);
-            // 
-            // metroTileAtrasEditar
-            // 
-            this.metroTileAtrasEditar.ActiveControl = null;
-            this.metroTileAtrasEditar.Location = new System.Drawing.Point(552, 246);
-            this.metroTileAtrasEditar.Name = "metroTileAtrasEditar";
-            this.metroTileAtrasEditar.Size = new System.Drawing.Size(94, 93);
-            this.metroTileAtrasEditar.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTileAtrasEditar.TabIndex = 21;
-            this.metroTileAtrasEditar.Text = "ATRAS";
-            this.metroTileAtrasEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTileAtrasEditar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
-            this.metroTileAtrasEditar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTileAtrasEditar.UseSelectable = true;
-            this.metroTileAtrasEditar.UseTileImage = true;
-            this.metroTileAtrasEditar.Click += new System.EventHandler(this.metroTileAtrasEditar_Click);
-            // 
-            // metroTile3
-            // 
-            this.metroTile3.ActiveControl = null;
-            this.metroTile3.Location = new System.Drawing.Point(552, 301);
-            this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(94, 93);
-            this.metroTile3.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTile3.TabIndex = 24;
-            this.metroTile3.Text = "ATRAS";
-            this.metroTile3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile3.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
-            this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile3.UseSelectable = true;
-            this.metroTile3.UseTileImage = true;
-            this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click);
-            // 
             // FRM_GestionCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -602,6 +603,7 @@
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "Gestion de Compras";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FRM_GestionCompras_FormClosed);
+            this.Load += new System.EventHandler(this.FRM_GestionCompras_Load);
             this.metroTabCompras.ResumeLayout(false);
             this.metroTabPageAgregar.ResumeLayout(false);
             this.metroTabPageAgregar.PerformLayout();
