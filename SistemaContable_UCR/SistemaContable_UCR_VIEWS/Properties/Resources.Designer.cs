@@ -123,6 +123,16 @@ namespace SistemaContable_UCR_VIEWS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap appbar_door_lock_open {
+            get {
+                object obj = ResourceManager.GetObject("appbar.door.lock.open", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap appbar_layer_add {
             get {
                 object obj = ResourceManager.GetObject("appbar.layer.add", resourceCulture);
@@ -183,6 +193,26 @@ namespace SistemaContable_UCR_VIEWS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap download {
+            get {
+                object obj = ResourceManager.GetObject("download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icnos_47 {
+            get {
+                object obj = ResourceManager.GetObject("icnos-47", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Add_User_Male_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Add_User_Male_48", resourceCulture);
@@ -226,6 +256,16 @@ namespace SistemaContable_UCR_VIEWS.Properties {
         internal static System.Drawing.Bitmap icons8_Shutdown_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Shutdown_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iniciar_sesion_badoo {
+            get {
+                object obj = ResourceManager.GetObject("iniciar sesion badoo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
