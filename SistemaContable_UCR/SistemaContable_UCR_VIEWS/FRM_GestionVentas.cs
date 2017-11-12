@@ -272,5 +272,27 @@ namespace SistemaContable_UCR_VIEWS
         {
             this.metroTabVentas.SelectedTab = metroTabPageEditar;
         }
+
+        private void txtVentas_Cantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MetroMessageBox.Show(this, "CAMPOS NUMERICOS", "," + "\n NO SE PERMITEN LETRAS..", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void metroTextBoxEditarTab_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MetroMessageBox.Show(this, "CAMPOS NUMERICOS", "," + "\n NO SE PERMITEN LETRAS..", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                e.Handled = true;
+                return;
+            }
+        }
     }
 }
