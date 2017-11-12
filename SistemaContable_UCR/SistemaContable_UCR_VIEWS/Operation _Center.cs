@@ -38,7 +38,7 @@ namespace SistemaContable_UCR_VIEWS
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            FRM_Compras compras = new FRM_Compras();
+            FRM_GestionCompras compras = new FRM_GestionCompras();
             compras.Visible = true;
 
             this.Visible = false;
