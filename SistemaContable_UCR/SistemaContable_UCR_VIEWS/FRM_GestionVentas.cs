@@ -86,7 +86,7 @@ namespace SistemaContable_UCR_VIEWS
 
                 transacciones.IdTipo = 1;
 
-                if (coordinadorDeTransacciones.Save(transacciones) != 0)
+                if (coordinadorDeTransacciones.Save(transacciones))
                 {
 
                     MetroMessageBox.Show(this, "VENTA REGISTRADA CON EXITO.", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -151,7 +151,7 @@ namespace SistemaContable_UCR_VIEWS
 
 
 
-            if (coordinadorDeTransacciones.Delete(transaccionAEliminar.ID) > 0)
+            if (coordinadorDeTransacciones.Delete(transaccionAEliminar.ID))
             {
 
                 MetroMessageBox.Show(this, "Venta eliminada con exito", "Exito!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -212,7 +212,7 @@ namespace SistemaContable_UCR_VIEWS
             if (metroTextBoxEditarTab.Text != "")
             {
                 transaccionABuscar.Cantidad = int.Parse(metroTextBoxEditarTab.Text);
-                if (coordinadorDeTransacciones.Update(transaccionABuscar) != 0)
+                if (coordinadorDeTransacciones.Update(transaccionABuscar))
                 {
                     MetroMessageBox.Show(this, "EDICION REGISTRADA CON EXITO.", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     limpiarCampos();

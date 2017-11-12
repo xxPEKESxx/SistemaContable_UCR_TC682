@@ -80,7 +80,7 @@ namespace SistemaContable_UCR_VIEWS
 
                 transacciones.IdTipo = 2;
 
-                if (coordinadorDeTransacciones.Save(transacciones) != 0)
+                if (coordinadorDeTransacciones.Save(transacciones))
                 {
 
                     MetroMessageBox.Show(this, "COMPRA REGISTRADA CON EXITO.", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -152,7 +152,7 @@ namespace SistemaContable_UCR_VIEWS
 
 
 
-                if (coordinadorDeTransacciones.Delete(transaccionAEliminar.ID) > 0)
+                if (coordinadorDeTransacciones.Delete(transaccionAEliminar.ID))
                 {
 
                     MetroMessageBox.Show(this, "Compra eliminada con exito", "Exito!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -266,7 +266,7 @@ namespace SistemaContable_UCR_VIEWS
             if (metroTextBoxEditarTab.Text != "")
             {
                 transaccionABuscar.Cantidad = int.Parse(metroTextBoxEditarTab.Text);
-                if (coordinadorDeTransacciones.Update(transaccionABuscar) != 0)
+                if (coordinadorDeTransacciones.Update(transaccionABuscar))
                 {
                     metroTabCompras.TabPages.Remove(metroTabPageEditar); 
                     MetroMessageBox.Show(this, "EDICION REGISTRADA CON EXITO.", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);

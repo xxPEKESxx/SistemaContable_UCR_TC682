@@ -114,7 +114,7 @@ namespace SistemaContable_UCR_VIEWS
 
                 tran.IdTipo = 1;
 
-                if (ct.Save(tran) != 0)
+                if (ct.Save(tran))
                 {
 
                     MetroMessageBox.Show(this, "COMPRA REGISTRADA CON EXITO.", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);

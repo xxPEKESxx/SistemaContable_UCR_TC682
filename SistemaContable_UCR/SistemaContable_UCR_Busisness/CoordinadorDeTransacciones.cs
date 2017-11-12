@@ -34,7 +34,7 @@ namespace SistemaContable_UCR_Busisness
             return string.Format(dateTimeFormat, datetime.Year, datetime.Month, datetime.Day);
         }
 
-        public int Update(SistemaContable_UCR_Model.Transacciones laTransaccion)
+        public bool Update(SistemaContable_UCR_Model.Transacciones laTransaccion)
         {
             GestorDeTransacciones gestor = new GestorDeTransacciones();
             CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
@@ -46,7 +46,9 @@ namespace SistemaContable_UCR_Busisness
             DateTime fecha = DateTime.Parse(laTransaccion.Fecha);
             laTransaccion.Fecha = DateTimeSQLite(fecha);
 
-            return gestor.Update(laTransaccion);
+            if (gestor.Update(laTransaccion) > 0)
+                return true;
+            else return false;
         }
 
         public Transacciones getById(int Id)
@@ -56,11 +58,13 @@ namespace SistemaContable_UCR_Busisness
             return gestor.getById(Id);
         }
 
-        public int Delete(int Id)
+        public bool Delete(int Id)
         {
             GestorDeTransacciones gestor = new GestorDeTransacciones();
 
-            return gestor.Delete(Id);
+            if (gestor.Delete(Id) > 0)
+                return true;
+            else return false;
         }
 
         public List<Transacciones> getAll() {
