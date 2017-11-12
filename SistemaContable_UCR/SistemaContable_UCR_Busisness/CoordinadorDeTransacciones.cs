@@ -12,7 +12,7 @@ namespace SistemaContable_UCR_Busisness
     public class CoordinadorDeTransacciones
     {
 
-        public int Save(SistemaContable_UCR_Model.Transacciones laNuevaTransaccion)
+        public bool Save(SistemaContable_UCR_Model.Transacciones laNuevaTransaccion)
         {
             GestorDeTransacciones gestor = new GestorDeTransacciones();
             CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
@@ -22,7 +22,9 @@ namespace SistemaContable_UCR_Busisness
             laNuevaTransaccion.Total = laNuevaTransaccion.Cantidad * producto.Precio;
             laNuevaTransaccion.Fecha = DateTimeSQLite(DateTime.Now);
 
-            return gestor.Save(laNuevaTransaccion);
+            if (gestor.Save(laNuevaTransaccion) > 0)
+                return true;
+            else return false;
         }
 
         private string DateTimeSQLite(DateTime datetime)

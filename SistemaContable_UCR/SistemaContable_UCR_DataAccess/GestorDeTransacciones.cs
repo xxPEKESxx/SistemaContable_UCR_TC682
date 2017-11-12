@@ -304,8 +304,8 @@ namespace SistemaContable_UCR_DataAccess
             try
             {
 
-                string query = "select tr.ID, tr.IdProducto, tr.Cantidad, tr.Total, tr.Fecha, tr.IdTipo, pr.Producto "+
-                    "from Transacciones tr JOIN Productos pr ON tr.IdProducto = pr.ID WHERE pr.Producto LIKE '%"+Nombre+"%' AND tr.Idtipo="+Tipo;
+                string query = "select tr.*, pr.Producto from Transacciones tr JOIN Productos pr "+
+                    "ON tr.IdProducto = pr.ID WHERE pr.Producto LIKE '%"+Nombre+"%' AND tr.Idtipo="+Tipo;
 
                 using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
                 {
