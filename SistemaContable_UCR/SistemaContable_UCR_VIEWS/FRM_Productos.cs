@@ -29,6 +29,7 @@ namespace SistemaContable_UCR_VIEWS
             cargar_txteditables();
             
             
+            
         }
         public void cargarCbx_productos() {
 
@@ -44,6 +45,7 @@ namespace SistemaContable_UCR_VIEWS
             this.cbx_eliminar_seleccion.DataSource = productos;
             this.cbx_eliminar_seleccion.ValueMember = "ID";
             this.cbx_eliminar_seleccion.DisplayMember = "Producto";
+
 
             this.cbx_muestraProductos.DataSource = productos;
             this.cbx_muestraProductos.ValueMember = "ID";
@@ -161,76 +163,11 @@ namespace SistemaContable_UCR_VIEWS
         private void producto_Eliminar_Click(object sender, EventArgs e)
         {
             
-
-            //CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
-            //Productos productoAEliminar = coordinadorDeProductos.getById(IdProducto);
-
-            //if (txtproducto_descriocion.Text != "" && txtproducto_precio.Text != ""
-            //    && txtproducto_name.Text != "")
-            //{
-
-                
-               
-            //   /// producto.ID = productoAEditar.ID;
-
-
-
-            //    if (coordinadorDeProductos.deleteProduct(productoAEliminar.ID))
-            //    {
-
-            //        MetroMessageBox.Show(this, "Producto eliminado con exito", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        cargarLista();
-            //    }
-            //    else
-            //    {
-            //        MetroMessageBox.Show(this, "Producto no eliminado", "Por favor verificar los capos en blanco," + "\n O verifique que el nombre del producto no esta repetido", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        cargarLista();
-            //    }
-            //}
-            //else
-            //{
-            //    MetroMessageBox.Show(this, "FAVOR NO DEJAR CAMPOS EN BLANCO", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
         }
 
         private void producto_Buscar_Click(object sender, EventArgs e)
         {
-            CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
-            List<Productos> productoABuscar = new List<Productos>();
-                //
-
-            //if (txtproducto_name.Text != "")
-            //{
-            //    productoABuscar = coordinadorDeProductos.getByProducto(txtproducto_name.Text);
-
-
-            //    /// producto.ID = productoAEditar.ID;
-            //    DataTable _table = ConvertirListaToDataTable(productoABuscar);
-
-            //    dataGrip_listaProductos.DataSource = _table;
-
-            //    dataGrip_listaProductos.ReadOnly = true;
-
-
-
-            //    if (productoABuscar.Count>0)
-            //    {
-
-            //        MetroMessageBox.Show(this, "Producto encontrado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
-
-                    
-            //    }
-            //    else
-            //    {
-            //        MetroMessageBox.Show(this, "Producto no encontrado", "," + "\n O Por favor verifique que el nombre del producto este correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        cargarLista();
-            //    }
-            //}
-            //else
-            //{
-            //    MetroMessageBox.Show(this, "EL CAMPO DE TEXTO NOMBRE PRODUCTO NO DEBE DE IR EN BLANCO", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
+            
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -272,8 +209,8 @@ namespace SistemaContable_UCR_VIEWS
                 pr.Precio = precio;
                 pr.Descripcion = txtDescripcion_Agregar.Text;
                 pr.Producto = Txt_nombre_Agrega.Text;
-                cargarCbx_productos();
-                cargarLista();
+               
+               
 
 
 
@@ -282,11 +219,13 @@ namespace SistemaContable_UCR_VIEWS
 
                     MetroMessageBox.Show(this, "Producto registrado con exito", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cargarLista();
+                    cargarCbx_productos();
                 }
                 else
                 {
                     MetroMessageBox.Show(this, "Producto no registrado", "Por favor verificar los capos en blanco," + "\n O verifique que el nombre del producto no esta repetido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cargarLista();
+                    cargarCbx_productos();
                 }
             }
             else
@@ -347,6 +286,70 @@ namespace SistemaContable_UCR_VIEWS
             {
                 MetroMessageBox.Show(this, "FAVOR NO DEJAR CAMPOS EN BLANCO", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+        }
+
+        private void btn_eliminar_elimnar_Click(object sender, EventArgs e)
+        {
+
+
+            Productos producto = new Productos();
+            CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
+
+
+            producto.ID = Convert.ToInt32(cbx_eliminar_seleccion.SelectedValue);
+
+            
+            if (coordinadorDeProductos.deleteProduct(producto.ID))
+                {
+
+                    MetroMessageBox.Show(this, "Producto eliminado con exito", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargarLista();
+                cargarCbx_productos();
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "Producto no eliminado", "Por favor verificar los capos en blanco," + "\n O verifique que el nombre del producto no esta repetido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargarLista();
+                cargarCbx_productos();
+            }
+           
+
+        }
+
+        private void btn_muestra_Buscar_Click(object sender, EventArgs e)
+        {
+            CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
+            List<Productos> productoABuscar = new List<Productos>();
+
+
+          
+                productoABuscar = coordinadorDeProductos.getByProducto(cbx_muestraProductos.Text);
+
+
+                /// producto.ID = productoAEditar.ID;
+                DataTable _table = ConvertirListaToDataTable(productoABuscar);
+
+                metroGrid1_muestra_.DataSource = _table;
+
+                metroGrid1_muestra_.ReadOnly = true;
+
+
+
+                if (productoABuscar.Count > 0)
+                {
+
+                    MetroMessageBox.Show(this, "Producto encontrado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "Producto no encontrado", "," + "\n O Por favor verifique que el nombre del producto este correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cargarLista();
+                }
+            
 
         }
     }

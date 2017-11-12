@@ -79,6 +79,9 @@
             // 
             // metroToolTip1
             // 
+            this.metroToolTip1.AutoPopDelay = 10000;
+            this.metroToolTip1.InitialDelay = 100;
+            this.metroToolTip1.ReshowDelay = 100;
             this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroToolTip1.StyleManager = null;
             this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -100,7 +103,7 @@
             this.tab_Principal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_Principal.Location = new System.Drawing.Point(20, 60);
             this.tab_Principal.Name = "tab_Principal";
-            this.tab_Principal.SelectedIndex = 1;
+            this.tab_Principal.SelectedIndex = 3;
             this.tab_Principal.Size = new System.Drawing.Size(757, 493);
             this.tab_Principal.TabIndex = 6;
             this.tab_Principal.UseSelectable = true;
@@ -202,6 +205,7 @@
             this.TxtPrecio_Agregar.Lines = new string[0];
             this.TxtPrecio_Agregar.Location = new System.Drawing.Point(22, 162);
             this.TxtPrecio_Agregar.MaxLength = 32767;
+            this.TxtPrecio_Agregar.Multiline = true;
             this.TxtPrecio_Agregar.Name = "TxtPrecio_Agregar";
             this.TxtPrecio_Agregar.PasswordChar = '\0';
             this.TxtPrecio_Agregar.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -232,6 +236,7 @@
             this.txtDescripcion_Agregar.Lines = new string[0];
             this.txtDescripcion_Agregar.Location = new System.Drawing.Point(22, 263);
             this.txtDescripcion_Agregar.MaxLength = 32767;
+            this.txtDescripcion_Agregar.Multiline = true;
             this.txtDescripcion_Agregar.Name = "txtDescripcion_Agregar";
             this.txtDescripcion_Agregar.PasswordChar = '\0';
             this.txtDescripcion_Agregar.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -262,6 +267,7 @@
             this.Txt_nombre_Agrega.Lines = new string[0];
             this.Txt_nombre_Agrega.Location = new System.Drawing.Point(22, 77);
             this.Txt_nombre_Agrega.MaxLength = 32767;
+            this.Txt_nombre_Agrega.Multiline = true;
             this.Txt_nombre_Agrega.Name = "Txt_nombre_Agrega";
             this.Txt_nombre_Agrega.PasswordChar = '\0';
             this.Txt_nombre_Agrega.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -296,6 +302,7 @@
             this.tabEditarProducto.Size = new System.Drawing.Size(749, 451);
             this.tabEditarProducto.TabIndex = 1;
             this.tabEditarProducto.Text = "Editar Productos";
+            this.tabEditarProducto.VerticalScrollbar = true;
             this.tabEditarProducto.VerticalScrollbarBarColor = true;
             this.tabEditarProducto.VerticalScrollbarHighlightOnWheel = false;
             this.tabEditarProducto.VerticalScrollbarSize = 10;
@@ -384,6 +391,7 @@
             this.txt_editar_precio.Lines = new string[0];
             this.txt_editar_precio.Location = new System.Drawing.Point(3, 318);
             this.txt_editar_precio.MaxLength = 32767;
+            this.txt_editar_precio.Multiline = true;
             this.txt_editar_precio.Name = "txt_editar_precio";
             this.txt_editar_precio.PasswordChar = '\0';
             this.txt_editar_precio.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -415,6 +423,7 @@
             this.txt_editar_descripcion.Lines = new string[0];
             this.txt_editar_descripcion.Location = new System.Drawing.Point(3, 251);
             this.txt_editar_descripcion.MaxLength = 32767;
+            this.txt_editar_descripcion.Multiline = true;
             this.txt_editar_descripcion.Name = "txt_editar_descripcion";
             this.txt_editar_descripcion.PasswordChar = '\0';
             this.txt_editar_descripcion.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -446,6 +455,7 @@
             this.txt_editar_nombre.Lines = new string[0];
             this.txt_editar_nombre.Location = new System.Drawing.Point(3, 173);
             this.txt_editar_nombre.MaxLength = 32767;
+            this.txt_editar_nombre.Multiline = true;
             this.txt_editar_nombre.Name = "txt_editar_nombre";
             this.txt_editar_nombre.PasswordChar = '\0';
             this.txt_editar_nombre.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -461,9 +471,12 @@
             // 
             // cbx_editar_seleccionproducto
             // 
+            this.cbx_editar_seleccionproducto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.cbx_editar_seleccionproducto.FormattingEnabled = true;
+            this.cbx_editar_seleccionproducto.IntegralHeight = false;
             this.cbx_editar_seleccionproducto.ItemHeight = 23;
             this.cbx_editar_seleccionproducto.Location = new System.Drawing.Point(3, 98);
+            this.cbx_editar_seleccionproducto.MaxDropDownItems = 4;
             this.cbx_editar_seleccionproducto.Name = "cbx_editar_seleccionproducto";
             this.cbx_editar_seleccionproducto.Size = new System.Drawing.Size(230, 29);
             this.cbx_editar_seleccionproducto.TabIndex = 7;
@@ -533,15 +546,20 @@
             this.btn_eliminar_elimnar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_eliminar_elimnar.UseSelectable = true;
             this.btn_eliminar_elimnar.UseTileImage = true;
+            this.btn_eliminar_elimnar.Click += new System.EventHandler(this.btn_eliminar_elimnar_Click);
             // 
             // cbx_eliminar_seleccion
             // 
+            this.cbx_eliminar_seleccion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.cbx_eliminar_seleccion.FormattingEnabled = true;
+            this.cbx_eliminar_seleccion.IntegralHeight = false;
             this.cbx_eliminar_seleccion.ItemHeight = 23;
             this.cbx_eliminar_seleccion.Location = new System.Drawing.Point(0, 102);
             this.cbx_eliminar_seleccion.Name = "cbx_eliminar_seleccion";
             this.cbx_eliminar_seleccion.Size = new System.Drawing.Size(299, 29);
             this.cbx_eliminar_seleccion.TabIndex = 18;
+            this.metroToolTip1.SetToolTip(this.cbx_eliminar_seleccion, "Seleccione un PRODUCTO, despues precione \r\nel boton eliminar con el click derecho" +
+        " del raton.");
             this.cbx_eliminar_seleccion.UseSelectable = true;
             // 
             // label3
@@ -601,6 +619,7 @@
             this.btn_muestra_Buscar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_muestra_Buscar.UseSelectable = true;
             this.btn_muestra_Buscar.UseTileImage = true;
+            this.btn_muestra_Buscar.Click += new System.EventHandler(this.btn_muestra_Buscar_Click);
             // 
             // metroGrid1_muestra_
             // 
@@ -657,6 +676,7 @@
             // cbx_muestraProductos
             // 
             this.cbx_muestraProductos.FormattingEnabled = true;
+            this.cbx_muestraProductos.IntegralHeight = false;
             this.cbx_muestraProductos.ItemHeight = 23;
             this.cbx_muestraProductos.Location = new System.Drawing.Point(0, 108);
             this.cbx_muestraProductos.Name = "cbx_muestraProductos";
@@ -679,6 +699,7 @@
             this.ClientSize = new System.Drawing.Size(797, 573);
             this.Controls.Add(this.tab_Principal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FRM_Productos";
             this.Resizable = false;
             this.Text = "Gestion de Productos";
