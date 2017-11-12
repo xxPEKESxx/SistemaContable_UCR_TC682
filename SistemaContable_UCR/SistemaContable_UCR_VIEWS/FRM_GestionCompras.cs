@@ -209,7 +209,7 @@ namespace SistemaContable_UCR_VIEWS
             CoordinadorDeTransacciones coordinadorDeTransacciones = new CoordinadorDeTransacciones();
             List<Transacciones> transaccionAFiltrar = new List<Transacciones>();
 
-            transaccionAFiltrar = coordinadorDeTransacciones.getByDate(metroDateTimeDesde.Value, metroDateTimeHasta.Value);
+            transaccionAFiltrar = coordinadorDeTransacciones.getComprasByDate(metroDateTimeDesde.Value, metroDateTimeHasta.Value);
 
             DataTable _table = ConvertirListaToDataTable(transaccionAFiltrar);
 
