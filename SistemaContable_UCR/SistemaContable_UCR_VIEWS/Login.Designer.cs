@@ -97,7 +97,7 @@
             this.idUser.Multiline = true;
             this.idUser.Name = "idUser";
             this.idUser.PasswordChar = '\0';
-            this.idUser.PromptText = "CEDULA";
+            this.idUser.PromptText = "CÉDULA";
             this.idUser.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.idUser.SelectedText = "";
             this.idUser.SelectionLength = 0;
@@ -109,7 +109,7 @@
             this.idUser.Text = "123";
             this.idUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.idUser.UseSelectable = true;
-            this.idUser.WaterMark = "CEDULA";
+            this.idUser.WaterMark = "CÉDULA";
             this.idUser.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.idUser.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
