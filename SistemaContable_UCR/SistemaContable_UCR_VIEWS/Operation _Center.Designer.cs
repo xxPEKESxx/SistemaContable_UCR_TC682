@@ -199,7 +199,7 @@
             this.MaximizeBox = false;
             this.Name = "Operation__Center";
             this.Resizable = false;
-            this.Text = "Sistema Contable UCR (tc682)";
+            this.Text = "Sistema Contable UCR (TCU-682)";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Operation__Center_FormClosed);
             this.Load += new System.EventHandler(this.Operation__Center_Load);
             this.metroPanel_Administration.ResumeLayout(false);

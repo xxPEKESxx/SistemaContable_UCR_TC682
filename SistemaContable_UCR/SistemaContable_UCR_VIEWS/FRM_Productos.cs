@@ -363,6 +363,18 @@ namespace SistemaContable_UCR_VIEWS
                 return;
             }
         }
+
+        private void txt_editar_precio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MetroMessageBox.Show(this, "CAMPOS NUMERICOS", "," + "\n NO SE PERMITEN LETRAS..", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                e.Handled = true;
+                return;
+            }
+
+        }
     }
     }
 

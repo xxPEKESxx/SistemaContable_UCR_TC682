@@ -69,7 +69,6 @@
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.cbx_muestraProductos = new MetroFramework.Controls.MetroComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.htmlToolTip1 = new MetroFramework.Drawing.Html.HtmlToolTip();
             this.tab_Principal.SuspendLayout();
             this.tabProductos_agregar.SuspendLayout();
             this.tabEditarProducto.SuspendLayout();
@@ -118,7 +117,7 @@
             this.tab_Principal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_Principal.Location = new System.Drawing.Point(20, 60);
             this.tab_Principal.Name = "tab_Principal";
-            this.tab_Principal.SelectedIndex = 0;
+            this.tab_Principal.SelectedIndex = 1;
             this.tab_Principal.Size = new System.Drawing.Size(757, 493);
             this.tab_Principal.TabIndex = 6;
             this.tab_Principal.UseSelectable = true;
@@ -230,7 +229,6 @@
             this.TxtPrecio_Agregar.ShortcutsEnabled = true;
             this.TxtPrecio_Agregar.Size = new System.Drawing.Size(226, 38);
             this.TxtPrecio_Agregar.TabIndex = 6;
-            this.htmlToolTip1.SetToolTip(this.TxtPrecio_Agregar, "JMPJMKMÑLMÑL");
             this.TxtPrecio_Agregar.UseSelectable = true;
             this.TxtPrecio_Agregar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtPrecio_Agregar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -421,6 +419,7 @@
             this.txt_editar_precio.UseSelectable = true;
             this.txt_editar_precio.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_editar_precio.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_editar_precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_editar_precio_KeyPress);
             // 
             // txt_editar_descripcion
             // 
@@ -695,10 +694,6 @@
             this.label5.Size = new System.Drawing.Size(100, 37);
             this.label5.TabIndex = 7;
             // 
-            // htmlToolTip1
-            // 
-            this.htmlToolTip1.OwnerDraw = true;
-            // 
             // FRM_Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -764,6 +759,5 @@
         private MetroFramework.Controls.MetroGrid metroGrid1_muestra_;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroComboBox cbx_muestraProductos;
-        private MetroFramework.Drawing.Html.HtmlToolTip htmlToolTip1;
     }
 }
