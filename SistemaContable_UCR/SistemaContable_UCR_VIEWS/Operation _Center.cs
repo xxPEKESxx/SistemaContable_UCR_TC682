@@ -61,5 +61,14 @@ namespace SistemaContable_UCR_VIEWS
         {
             Application.Exit();
         }
+
+        private void btn_creditos_Click(object sender, EventArgs e)
+        {
+            Creditos cr = new Creditos();
+
+            cr.Visible = true;
+            this.Visible = false;
+
+        }
     }
 }

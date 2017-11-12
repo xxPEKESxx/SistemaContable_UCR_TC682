@@ -108,6 +108,7 @@
             this.btn_creditos.UseSelectable = true;
             this.btn_creditos.UseStyleColors = true;
             this.btn_creditos.UseTileImage = true;
+            this.btn_creditos.Click += new System.EventHandler(this.btn_creditos_Click);
             // 
             // btn_ventas
             // 
