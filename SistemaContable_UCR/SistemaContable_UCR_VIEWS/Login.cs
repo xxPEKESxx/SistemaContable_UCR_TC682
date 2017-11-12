@@ -34,10 +34,10 @@ namespace SistemaContable_UCR_VIEWS
 
             if ((cu.login(idUser.Text,metroTextBox_Password.Text)))
             {
-
+                this.Visible = false;
                 Operation__Center Oc = new Operation__Center();
                 Oc.Visible = true;
-                Visible = false;
+               
 
             }
             else {
@@ -54,6 +54,11 @@ namespace SistemaContable_UCR_VIEWS
 
             re.Visible = true;
             Visible = false;
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

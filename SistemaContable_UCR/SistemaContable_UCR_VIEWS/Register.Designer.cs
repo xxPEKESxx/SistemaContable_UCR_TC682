@@ -36,6 +36,7 @@
             this.icoUCR = new System.Windows.Forms.Label();
             this.registro_Atras = new MetroFramework.Controls.MetroTile();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.txt_register_codigoseguridad = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // registro_dni
@@ -222,16 +223,17 @@
             // 
             this.registro_Atras.ActiveControl = null;
             this.registro_Atras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.registro_Atras.Location = new System.Drawing.Point(23, 416);
+            this.registro_Atras.Location = new System.Drawing.Point(23, 454);
             this.registro_Atras.Name = "registro_Atras";
             this.registro_Atras.Size = new System.Drawing.Size(137, 108);
+            this.registro_Atras.Style = MetroFramework.MetroColorStyle.Teal;
             this.registro_Atras.TabIndex = 1;
             this.registro_Atras.Text = "ATRAS";
             this.registro_Atras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.registro_Atras.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.icons8_Long_Arrow_Left_48;
+            this.registro_Atras.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
             this.registro_Atras.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.registro_Atras.UseCustomBackColor = true;
             this.registro_Atras.UseSelectable = true;
+            this.registro_Atras.UseStyleColors = true;
             this.registro_Atras.UseTileImage = true;
             this.registro_Atras.Click += new System.EventHandler(this.registro_Atras_Click);
             // 
@@ -239,27 +241,64 @@
             // 
             this.metroTile1.ActiveControl = null;
             this.metroTile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.metroTile1.Location = new System.Drawing.Point(214, 416);
+            this.metroTile1.Location = new System.Drawing.Point(214, 454);
             this.metroTile1.Name = "metroTile1";
             this.metroTile1.Size = new System.Drawing.Size(137, 108);
             this.metroTile1.TabIndex = 1;
             this.metroTile1.Text = "REGISTRAR";
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile1.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.icons8_Add_User_Male_48;
+            this.metroTile1.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_thumb_up_add;
             this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile1.UseCustomBackColor = true;
             this.metroTile1.UseSelectable = true;
+            this.metroTile1.UseStyleColors = true;
             this.metroTile1.UseTileImage = true;
             this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
+            // 
+            // txt_register_codigoseguridad
+            // 
+            // 
+            // 
+            // 
+            this.txt_register_codigoseguridad.CustomButton.Image = null;
+            this.txt_register_codigoseguridad.CustomButton.Location = new System.Drawing.Point(288, 1);
+            this.txt_register_codigoseguridad.CustomButton.Name = "";
+            this.txt_register_codigoseguridad.CustomButton.Size = new System.Drawing.Size(39, 39);
+            this.txt_register_codigoseguridad.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_register_codigoseguridad.CustomButton.TabIndex = 1;
+            this.txt_register_codigoseguridad.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_register_codigoseguridad.CustomButton.UseSelectable = true;
+            this.txt_register_codigoseguridad.CustomButton.Visible = false;
+            this.txt_register_codigoseguridad.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txt_register_codigoseguridad.Lines = new string[] {
+        "TCU-682-ACT"};
+            this.txt_register_codigoseguridad.Location = new System.Drawing.Point(23, 378);
+            this.txt_register_codigoseguridad.MaxLength = 32767;
+            this.txt_register_codigoseguridad.Name = "txt_register_codigoseguridad";
+            this.txt_register_codigoseguridad.PasswordChar = '\0';
+            this.txt_register_codigoseguridad.PromptText = "CODIGO DE SEGURIDAD";
+            this.txt_register_codigoseguridad.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_register_codigoseguridad.SelectedText = "";
+            this.txt_register_codigoseguridad.SelectionLength = 0;
+            this.txt_register_codigoseguridad.SelectionStart = 0;
+            this.txt_register_codigoseguridad.ShortcutsEnabled = true;
+            this.txt_register_codigoseguridad.Size = new System.Drawing.Size(328, 41);
+            this.txt_register_codigoseguridad.TabIndex = 0;
+            this.txt_register_codigoseguridad.Text = "TCU-682-ACT";
+            this.txt_register_codigoseguridad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_register_codigoseguridad.UseSelectable = true;
+            this.txt_register_codigoseguridad.WaterMark = "CODIGO DE SEGURIDAD";
+            this.txt_register_codigoseguridad.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_register_codigoseguridad.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 542);
+            this.ClientSize = new System.Drawing.Size(374, 585);
             this.Controls.Add(this.icoUCR);
             this.Controls.Add(this.registro_Atras);
             this.Controls.Add(this.metroTile1);
+            this.Controls.Add(this.txt_register_codigoseguridad);
             this.Controls.Add(this.registro_passwordConfirn);
             this.Controls.Add(this.register_password);
             this.Controls.Add(this.registro_apellidos);
@@ -287,5 +326,6 @@
         private MetroFramework.Controls.MetroTile metroTile1;
         private MetroFramework.Controls.MetroTile registro_Atras;
         private System.Windows.Forms.Label icoUCR;
+        private MetroFramework.Controls.MetroTextBox txt_register_codigoseguridad;
     }
 }

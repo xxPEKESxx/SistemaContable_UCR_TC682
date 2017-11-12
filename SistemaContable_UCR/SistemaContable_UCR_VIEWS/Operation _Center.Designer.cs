@@ -82,7 +82,7 @@
             this.btn_cerrar.Size = new System.Drawing.Size(111, 114);
             this.btn_cerrar.Style = MetroFramework.MetroColorStyle.Red;
             this.btn_cerrar.TabIndex = 2;
-            this.btn_cerrar.Text = "CERRAR";
+            this.btn_cerrar.Text = "SALIR";
             this.btn_cerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_cerrar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.icons8_Shutdown_48;
             this.btn_cerrar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -101,6 +101,7 @@
             this.btn_creditos.Style = MetroFramework.MetroColorStyle.Red;
             this.btn_creditos.TabIndex = 2;
             this.btn_creditos.Text = "Creditos";
+            this.btn_creditos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_creditos.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_list_hidden;
             this.btn_creditos.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroToolTip1.SetToolTip(this.btn_creditos, "Este modulo es para saber un poco de los\r\n creadores de la aplicacion, \r\nademas d" +
@@ -119,7 +120,7 @@
             this.btn_ventas.Size = new System.Drawing.Size(142, 274);
             this.btn_ventas.Style = MetroFramework.MetroColorStyle.Lime;
             this.btn_ventas.TabIndex = 2;
-            this.btn_ventas.Text = "Ventas";
+            this.btn_ventas.Text = "GANANCIAS";
             this.btn_ventas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_ventas.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_book_hardcover_open_writing;
             this.btn_ventas.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,7 +138,7 @@
             this.btn_productos.Size = new System.Drawing.Size(294, 134);
             this.btn_productos.Style = MetroFramework.MetroColorStyle.Blue;
             this.btn_productos.TabIndex = 2;
-            this.btn_productos.Text = "Productos";
+            this.btn_productos.Text = "INVENTARIO";
             this.btn_productos.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_clean;
             this.btn_productos.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroToolTip1.SetToolTip(this.btn_productos, "Aqui se pueden agregar productos, los cuales se utilizaran \r\nen la venta y la com" +
@@ -155,7 +156,7 @@
             this.btn_usuarios.Size = new System.Drawing.Size(294, 134);
             this.btn_usuarios.Style = MetroFramework.MetroColorStyle.Orange;
             this.btn_usuarios.TabIndex = 2;
-            this.btn_usuarios.Text = "Balance";
+            this.btn_usuarios.Text = "UTILIDAD";
             this.btn_usuarios.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btn_usuarios.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_people_multiple;
             this.btn_usuarios.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -173,7 +174,7 @@
             this.btn_compras.Size = new System.Drawing.Size(142, 274);
             this.btn_compras.Style = MetroFramework.MetroColorStyle.Green;
             this.btn_compras.TabIndex = 2;
-            this.btn_compras.Text = "Compras";
+            this.btn_compras.Text = "GASTOS";
             this.btn_compras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_compras.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_book_list;
             this.btn_compras.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;

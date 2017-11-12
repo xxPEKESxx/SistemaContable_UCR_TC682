@@ -30,7 +30,7 @@ namespace SistemaContable_UCR_VIEWS
         {
             Login lo = new Login();
             lo.Visible = true;
-            this.Close();
+            this.Visible = false;
 
 
         }
@@ -63,7 +63,7 @@ namespace SistemaContable_UCR_VIEWS
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
-        { Login lo = new Login();
+        { 
             CoordinadorDeUsuarios cu = new CoordinadorDeUsuarios();
             
            Usuarios U = new Usuarios();
@@ -72,24 +72,34 @@ namespace SistemaContable_UCR_VIEWS
             {
                 if (registro_passwordConfirn.Text != "" && register_password.Text != "" 
                     && registro_dni.Text != "" && registro_nombre.Text != ""
-                    && registro_apellidos.Text != "" ) {
-
-                    U.DNI = registro_dni.Text;
-                    U.UserName = registro_nombre.Text;
-                    U.UserLastName = registro_apellidos.Text;
-                    U.UserPassword = register_password.Text;
-
-                    if (cu.register(U))
+                    && registro_apellidos.Text != "" && txt_register_codigoseguridad.Text != "") {
+                    if (txt_register_codigoseguridad.Text.Equals("TCU-682-ACT"))
                     {
-                        MetroMessageBox.Show(this, "Usuario registrado con exito", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                        lo.Visible = true;
 
+                        U.DNI = registro_dni.Text;
+                        U.UserName = registro_nombre.Text;
+                        U.UserLastName = registro_apellidos.Text;
+                        U.UserPassword = register_password.Text;
+
+                        if (cu.register(U))
+                        {
+                            MetroMessageBox.Show(this, "Usuario registrado con exito", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Visible=false;
+                            Login lo = new Login();
+                            lo.Visible = true;
+
+                        }
+                        else
+                        {
+                            MetroMessageBox.Show(this, "el usuario ya existe", "Lo sentimos!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        }
                     }
                     else {
-                        MetroMessageBox.Show(this, "el usuario ya existe", "Lo sentimos!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MetroMessageBox.Show(this, "Para poder registrar un usuario debe de ingresar el Código de seguridad"+"\nDebe de solicitar el codigo al encargado de proyecto de UCR a", "CÓDIGO DE SEGURIDAD ERRONEO!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
+
                 }
                 else {
                     MetroMessageBox.Show(this, "Alguno de los campos estan en blanco, por favor llene todos los campos", "LLENE TODOS LOS CAMPOS!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
