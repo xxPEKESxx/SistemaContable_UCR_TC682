@@ -14,7 +14,7 @@ namespace SistemaContable_UCR_DataAccess
 
         public int Save(Transacciones laNuevaTransaccion)
         {
-            int result = 0;
+            int filasInsertadas = 0;
 
             Conection Conection = new Conection();
             string query = "insert into Transacciones (IdProducto, Cantidad, Total, Fecha, IdTipo) values ('" + 
@@ -26,18 +26,18 @@ namespace SistemaContable_UCR_DataAccess
                     stringConection.Open();
                     using (SQLiteCommand cmd = new SQLiteCommand(query, stringConection))
                     {
-                       result = cmd.ExecuteNonQuery();
+                       filasInsertadas = cmd.ExecuteNonQuery();
                         cmd.Dispose();
                     }
                     stringConection.Close();
                 }
 
-            return result;
+            return filasInsertadas;
         }
 
         public int Update(Transacciones laTransaccion)
         {
-            int result = 0;
+            int filasActualizadas = 0;
             Conection Conection = new Conection();
             try
             {
@@ -51,7 +51,7 @@ namespace SistemaContable_UCR_DataAccess
                     c.Open();
                     using (SQLiteCommand cmd = new SQLiteCommand(query, c))
                     {
-                        result = cmd.ExecuteNonQuery();
+                        filasActualizadas = cmd.ExecuteNonQuery();
                         cmd.Dispose();
                     }
                     c.Close();
@@ -62,7 +62,7 @@ namespace SistemaContable_UCR_DataAccess
                 Console.WriteLine(ex.Message);
             }
 
-            return result;
+            return filasActualizadas;
         }
 
         public Transacciones getById(int Id)
@@ -102,7 +102,7 @@ namespace SistemaContable_UCR_DataAccess
 
         public int Delete(int Id)
         {
-            int result = 0;
+            int filasEliminadas = 0;
         Conection Conection = new Conection();
             try
             {
@@ -113,7 +113,7 @@ namespace SistemaContable_UCR_DataAccess
                     c.Open();
                     using (SQLiteCommand cmd = new SQLiteCommand(query, c))
                     {
-                        result = cmd.ExecuteNonQuery();
+                        filasEliminadas = cmd.ExecuteNonQuery();
                         cmd.Dispose();
                     }
                     c.Close();
@@ -124,7 +124,7 @@ namespace SistemaContable_UCR_DataAccess
                 Console.WriteLine(ex.Message);
             }
 
-            return result;
+            return filasEliminadas;
         }
 
         public List<Transacciones> getAll() {

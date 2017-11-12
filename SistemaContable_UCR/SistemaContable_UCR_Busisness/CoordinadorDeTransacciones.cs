@@ -22,7 +22,9 @@ namespace SistemaContable_UCR_Busisness
             laNuevaTransaccion.Total = laNuevaTransaccion.Cantidad * producto.Precio;
             laNuevaTransaccion.Fecha = DateTimeSQLite(DateTime.Now);
 
-            if (gestor.Save(laNuevaTransaccion) > 0)
+            int filasInsertadas = gestor.Save(laNuevaTransaccion);
+
+            if (filasInsertadas > 0)
                 return true;
             else return false;
         }
@@ -46,7 +48,9 @@ namespace SistemaContable_UCR_Busisness
             DateTime fecha = DateTime.Parse(laTransaccion.Fecha);
             laTransaccion.Fecha = DateTimeSQLite(fecha);
 
-            if (gestor.Update(laTransaccion) > 0)
+            int filasActualizadas = gestor.Update(laTransaccion);
+
+            if (filasActualizadas > 0)
                 return true;
             else return false;
         }
@@ -62,7 +66,9 @@ namespace SistemaContable_UCR_Busisness
         {
             GestorDeTransacciones gestor = new GestorDeTransacciones();
 
-            if (gestor.Delete(Id) > 0)
+            int filasEliminadas = gestor.Delete(Id);
+
+            if (filasEliminadas > 0)
                 return true;
             else return false;
         }
