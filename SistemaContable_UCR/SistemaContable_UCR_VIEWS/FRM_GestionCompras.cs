@@ -144,6 +144,7 @@ namespace SistemaContable_UCR_VIEWS
         private void metroGridCompras_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Transacciones pr = new Transacciones();
+            Productos productos = new Productos();
             DataGridView dgv = sender as DataGridView;
 
             if (dgv == null)
@@ -161,8 +162,12 @@ namespace SistemaContable_UCR_VIEWS
 
                 pr = coordinacionDeTransacciones.getById(pro.ID);
                 this.IDCompra = pr.ID;
+                CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
+                productos = coordinadorDeProductos.getById(pr.IdProducto);
             }
 
+
+            metroLabelNombreProducto.Text = productos.Producto;
             metroTextBoxEditarTab.Text = (pr.Cantidad.ToString());
         }
 
@@ -273,8 +278,8 @@ namespace SistemaContable_UCR_VIEWS
 
         private void metroTileAgregarProducto_Click(object sender, EventArgs e)
         {
-            FRM_Productos producto = new FRM_Productos();
-            producto.Visible = true;
+            Operation__Center center = new Operation__Center();
+            center.Visible = true;
 
             this.Visible = false;
         }
