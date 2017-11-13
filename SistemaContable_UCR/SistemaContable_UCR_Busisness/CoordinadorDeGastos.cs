@@ -21,22 +21,12 @@ namespace SistemaContable_UCR_Busisness
             else return false;
         }
 
-        public bool update(SistemaContable_UCR_Model.Transacciones laTransaccion)
+        public bool update(Gastos nuevoGasto)
         {
-            GestorDeTransacciones gestor = new GestorDeTransacciones();
-            CoordinadorDeProductos coordinadorDeProductos = new CoordinadorDeProductos();
+            GestorDeGastos gestorDeGasto = new GestorDeGastos();
+            nuevoGasto.Fecha = dateTimeSQLite(DateTime.Now);
 
-            Productos producto = coordinadorDeProductos.getById(laTransaccion.IdProducto);
-
-            laTransaccion.Total = laTransaccion.Cantidad * producto.Precio;
-
-            DateTime fecha = DateTime.Parse(laTransaccion.Fecha);
-            laTransaccion.Fecha = dateTimeSQLite(fecha);
-
-            int filasActualizadas = gestor.Update(laTransaccion);
-
-            if (filasActualizadas > 0)
-                return true;
+            if (gestorDeGasto.update(nuevoGasto) > 0) return true;
             else return false;
         }
 
@@ -45,6 +35,33 @@ namespace SistemaContable_UCR_Busisness
             string dateTimeFormat = "{0}-{1}-{2}";
 
             return string.Format(dateTimeFormat, datetime.Year, datetime.Month, datetime.Day);
+        }
+
+        public bool delete(int idGasto)
+        {
+            GestorDeGastos gestorDeGasto = new GestorDeGastos();
+            if (gestorDeGasto.delete(idGasto) > 0) return true;
+            else return false;
+        }
+
+        public Gastos getById(int idGasto)
+        {
+            GestorDeGastos gestorDeGasto = new GestorDeGastos();
+            return gestorDeGasto.getById(idGasto);
+        }
+
+        public List<Gastos> getAll()
+        {
+            GestorDeGastos gestorDeGasto = new GestorDeGastos();
+            return gestorDeGasto.getAll();
+        }
+
+        public List<Gastos> getByDateInterval(DateTime from, DateTime to)
+        {
+            GestorDeGastos gestorDeGasto = new GestorDeGastos();
+            string searchFrom = dateTimeSQLite(from);
+            string searchTo = dateTimeSQLite(to.AddDays(1));
+            return gestorDeGasto.getByDateInterval(searchFrom, searchTo);
         }
     }
 }

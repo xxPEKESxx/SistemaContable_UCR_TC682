@@ -41,35 +41,29 @@ namespace SistemaContable_UCR_DataAccess
             int filasInsertadas = executeNonQuery(query);
             return filasInsertadas;
         }
-        public int Update(Transacciones laTransaccion)
+        public int update(Gastos nuevoGasto)
         {
-            string query = "update Transacciones set IdProducto='" + laTransaccion.IdProducto +
-                "', Cantidad='" + laTransaccion.Cantidad + "', Total='" + laTransaccion.Total +
-                "', Fecha='" + laTransaccion.Fecha + "', IdTipo='" + laTransaccion.IdTipo +
-                "' where ID='" + laTransaccion.ID + "'";
-
-            int filasActualizadas = ExecuteNonQuery(query);
-
+            string query = "update Gastos set Descripcion='" + nuevoGasto.Descripcion +
+                "', Total='" + nuevoGasto.Total + "', Fecha='" + nuevoGasto.Fecha +
+                "' where ID='" + nuevoGasto.ID + "'";
+            int filasActualizadas = executeNonQuery(query);
             return filasActualizadas;
         }
 
-        public int Delete(int Id)
+        public int delete(int Id)
         {
-            string query = "delete from Transacciones where ID=" + Id;
-
-            int filasEliminadas = ExecuteNonQuery(query);
-
+            string query = "delete from Gastos where ID=" + Id;
+            int filasEliminadas = executeNonQuery(query);
             return filasEliminadas;
         }
 
-        public Transacciones getById(int Id)
+        public Gastos getById(int id)
         {
             Conection Conection = new Conection();
-            Transacciones transaccion = null;
+            Gastos gasto = null;
             try
             {
-                string query = "select tr.*, pr.Producto from Transacciones tr JOIN Productos pr ON " +
-                "tr.IdProducto = pr.ID where tr.ID=" + Id;
+                string query = "select * from Gastos where ID=" + id;
 
                 using (SQLiteConnection c = new SQLiteConnection(Conection.getConection()))
                 {
@@ -82,7 +76,7 @@ namespace SistemaContable_UCR_DataAccess
 
                             while (datos.Read())
                             {
-                                transaccion = fillTransaction(datos);
+                                gasto = fillGasto(datos);
                             }
                             datos.Close();
                         }
@@ -95,13 +89,32 @@ namespace SistemaContable_UCR_DataAccess
                 Console.WriteLine(ex.Message);
             }
 
-            return transaccion;
+            return gasto;
         }
 
-        public List<Transacciones> ExecuteReader(string query)
+        public List<Gastos> getAll()
         {
 
-            List<Transacciones> laListaDeTransaccciones = new List<Transacciones>();
+            string query = "select * from Gastos";
+
+            List<Gastos> listaDeGastos = executeReader(query);
+
+            return listaDeGastos;
+        }
+
+        public List<Gastos> getByDateInterval(String Desde, String Hasta)
+        {
+            string query = "select * from Gastos where Fecha BETWEEN '" + Desde + "' AND '" + Hasta + "'" ;
+
+            List<Gastos> listaDeGastos = executeReader(query);
+
+            return listaDeGastos;
+        }
+
+        private List<Gastos> executeReader(string query)
+        {
+
+            List<Gastos> listaDeGastos = new List<Gastos>();
 
             try
             {
@@ -119,7 +132,7 @@ namespace SistemaContable_UCR_DataAccess
                             while (datos.Read())
                             {
 
-                                laListaDeTransaccciones.Add(fillTransaction(datos));
+                                listaDeGastos.Add(fillGasto(datos));
                             }
                             datos.Close();
                         }
@@ -131,30 +144,17 @@ namespace SistemaContable_UCR_DataAccess
             {
                 Console.WriteLine(ex.Message);
             }
-
-            return laListaDeTransaccciones;
+            return listaDeGastos;
         }
 
-        public List<Transacciones> getAll()
+        private Gastos fillGasto(SQLiteDataReader dato)
         {
-
-            string query = "select tr.*, pr.Producto from Transacciones tr JOIN Productos pr ON " +
-                "tr.IdProducto = pr.ID";
-
-            List<Transacciones> laListaDeTransaccciones = ExecuteReader(query);
-
-            return laListaDeTransaccciones;
-        }
-
-        public List<Transacciones> getByDateInterval(String Desde, String Hasta, int Tipo)
-        {
-            string query = "select tr.*, pr.Producto from Transacciones tr JOIN Productos pr ON " +
-                "tr.IdProducto = pr.ID where Fecha BETWEEN '" + Desde + "' AND '" + Hasta + "'" +
-                " AND IdTipo=" + Tipo;
-
-            List<Transacciones> laListaDeTransaccciones = ExecuteReader(query);
-
-            return laListaDeTransaccciones;
+            Gastos gasto = new Gastos();
+            gasto.ID = dato.GetInt32(0);
+            gasto.Descripcion = dato.GetString(1);
+            gasto.Total = dato.GetFloat(2);
+            gasto.Fecha = dato.GetString(3);
+            return gasto;
         }
 
     }
