@@ -11,6 +11,6 @@ namespace SistemaContable_UCR_Model
         public int ID { get; set; }
         public string Descripcion { get; set; }
         public float Total { get; set; }
-        public DateTime Fecha { get; set; }
+        public string Fecha { get; set; }
     }
 }
