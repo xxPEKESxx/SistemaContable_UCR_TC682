@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Conection.cs" />
+    <Compile Include="GestorDeGastos.cs" />
     <Compile Include="GestorDeProductos.cs" />
     <Compile Include="GestorDeTransacciones.cs" />
     <Compile Include="GestorDeUsuarios.cs" />
