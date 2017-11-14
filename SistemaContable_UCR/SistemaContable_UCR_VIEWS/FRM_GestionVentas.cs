@@ -294,5 +294,12 @@ namespace SistemaContable_UCR_VIEWS
                 return;
             }
         }
+
+        private void FRM_GestionVentas_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Operation__Center oc = new Operation__Center();
+            this.Visible = false;
+            oc.Visible = true;
+        }
     }
 }

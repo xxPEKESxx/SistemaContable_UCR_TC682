@@ -34,20 +34,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Productos));
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.cbx_eliminar_seleccion = new MetroFramework.Controls.MetroComboBox();
+            this.btn_Atras_Agregar = new MetroFramework.Controls.MetroTile();
+            this.btn_Agregar_Agregar = new MetroFramework.Controls.MetroTile();
+            this.txtDescripcion_Agregar = new MetroFramework.Controls.MetroTextBox();
+            this.btn_editar_Atras = new MetroFramework.Controls.MetroTile();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.btn_muestra_Atras = new MetroFramework.Controls.MetroTile();
             this.label1 = new System.Windows.Forms.Label();
             this.tab_Principal = new MetroFramework.Controls.MetroTabControl();
             this.tabProductos_agregar = new MetroFramework.Controls.MetroTabPage();
-            this.btn_Atras_Agregar = new MetroFramework.Controls.MetroTile();
-            this.btn_Agregar_Agregar = new MetroFramework.Controls.MetroTile();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.TxtPrecio_Agregar = new MetroFramework.Controls.MetroTextBox();
-            this.txtDescripcion_Agregar = new MetroFramework.Controls.MetroTextBox();
             this.Txt_nombre_Agrega = new MetroFramework.Controls.MetroTextBox();
             this.tabEditarProducto = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.btn_editar_Atras = new MetroFramework.Controls.MetroTile();
             this.btn_editar_Agregar = new MetroFramework.Controls.MetroTile();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
@@ -59,11 +61,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabEliminarProductos = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.btn_eliminar_elimnar = new MetroFramework.Controls.MetroTile();
             this.label3 = new System.Windows.Forms.Label();
             this.tab_mostrar_Productos = new MetroFramework.Controls.MetroTabPage();
-            this.btn_muestra_Atras = new MetroFramework.Controls.MetroTile();
             this.btn_muestra_Buscar = new MetroFramework.Controls.MetroTile();
             this.metroGrid1_muestra_ = new MetroFramework.Controls.MetroGrid();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
@@ -100,6 +100,120 @@
         " del raton.");
             this.cbx_eliminar_seleccion.UseSelectable = true;
             // 
+            // btn_Atras_Agregar
+            // 
+            this.btn_Atras_Agregar.ActiveControl = null;
+            this.btn_Atras_Agregar.Location = new System.Drawing.Point(652, 355);
+            this.btn_Atras_Agregar.Name = "btn_Atras_Agregar";
+            this.btn_Atras_Agregar.Size = new System.Drawing.Size(94, 93);
+            this.btn_Atras_Agregar.TabIndex = 8;
+            this.btn_Atras_Agregar.Text = "ATRAS";
+            this.btn_Atras_Agregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Atras_Agregar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
+            this.btn_Atras_Agregar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroToolTip1.SetToolTip(this.btn_Atras_Agregar, "para volver al panel \r\ncentral de gestiones del sistema contable");
+            this.btn_Atras_Agregar.UseSelectable = true;
+            this.btn_Atras_Agregar.UseTileImage = true;
+            this.btn_Atras_Agregar.Click += new System.EventHandler(this.btn_Atras_Agregar_Click);
+            // 
+            // btn_Agregar_Agregar
+            // 
+            this.btn_Agregar_Agregar.ActiveControl = null;
+            this.btn_Agregar_Agregar.Location = new System.Drawing.Point(546, 355);
+            this.btn_Agregar_Agregar.Name = "btn_Agregar_Agregar";
+            this.btn_Agregar_Agregar.Size = new System.Drawing.Size(86, 93);
+            this.btn_Agregar_Agregar.TabIndex = 8;
+            this.btn_Agregar_Agregar.Text = "AGREGAR";
+            this.btn_Agregar_Agregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Agregar_Agregar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_layer_add;
+            this.btn_Agregar_Agregar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroToolTip1.SetToolTip(this.btn_Agregar_Agregar, "Para agregar un nuevo producto a inventario.");
+            this.btn_Agregar_Agregar.UseSelectable = true;
+            this.btn_Agregar_Agregar.UseTileImage = true;
+            this.btn_Agregar_Agregar.Click += new System.EventHandler(this.btn_Agregar_Agregar_Click);
+            // 
+            // txtDescripcion_Agregar
+            // 
+            // 
+            // 
+            // 
+            this.txtDescripcion_Agregar.CustomButton.Image = null;
+            this.txtDescripcion_Agregar.CustomButton.Location = new System.Drawing.Point(190, 2);
+            this.txtDescripcion_Agregar.CustomButton.Name = "";
+            this.txtDescripcion_Agregar.CustomButton.Size = new System.Drawing.Size(33, 33);
+            this.txtDescripcion_Agregar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtDescripcion_Agregar.CustomButton.TabIndex = 1;
+            this.txtDescripcion_Agregar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtDescripcion_Agregar.CustomButton.UseSelectable = true;
+            this.txtDescripcion_Agregar.CustomButton.Visible = false;
+            this.txtDescripcion_Agregar.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtDescripcion_Agregar.Lines = new string[0];
+            this.txtDescripcion_Agregar.Location = new System.Drawing.Point(22, 263);
+            this.txtDescripcion_Agregar.MaxLength = 32767;
+            this.txtDescripcion_Agregar.Multiline = true;
+            this.txtDescripcion_Agregar.Name = "txtDescripcion_Agregar";
+            this.txtDescripcion_Agregar.PasswordChar = '\0';
+            this.txtDescripcion_Agregar.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtDescripcion_Agregar.SelectedText = "";
+            this.txtDescripcion_Agregar.SelectionLength = 0;
+            this.txtDescripcion_Agregar.SelectionStart = 0;
+            this.txtDescripcion_Agregar.ShortcutsEnabled = true;
+            this.txtDescripcion_Agregar.Size = new System.Drawing.Size(226, 38);
+            this.txtDescripcion_Agregar.TabIndex = 6;
+            this.metroToolTip1.SetToolTip(this.txtDescripcion_Agregar, "Aqui puede agregar una breve \r\ndescripcion del producto, por \r\nejemplo= \"Producto" +
+        " usado\",\"Producto nuevo\",\r\n\"producto hecho a mano\"");
+            this.txtDescripcion_Agregar.UseSelectable = true;
+            this.txtDescripcion_Agregar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtDescripcion_Agregar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // btn_editar_Atras
+            // 
+            this.btn_editar_Atras.ActiveControl = null;
+            this.btn_editar_Atras.Location = new System.Drawing.Point(659, 362);
+            this.btn_editar_Atras.Name = "btn_editar_Atras";
+            this.btn_editar_Atras.Size = new System.Drawing.Size(94, 93);
+            this.btn_editar_Atras.TabIndex = 15;
+            this.btn_editar_Atras.Text = "ATRAS";
+            this.btn_editar_Atras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_editar_Atras.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
+            this.btn_editar_Atras.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroToolTip1.SetToolTip(this.btn_editar_Atras, "para volver al panel \r\ncentral de gestiones del sistema contable.\r\n");
+            this.btn_editar_Atras.UseSelectable = true;
+            this.btn_editar_Atras.UseTileImage = true;
+            this.btn_editar_Atras.Click += new System.EventHandler(this.btn_editar_Atras_Click);
+            // 
+            // metroTile1
+            // 
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.Location = new System.Drawing.Point(654, 355);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(92, 93);
+            this.metroTile1.TabIndex = 19;
+            this.metroTile1.Text = "ATRAS";
+            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTile1.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
+            this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroToolTip1.SetToolTip(this.metroTile1, "para volver al panel \r\ncentral de gestiones del sistema contable.");
+            this.metroTile1.UseSelectable = true;
+            this.metroTile1.UseTileImage = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
+            // 
+            // btn_muestra_Atras
+            // 
+            this.btn_muestra_Atras.ActiveControl = null;
+            this.btn_muestra_Atras.Location = new System.Drawing.Point(646, 338);
+            this.btn_muestra_Atras.Name = "btn_muestra_Atras";
+            this.btn_muestra_Atras.Size = new System.Drawing.Size(92, 110);
+            this.btn_muestra_Atras.TabIndex = 25;
+            this.btn_muestra_Atras.Text = "ATRAS";
+            this.btn_muestra_Atras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_muestra_Atras.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
+            this.btn_muestra_Atras.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroToolTip1.SetToolTip(this.btn_muestra_Atras, "para volver al panel \r\ncentral de gestiones del sistema contable.");
+            this.btn_muestra_Atras.UseSelectable = true;
+            this.btn_muestra_Atras.UseTileImage = true;
+            this.btn_muestra_Atras.Click += new System.EventHandler(this.btn_muestra_Atras_Click);
+            // 
             // label1
             // 
             this.label1.Image = global::SistemaContable_UCR_VIEWS.Properties.Resources.ucr_favicon;
@@ -117,7 +231,7 @@
             this.tab_Principal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_Principal.Location = new System.Drawing.Point(20, 60);
             this.tab_Principal.Name = "tab_Principal";
-            this.tab_Principal.SelectedIndex = 1;
+            this.tab_Principal.SelectedIndex = 0;
             this.tab_Principal.Size = new System.Drawing.Size(757, 493);
             this.tab_Principal.TabIndex = 6;
             this.tab_Principal.UseSelectable = true;
@@ -144,36 +258,6 @@
             this.tabProductos_agregar.VerticalScrollbarBarColor = true;
             this.tabProductos_agregar.VerticalScrollbarHighlightOnWheel = false;
             this.tabProductos_agregar.VerticalScrollbarSize = 10;
-            // 
-            // btn_Atras_Agregar
-            // 
-            this.btn_Atras_Agregar.ActiveControl = null;
-            this.btn_Atras_Agregar.Location = new System.Drawing.Point(652, 355);
-            this.btn_Atras_Agregar.Name = "btn_Atras_Agregar";
-            this.btn_Atras_Agregar.Size = new System.Drawing.Size(94, 93);
-            this.btn_Atras_Agregar.TabIndex = 8;
-            this.btn_Atras_Agregar.Text = "ATRAS";
-            this.btn_Atras_Agregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Atras_Agregar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
-            this.btn_Atras_Agregar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Atras_Agregar.UseSelectable = true;
-            this.btn_Atras_Agregar.UseTileImage = true;
-            this.btn_Atras_Agregar.Click += new System.EventHandler(this.btn_Atras_Agregar_Click);
-            // 
-            // btn_Agregar_Agregar
-            // 
-            this.btn_Agregar_Agregar.ActiveControl = null;
-            this.btn_Agregar_Agregar.Location = new System.Drawing.Point(546, 355);
-            this.btn_Agregar_Agregar.Name = "btn_Agregar_Agregar";
-            this.btn_Agregar_Agregar.Size = new System.Drawing.Size(86, 93);
-            this.btn_Agregar_Agregar.TabIndex = 8;
-            this.btn_Agregar_Agregar.Text = "AGREGAR";
-            this.btn_Agregar_Agregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Agregar_Agregar.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_layer_add;
-            this.btn_Agregar_Agregar.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Agregar_Agregar.UseSelectable = true;
-            this.btn_Agregar_Agregar.UseTileImage = true;
-            this.btn_Agregar_Agregar.Click += new System.EventHandler(this.btn_Agregar_Agregar_Click);
             // 
             // metroLabel3
             // 
@@ -216,6 +300,7 @@
             this.TxtPrecio_Agregar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.TxtPrecio_Agregar.CustomButton.UseSelectable = true;
             this.TxtPrecio_Agregar.CustomButton.Visible = false;
+            this.TxtPrecio_Agregar.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.TxtPrecio_Agregar.Lines = new string[0];
             this.TxtPrecio_Agregar.Location = new System.Drawing.Point(22, 162);
             this.TxtPrecio_Agregar.MaxLength = 32767;
@@ -234,37 +319,6 @@
             this.TxtPrecio_Agregar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.TxtPrecio_Agregar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPrecio_Agregar_KeyPress);
             // 
-            // txtDescripcion_Agregar
-            // 
-            // 
-            // 
-            // 
-            this.txtDescripcion_Agregar.CustomButton.Image = null;
-            this.txtDescripcion_Agregar.CustomButton.Location = new System.Drawing.Point(190, 2);
-            this.txtDescripcion_Agregar.CustomButton.Name = "";
-            this.txtDescripcion_Agregar.CustomButton.Size = new System.Drawing.Size(33, 33);
-            this.txtDescripcion_Agregar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtDescripcion_Agregar.CustomButton.TabIndex = 1;
-            this.txtDescripcion_Agregar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtDescripcion_Agregar.CustomButton.UseSelectable = true;
-            this.txtDescripcion_Agregar.CustomButton.Visible = false;
-            this.txtDescripcion_Agregar.Lines = new string[0];
-            this.txtDescripcion_Agregar.Location = new System.Drawing.Point(22, 263);
-            this.txtDescripcion_Agregar.MaxLength = 32767;
-            this.txtDescripcion_Agregar.Multiline = true;
-            this.txtDescripcion_Agregar.Name = "txtDescripcion_Agregar";
-            this.txtDescripcion_Agregar.PasswordChar = '\0';
-            this.txtDescripcion_Agregar.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtDescripcion_Agregar.SelectedText = "";
-            this.txtDescripcion_Agregar.SelectionLength = 0;
-            this.txtDescripcion_Agregar.SelectionStart = 0;
-            this.txtDescripcion_Agregar.ShortcutsEnabled = true;
-            this.txtDescripcion_Agregar.Size = new System.Drawing.Size(226, 38);
-            this.txtDescripcion_Agregar.TabIndex = 6;
-            this.txtDescripcion_Agregar.UseSelectable = true;
-            this.txtDescripcion_Agregar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtDescripcion_Agregar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // Txt_nombre_Agrega
             // 
             // 
@@ -279,6 +333,7 @@
             this.Txt_nombre_Agrega.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.Txt_nombre_Agrega.CustomButton.UseSelectable = true;
             this.Txt_nombre_Agrega.CustomButton.Visible = false;
+            this.Txt_nombre_Agrega.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.Txt_nombre_Agrega.Lines = new string[0];
             this.Txt_nombre_Agrega.Location = new System.Drawing.Point(22, 77);
             this.Txt_nombre_Agrega.MaxLength = 32767;
@@ -330,21 +385,6 @@
             this.metroLabel7.Size = new System.Drawing.Size(180, 38);
             this.metroLabel7.TabIndex = 17;
             this.metroLabel7.Text = "SELECCIONE EL PRODUCTO \r\nA EDITAR";
-            // 
-            // btn_editar_Atras
-            // 
-            this.btn_editar_Atras.ActiveControl = null;
-            this.btn_editar_Atras.Location = new System.Drawing.Point(659, 362);
-            this.btn_editar_Atras.Name = "btn_editar_Atras";
-            this.btn_editar_Atras.Size = new System.Drawing.Size(94, 93);
-            this.btn_editar_Atras.TabIndex = 15;
-            this.btn_editar_Atras.Text = "ATRAS";
-            this.btn_editar_Atras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_editar_Atras.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
-            this.btn_editar_Atras.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_editar_Atras.UseSelectable = true;
-            this.btn_editar_Atras.UseTileImage = true;
-            this.btn_editar_Atras.Click += new System.EventHandler(this.btn_editar_Atras_Click);
             // 
             // btn_editar_Agregar
             // 
@@ -534,21 +574,6 @@
             this.metroLabel8.TabIndex = 21;
             this.metroLabel8.Text = "SELECCIONE EL PRODUCTO \r\nA ELIMINAR.";
             // 
-            // metroTile1
-            // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(654, 355);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(92, 93);
-            this.metroTile1.TabIndex = 19;
-            this.metroTile1.Text = "ATRAS";
-            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile1.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
-            this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile1.UseSelectable = true;
-            this.metroTile1.UseTileImage = true;
-            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
-            // 
             // btn_eliminar_elimnar
             // 
             this.btn_eliminar_elimnar.ActiveControl = null;
@@ -592,21 +617,6 @@
             this.tab_mostrar_Productos.VerticalScrollbarHighlightOnWheel = false;
             this.tab_mostrar_Productos.VerticalScrollbarSize = 10;
             this.tab_mostrar_Productos.Click += new System.EventHandler(this.tab_mostrar_Productos_Click);
-            // 
-            // btn_muestra_Atras
-            // 
-            this.btn_muestra_Atras.ActiveControl = null;
-            this.btn_muestra_Atras.Location = new System.Drawing.Point(646, 338);
-            this.btn_muestra_Atras.Name = "btn_muestra_Atras";
-            this.btn_muestra_Atras.Size = new System.Drawing.Size(92, 110);
-            this.btn_muestra_Atras.TabIndex = 25;
-            this.btn_muestra_Atras.Text = "ATRAS";
-            this.btn_muestra_Atras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_muestra_Atras.TileImage = global::SistemaContable_UCR_VIEWS.Properties.Resources.appbar_arrow_left;
-            this.btn_muestra_Atras.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_muestra_Atras.UseSelectable = true;
-            this.btn_muestra_Atras.UseTileImage = true;
-            this.btn_muestra_Atras.Click += new System.EventHandler(this.btn_muestra_Atras_Click);
             // 
             // btn_muestra_Buscar
             // 

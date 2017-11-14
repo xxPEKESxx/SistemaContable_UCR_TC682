@@ -19,6 +19,9 @@ namespace SistemaContable_UCR_VIEWS
     public partial class FRM_Productos : MetroForm
     {
         public int IdProducto = 0;
+      
+
+
         
         public FRM_Productos()
         {

@@ -85,6 +85,7 @@ namespace SistemaContable_UCR_VIEWS
 
                     MetroMessageBox.Show(this, "COMPRA REGISTRADA CON EXITO.", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     limpiarCampos();
+                    cargarGridCompras();
                 }
                 else
                 {
@@ -159,11 +160,12 @@ namespace SistemaContable_UCR_VIEWS
             CoordinadorDeTransacciones coordinadorDeTransacciones = new CoordinadorDeTransacciones();
             Transacciones transaccionAEliminar = coordinadorDeTransacciones.getById(IDCompra);
 
-            
-                /// producto.ID = productoAEditar.ID;
+           
+
+            DialogResult result=  MetroMessageBox.Show(this, "Realmente desea eliminar la compra seleccionada ??", "Eliminar Compra", MessageBoxButtons.YesNo);
 
 
-
+            if (result==DialogResult.Yes) {
                 if (coordinadorDeTransacciones.Delete(transaccionAEliminar.ID))
                 {
 
@@ -175,6 +177,9 @@ namespace SistemaContable_UCR_VIEWS
                     MetroMessageBox.Show(this, "Compra no eliminada", "Por favor verificar los capos en blanco," + "\n ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cargarGridCompras();
                 }
+            }
+
+          
             
         }
 
@@ -343,6 +348,14 @@ namespace SistemaContable_UCR_VIEWS
         private void FRM_GestionCompras_Load(object sender, EventArgs e)
         {
             metroTabCompras.TabPages.Remove(metroTabPageEditar);
+        }
+
+        private void btn_gastos_atras_Click(object sender, EventArgs e)
+        {
+            Operation__Center oc = new Operation__Center();
+            oc.Visible = true;
+            this.Visible = false;
+
         }
     }
 }
